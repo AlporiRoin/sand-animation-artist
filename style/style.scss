@@ -45,7 +45,7 @@
 
         width: 100%;
 
-        background: url('../../static/pictures/background/header.png');
+        background: url('../static/pictures/background/header.png');
         background-size: cover;
         background-position: 50% 50%;
         background-repeat: no-repeat;
@@ -331,6 +331,8 @@
 
         left: 20%;
 
+        text-transform: uppercase;
+
         h1 {
 
             font-size: 64px;
@@ -338,6 +340,16 @@
             font-style: normal;
 
             color: #FFFFFF;
+
+            span {
+
+                font-size: 64px;
+                font-family: 'Gilroy - SemiBold';
+                font-style: normal;
+
+                color: #CB9C68;
+
+            }
             
         }
 
@@ -348,6 +360,8 @@
         position: relative;
 
         left: 35%;
+
+        text-transform: uppercase;
 
         h1 {
 
@@ -629,7 +643,7 @@
                     h5 {
 
                         font-size: 17px;
-                        font-family: 'Gilroy - Regular';;
+                        font-family: 'Gilroy - Regular';
                         font-weight: lighter;
                         font-style: normal;
 
@@ -644,6 +658,252 @@
 
             }
 
+        }
+
+    }
+
+    .buyer__acquisition {
+
+        position: relative;
+
+        width: 100%;
+
+        .upper__inscription {
+
+            width: 100%;
+
+            background: linear-gradient(93.26deg, rgba(44, 35, 31, 0.68) 3.49%, rgba(203, 156, 104, 0.68) 50.41%, rgba(54, 43, 36, 0.68) 97.32%);
+            box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+            backdrop-filter: blur(28px);
+
+        }
+
+        .knowledge__map {
+
+            width: 100%;
+
+            box-sizing: border-box;
+
+            padding-top: 45px;
+            padding-bottom: 45px;
+
+            .top_text_items {
+
+                display: flex;
+
+                width: 100%;
+
+                .top_text_container {
+
+                    position: relative;
+
+                    width: 25%;
+
+                    h5 {
+
+                        width: 86%;
+
+                        font-size: 18px;
+                        font-family: 'Gilroy - SemiBold';
+                        font-weight: lighter;
+                        font-style: normal;
+    
+                        color: #FFFFFF;
+    
+                    }
+
+                }
+
+            }
+
+            .item__designations {
+
+                height: 100%;
+
+                display: flex;
+
+                position: relative;
+
+                width: 100%;
+
+                margin-top: 10px;
+                margin-bottom: 10px;
+
+                .map__row {
+
+                    flex-basis: calc(75% + 32px);
+                    flex-grow: 0;
+
+                    height: inherit;
+
+                    .top_row_designation {
+
+                        height: 50%;
+
+                        .item__circle {
+        
+                            width: 32px;
+                            height: 32px;
+        
+                            border-radius: 50%;
+        
+                            background: #CB9C68;
+        
+                            h5 {
+        
+                                position: relative;
+        
+                                font-size: 24px;
+                                font-family: 'Gilroy - SemiBold';
+                                font-weight: lighter;
+                                font-style: normal;
+        
+                                color: #FFFFFF;
+        
+                                text-align: center;
+        
+                                line-height: 1.3;
+        
+                            }
+        
+                        }
+
+                        .upper_infirmary_line {
+
+                            flex-grow: 1;
+                            
+                            height: 2px;
+
+                            margin-top: 15px;
+        
+                            background: #CB9C68;
+        
+                        }
+
+                    }
+
+                    .designation_bottom_row {
+
+                        height: 50%;
+
+                        margin-top: 100px;
+
+                        .item__circle {
+        
+                            width: 32px;
+                            height: 32px;
+        
+                            border-radius: 50%;
+        
+                            background: #CB9C68;
+        
+                            h5 {
+        
+                                position: relative;
+        
+                                font-size: 24px;
+                                font-family: 'Gilroy - SemiBold';
+                                font-weight: lighter;
+                                font-style: normal;
+        
+                                color: #FFFFFF;
+        
+                                text-align: center;
+        
+                                line-height: 1.3;
+        
+                            }
+        
+                        }
+
+                        .lower_infirmary_line {
+
+                            flex-grow: 1;
+                            
+                            height: 2px;
+
+                            margin-top: 15px;
+        
+                            background: #CB9C68;
+        
+                        }
+
+                    }
+
+                }
+
+                .map_rotation_designation {
+
+                    flex-basis: calc(25% - 32px);
+                    flex-grow: 0;
+
+                    .upper_infirmary_line {
+
+                        flex-grow: 1;
+                        
+                        height: 2px;
+
+                        margin-top: 15px;
+    
+                        background: #CB9C68;
+    
+                    }
+
+                    .vertical_line_map {
+
+                        width: 2px;
+                        height: calc(100% - 34px);
+
+                        margin-left: auto;
+                        margin-right: 0px;
+
+                        background: #CB9C68;
+
+                    }
+
+                    .lower_infirmary_line {
+
+                        flex-grow: 1;
+                        
+                        height: 2px;
+    
+                        background: #CB9C68;
+    
+                    }
+
+                }
+
+            }
+
+            .bottom_text_items {
+
+                display: flex;
+
+                width: 100%;
+
+                .bottom_text_container {
+
+                    position: relative;
+
+                    width: 25%;
+
+                    h5 {
+
+                        width: 86%;
+
+                        font-size: 18px;
+                        font-family: 'Gilroy - SemiBold';
+                        font-weight: lighter;
+                        font-style: normal;
+    
+                        color: #FFFFFF;
+    
+                    }
+
+                }
+
+            }
+            
         }
 
     }
