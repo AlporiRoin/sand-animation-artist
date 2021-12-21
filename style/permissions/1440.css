@@ -1,0 +1,30 @@
+@media screen and ( min-width: 1440px ) {
+
+    .container {
+
+        width: 100vw;
+
+        margin-left: 10%;
+        margin-right: 10%;
+
+    }
+    
+    header {
+
+        width: 100vw;
+
+        background: url('../../static/pictures/background/header.png');
+        background-size: cover;
+        background-position: 50% 50%;
+        background-repeat: no-repeat;
+
+    }
+
+    .header__top {
+
+        width: 100vw;
+
+
+    }
+
+}
