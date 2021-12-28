@@ -17,24 +17,32 @@
 
             <div class="darkening__background">
                 <div class="header__top">
-                    <div class="container flex">
+                    <div id="" class="container flex">
                         <div class="logotip">
                             <img src="./static/pictures/logotip/logotip.png" alt="Логотип">
                         </div>
-                        <div class="menu flex">
+                        <div id="menu" class="menu flex">
                             <div class="social_media">
-                                <ul class="flex flex-center" >
+                                <ul class="flex" >
                                     <li>
-                                        <img src="./static/pictures/social media icons/instagram.svg" alt="Instagram">
+                                        <a href="#">
+                                            <img src="./static/pictures/social media icons/instagram.svg" alt="Instagram">
+                                        </a>
                                     </li>
                                     <li>
-                                        <img src="./static/pictures/social media icons/vk.svg" alt="VK">
+                                        <a href="#">
+                                            <img src="./static/pictures/social media icons/vk.svg" alt="VK">
+                                        </a>
                                     </li>
                                     <li>
-                                        <img src="./static/pictures/social media icons/youtube.svg" alt="YouTube">
+                                        <a href="#">
+                                            <img src="./static/pictures/social media icons/youtube.svg" alt="YouTube">
+                                        </a>
                                     </li>
                                     <li>
-                                        <img src="./static/pictures/social media icons/facebook.svg" alt="Facebook">
+                                        <a href="#">
+                                            <img src="./static/pictures/social media icons/facebook.svg" alt="Facebook">
+                                        </a>
                                     </li>
                                 </ul>
                             </div>
@@ -82,7 +90,7 @@
                     </div>
                 </div>
                 <div class="student_level_dies">
-                    <div class="container flex flex-wrap">
+                    <div id="student_level_dies" class="container">
                         <div class="die">
                             <img src="./static/pictures/brush draws.svg" alt="Кисть рисует">
                             <h5>Кому нравиться это искусство и хочет для себя научиться рисовать в стиле песочной анимации</h5>
@@ -103,19 +111,20 @@
                 </div>
             </div>
 
+            <!--   Для десктопов   -->
             <div class="course__overview">      <!--   "Посмотрите, что будет на обучении"   -->
-                <div class="container flex">
+                <div class="container">
                     <div class="course_overview_left">
                         <div class="title">
                             <h2>посмотрите, что будет на обучении</h2>
                             <div class="arrow">
-                                <img src="./static/pictures/arrow/Arrow.svg" alt="Стрелк">
+                                <img src="./static/pictures/arrow/Arrow.svg" alt="Стрелка">
                             </div>
                         </div>
                         <div class="subtitle">
                             <h4>Начните обучение прямо сегодня</h4>
                         </div>
-                        <div class="start__button">
+                        <div id="start__button" class="start__button">
                             <button>
                                 <h4>Начать</h4>
                             </button>
@@ -126,22 +135,47 @@
                     </div>
                 </div>
             </div>
+            <!---->
+
+            <!--   Для мобильных экранов   -->
+            <div class="course_overview__mobile">      <!--   "Посмотрите, что будет на обучении"   -->
+                <div class="container">
+                    <div class="course_overview_top">
+                        <div class="left__subpart">
+                            <div class="title">
+                                <h2>посмотрите, что будет на обучении</h2>
+                            </div>
+                            <div class="subtitle">
+                                <h4>Начните обучение прямо сегодня</h4>
+                            </div>
+                        </div>
+                        <div class="right__subpart">
+                            <img src="./static/pictures/arrow/Arrow.svg" alt="Стрелка">
+                        </div>
+                    </div>
+                    <div class="course_overview_bottom">
+                        <div class="course_overview__bottom_img"></div>
+                        <div id="start__button" class="start__button">
+                            <button>
+                                <h4>Начать</h4>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!---->
 
             <div class="advantages">    <!--   "Преимущества профессии"   --> 
                 <div class="right_side_callout">
                     <div class="upper__text">
-                        <div class="text_wrapper">
-                            <h1>преимущества</h1>
-                        </div>
+                        <h1>преимущества</h1>
                     </div>
                     <div class="bottom__text">
-                        <div class="text__wrapper">
-                            <h1>профессии</h1>
-                        </div>
+                        <h1><span>профессии</span></h1>
                     </div>
                 </div>
                 <div class="advantages__dies">
-                    <div class="container flex">
+                    <div id="advantages_dies__container" class="container">
                         <div class="die__advantages">
                             <div class="title__advantages">
                                 <h4>Сцена со звёздами</h4>
@@ -181,6 +215,8 @@
                         </div>
                     </div>
                 </div>
+
+                <!--   Для десктопов   -->
                 <div class="knowledge__map">
                     <div class="container">
                         <div class="top_text_items">
@@ -256,6 +292,75 @@
                         </div>
                     </div>
                 </div>
+                <!---->
+
+                <!--   Для мобильных экранов   -->
+                <div class="knowledge_map__mobile">
+                    <div class="container flex">
+                        <div class="left_part_map">
+                            <div class="map__row">
+                                <div class="item__circle">
+                                    <h5>1</h5>
+                                </div>
+                                <div class="infirmary_line"></div>
+                                <div class="item__circle">
+                                    <h5>2</h5>
+                                </div>
+                                <div class="infirmary_line"></div>
+                                <div class="item__circle">
+                                    <h5>3</h5>
+                                </div>
+                                <div class="infirmary_line"></div>
+                                <div class="item__circle">
+                                    <h5>4</h5>
+                                </div>
+                                <div class="infirmary_line"></div>
+                                <div class="item__circle">
+                                    <h5>5</h5>
+                                </div>
+                                <div class="infirmary_line"></div>
+                                <div class="item__circle">
+                                    <h5>6</h5>
+                                </div>
+                                <div class="infirmary_line"></div>
+                                <div class="item__circle">
+                                    <h5>7</h5>
+                                </div>
+                                <div class="infirmary_line"></div>
+                                <div class="item__circle">
+                                    <h5>8</h5>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="right_part_map">
+                            <div class="text_container">
+                                <h5>Изучаем все, что необходимо для работы</h5>
+                            </div>
+                            <div class="text_container">
+                                <h5>Технике рисования в стиле песочной анимации</h5>
+                            </div>
+                            <div class="text_container">
+                                <h5>Научитесь техники перехода от кадра к кадру</h5>
+                            </div>
+                            <div class="text_container">
+                                <h5>Определим направление, в котором вы будете работать</h5>
+                            </div>
+                            <div class="text_container">
+                                <h5>Научим вас создавать бизнес предоставляя песочное шоу</h5>
+                            </div>
+                            <div class="text_container">
+                                <h5>Выполните свой первый реальный проект</h5>
+                            </div>
+                            <div class="text_container">
+                                <h5>Создадите под руководством куратора свое портфолио</h5>
+                            </div>
+                            <div class="text_container">
+                                <h5>Узнаете про особенности песочного шоу</h5>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!---->
             </div>
 
             <div class="mentors">   <!--   "Ваши наставники"   -->
@@ -272,7 +377,7 @@
                     </div>
                 </div>
                 <div class="mentors__dies">
-                    <div class="container flex">
+                    <div class="container">
                         <div class="die_with_mentor">
                             <div class="mentor__image">
                                 <img src="./static/pictures/images mentors/Anna.png" alt="Фотография куратора">
@@ -316,7 +421,7 @@
             </div>
 
             <div class="advantages__course">    <!--   "Программа обучения - это не только уроки"   -->
-                <div class="container flex">
+                <div class="container">
                     <div class="advantages_course_left">
                         <div class="advantages_course_title">
                             <h2>программа обучения - это не только уроки</h2>
@@ -360,6 +465,7 @@
                 </div>
             </div>
 
+            <!--   Для десктопов   -->
             <div class="further__path">     <!--   "А что дальше, больше знаний и возможностей"   -->
                 <div class="right_side_callout">
                     <div class="upper__text">
@@ -431,6 +537,76 @@
                     </div>
                 </div>
             </div>
+            <!---->
+
+            <!--   Для мобильных экранов   -->
+            <div class="further_path__mobile">     <!--   "А что дальше, больше знаний и возможностей"   -->
+                <div class="right_side_callout">
+                    <div class="upper__text">
+                        <div class="text_wrapper">
+                            <h1>а что дальше</h1>
+                        </div>
+                    </div>
+                    <div class="bottom__text">
+                        <div class="text__wrapper">
+                            <h1><span>больше знаний и возможностей</span></h1>
+                        </div>
+                    </div>
+                </div>
+                <div class="map_further_path">
+                    <div class="container flex">
+                        <div class="left_part__futher_path">
+                            <div class="item__circle">
+                                <h5>0</h5>
+                            </div>
+                            <div class="infirmary_line__first"></div>
+                            <div class="item__circle">
+                                <h5>1</h5>
+                            </div>
+                            <div class="infirmary_line__second"></div>
+                            <div class="item__circle">
+                                <h5>2</h5>
+                            </div>
+                            <div class="infirmary_line__third"></div>
+                            <div class="item__circle">
+                                <h5>3</h5>
+                            </div>
+                        </div>
+                        <div class="right_part__futher_path">
+                            <div class="map__item">
+                                <div class="item__title">
+                                    <h4>Вы получите приглашение в закрытый клуб для художников</h4>
+                                </div>
+                            </div>
+                            <div class="map__item">
+                                <div class="item__title">
+                                    <h4>Консультации кураторов</h4>
+                                </div>
+                                <div class="subtitle__paragraph">
+                                    <h5>У вас появиться доступ ко всем кураторам нашей школы</h5>
+                                </div>
+                            </div>
+                            <div class="map__item">
+                                <div class="item__title">
+                                    <h4>Приглашения участвовать в конкурсах</h4>
+                                </div>
+                                <div class="subtitle__paragraph">
+                                    <h5>Мы сообщаем о всех интересных конкурсах, чтоб вы могли развиваться</h5>
+                                </div>
+                            </div>
+                            <div class="map__item">
+                                <div class="item__title">
+                                    <h4>Нетворкинг и тусовка</h4>
+                                </div>
+                                <div class="subtitle__paragraph">
+                                    <h5>Вы можете знакомиться с разными художниками и создавать творческие колаборации</h5>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!---->
 
             <div class="training__programs">    <!--   "Программы обучения"   -->
                 <div class="upper__inscription">
@@ -444,7 +620,7 @@
                     </div>
                 </div>
                 <div class="program__dies">
-                    <div class="container flex">
+                    <div class="container">
                         <div class="program__die">
                             <div class="substrate_program_die"></div>
                             <div class="program__wrapper">
@@ -512,7 +688,7 @@
                                     <img src="./static/pictures/books/VIP.png" alt="VIP">
                                 </div>
                                 <div class="program__title">
-                                    <h4>VIP профессионал</h5>
+                                    <h4>Профи с гарантией заказа</h5>
                                 </div>
                                 <div class="program__subtitle">
                                     <h5>Для тех, кто планирует превратить хобби в бизнес</h5>
@@ -542,10 +718,16 @@
                         </div>
                     </div>
                 </div>
+
+                <!--   Для десктопов   -->
                 <div class="slider__location">
                     <div class="container">
                         <div class="feedback__slider flex">
                             <div class="feedback_slider__line">
+
+                                <!--   Слайды с отзывами   -->
+                                <!--   При необходимости добавить новый отзыв, скопируйте любой из расположенных ниже и вставьте после последнего, заменив данные в нём   -->
+
                                 <div class="slide_with_review">
                                     <div class="photo_from_review">
                                         <img src="./static/pictures/reviews/Tatyana.png" alt="Фотография человека, оставившего отзыв">
@@ -559,6 +741,7 @@
                                         </div>
                                     </div>
                                 </div>
+
                                 <div class="slide_with_review">
                                     <div class="photo_from_review">
                                         <img src="./static/pictures/reviews/Kristina.png" alt="Фотография человека, оставившего отзыв">
@@ -572,6 +755,7 @@
                                         </div>
                                     </div>
                                 </div>
+
                                 <div class="slide_with_review">
                                     <div class="photo_from_review">
                                         <img src="./static/pictures/reviews/Tatyana.png" alt="Фотография человека, оставившего отзыв">
@@ -585,6 +769,7 @@
                                         </div>
                                     </div>
                                 </div>
+
                                 <div class="slide_with_review">
                                     <div class="photo_from_review">
                                         <img src="./static/pictures/reviews/Kristina.png" alt="Фотография человека, оставившего отзыв">
@@ -598,6 +783,9 @@
                                         </div>
                                     </div>
                                 </div>
+
+                                <!---->
+
                             </div>
                         </div>
                         <div class="slider__buttons">
@@ -614,6 +802,100 @@
                         </div>
                     </div>
                 </div>
+                <!---->
+
+                <!--   Для мобильных экранов   -->
+                <div class="slider__location__mobile">
+                    <div class="container">
+                        <div class="feedback__slider flex">
+                            <div class="feedback_slider__line">
+
+                                <!--   Слайды с отзывами   -->
+                                <!--   При необходимости добавить новый отзыв, скопируйте любой из расположенных ниже и вставьте после последнего, заменив данные в нём   -->
+
+                                <div class="slide_with_review">
+                                    <div class="top__slide_review">
+                                        <div class="photo_from_review">
+                                            <img src="./static/pictures/reviews/Tatyana.png" alt="Фотография человека, оставившего отзыв">
+                                        </div>
+                                        <div class="reviewer__name">
+                                            <h4>Татьяна</h4>
+                                        </div>
+                                    </div>
+                                    <div class="bottom__slide_review">
+                                        <div class="review__text">
+                                            <h5>Я пошла на обучение, чтобы преподавать деткам песочную анимацию. Но я не понимала как выстроить процесс обучения. Благодаря курсу, стало понятно как преподавать, как учить. Я покупала минимальный пакет, потому что уже определилась с направлением, мне курс реально помог.</h5>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="slide_with_review">
+                                    <div class="top__slide_review">
+                                        <div class="photo_from_review">
+                                            <img src="./static/pictures/reviews/Kristina.png" alt="Фотография человека, оставившего отзыв">
+                                        </div>
+                                        <div class="reviewer__name">
+                                            <h4>Кристина</h4>
+                                        </div>
+                                    </div>
+                                    <div class="bottom__slide_review">
+                                        <div class="review__text">
+                                            <h5>Раньше я работала веб-дизайнером, и в принципе я знаю чего хочу, но пошла попробовать новые горизонты. Теперь сотрудничаю со студией и создаю картины, которые Анна и ее команда продает. Мне нравиться, я рисую что душа пожелает и целая команда думает куда это можно продать, а я получаю свою часть денег за работу. Успехов нам всем)!</h5>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="slide_with_review">
+                                    <div class="top__slide_review">
+                                        <div class="photo_from_review">
+                                            <img src="./static/pictures/reviews/Kristina.png" alt="Фотография человека, оставившего отзыв">
+                                        </div>
+                                        <div class="reviewer__name">
+                                            <h4>Кристина</h4>
+                                        </div>
+                                    </div>
+                                    <div class="bottom__slide_review">
+                                        <div class="review__text">
+                                            <h5>Раньше я работала веб-дизайнером, и в принципе я знаю чего хочу, но пошла попробовать новые горизонты. Теперь сотрудничаю со студией и создаю картины, которые Анна и ее команда продает. Мне нравиться, я рисую что душа пожелает и целая команда думает куда это можно продать, а я получаю свою часть денег за работу. Успехов нам всем)!</h5>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="slide_with_review">
+                                    <div class="top__slide_review">
+                                        <div class="photo_from_review">
+                                            <img src="./static/pictures/reviews/Kristina.png" alt="Фотография человека, оставившего отзыв">
+                                        </div>
+                                        <div class="reviewer__name">
+                                            <h4>Кристина</h4>
+                                        </div>
+                                    </div>
+                                    <div class="bottom__slide_review">
+                                        <div class="review__text">
+                                            <h5>Раньше я работала веб-дизайнером, и в принципе я знаю чего хочу, но пошла попробовать новые горизонты. Теперь сотрудничаю со студией и создаю картины, которые Анна и ее команда продает. Мне нравиться, я рисую что душа пожелает и целая команда думает куда это можно продать, а я получаю свою часть денег за работу. Успехов нам всем)!</h5>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!---->
+
+                            </div>
+                        </div>
+                        <div class="slider__buttons">
+                            <div class="left_slider_button">
+                                <button>
+                                    <img src="./static/pictures/arrow/left slider button.png" alt="Левая кнопка слайдера">
+                                </button>
+                            </div>
+                            <div class="right_slider_button">
+                                <button>
+                                    <img src="./static/pictures/arrow/right slider button.png" alt="Правая кнопка слайдера">
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>  
+                <!---->
             </div>
 
             <div class="successful__cooperation">   <!--   Слайдер логотипов   -->
@@ -705,11 +987,11 @@
 
         <footer>
 
-            <div class="container flex">
-                <div class="logotip">
+            <div class="container">
+                <div class="footer__logotip">
                     <img src="./static/pictures/logotip/logotip.png" alt="Логотип">
                 </div>
-                <div class="columns__menu flex">
+                <div class="columns__menu">
                     <div class="column">
                         <h4><a href="#" >Договор оферты</a></h4>
                         <h4><a href="#" >Отказ от ответственности</a></h4>

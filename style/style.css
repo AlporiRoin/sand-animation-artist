@@ -14,6 +14,7 @@
 }
 
 .flex-wrap {
+  display: flex;
   flex-wrap: wrap;
   align-content: space-between;
 }
@@ -42,27 +43,32 @@
   }
 
   .header__top {
-    width: 100%;
+    box-sizing: border-box;
+    width: 100vw;
+    height: 16vh;
   }
 
   .logotip {
+    position: relative;
+    height: 100%;
+  }
+  .logotip img {
+    position: absolute;
     width: 133px;
     height: 70px;
-    margin-top: 25px;
-    margin-bottom: 25px;
+    top: 0;
+    bottom: 0;
+    margin: auto 0;
   }
 
   .menu {
     position: relative;
-    min-height: 100%;
-    overflow: auto;
-    margin-top: 25px;
-    margin-bottom: 25px;
-    width: 50%;
+    width: 40vw;
+    height: inherit;
   }
 
   .social_media {
-    width: 40%;
+    width: 12vw;
     height: 100%;
   }
   .social_media ul {
@@ -71,51 +77,65 @@
     list-style-type: none;
   }
   .social_media ul li {
-    width: 20%;
+    position: relative;
+    flex-grow: 1;
     height: 100%;
   }
   .social_media ul li img {
     position: absolute;
     top: 0;
+    left: 0;
+    right: 0;
     bottom: 0;
-    margin: auto 0;
+    margin: auto;
   }
 
   .entrance {
     position: relative;
-    min-height: 100%;
-    overflow: auto;
-    margin-top: 25px;
-    margin-bottom: 25px;
+    height: 100%;
+    display: flex;
   }
   .entrance a {
+    position: relative;
+    display: flex;
+    height: 100%;
     text-decoration: none;
   }
   .entrance a h4 {
     font-size: 20px;
     font-family: "Gilroy - UltraLight";
     font-style: normal;
-    transform: uppercase;
+    text-transform: uppercase;
     color: #FFFFFF;
+    text-align: center;
+    margin: auto;
+  }
+  .entrance a h4:hover {
     border-bottom: 1px solid white;
   }
 
   .contacts {
     position: relative;
-    min-height: 100%;
-    overflow: auto;
-    margin-top: 25px;
-    margin-bottom: 25px;
+    height: 100%;
+    display: flex;
   }
   .contacts a {
+    position: relative;
+    display: flex;
+    height: 100%;
     text-decoration: none;
   }
   .contacts a h4 {
     font-size: 20px;
     font-family: "Gilroy - UltraLight";
     font-style: normal;
-    transform: uppercase;
+    text-transform: uppercase;
     color: #FFFFFF;
+    text-align: center;
+    margin: auto;
+  }
+  .contacts a h4:hover {
+    border-bottom: 1px solid white;
   }
 
   .header__bottom {
@@ -124,16 +144,16 @@
   .header__bottom .header__title {
     position: relative;
     width: 70%;
-    margin-top: 96px;
+    margin-top: 11%;
   }
   .header__bottom .header__title h1 {
-    font-size: 64px;
+    font-size: 4.4vw;
     font-family: "Gilroy - SemiBold";
     font-style: normal;
     color: #FFFFFF;
   }
   .header__bottom .header__title h1 span {
-    font-size: 22px;
+    font-size: 1.6vw;
     font-family: "Gilroy - UltraLight";
     font-style: normal;
     color: #FFFFFF;
@@ -142,7 +162,8 @@
   .header__bottom .header__subtitle {
     position: relative;
     width: 100%;
-    margin-top: 12px;
+    margin-top: 1.5%;
+    margin-bottom: 2%;
   }
   .header__bottom .header__subtitle h4 {
     font-size: 24px;
@@ -153,18 +174,18 @@
   .header__bottom .learn_more_button {
     position: relative;
     width: 100%;
-    margin-top: 50px;
+    margin-top: 5%;
   }
   .header__bottom .learn_more_button button {
-    width: 283px;
-    height: 67px;
+    width: 20vw;
+    height: 10vh;
     cursor: pointer;
     border: none;
     border-radius: 8px;
     background: #CB9C68;
   }
   .header__bottom .learn_more_button button h4 {
-    font-size: 25px;
+    font-size: 2vw;
     font-family: "Gilroy - UltraLight";
     font-style: normal;
     color: #FFFFFF;
@@ -196,18 +217,17 @@
 
   .upper__text {
     position: relative;
-    width: 600px;
-    left: 20%;
+    display: inline-block;
     text-transform: uppercase;
   }
   .upper__text h1 {
-    font-size: 64px;
+    font-size: 4vw;
     font-family: "Gilroy - SemiBold";
     font-style: normal;
     color: #FFFFFF;
   }
   .upper__text h1 span {
-    font-size: 64px;
+    font-size: 4vw;
     font-family: "Gilroy - SemiBold";
     font-style: normal;
     color: #CB9C68;
@@ -215,31 +235,36 @@
 
   .bottom__text {
     position: relative;
-    width: 750px;
-    left: 35%;
+    display: inline-block;
     text-transform: uppercase;
   }
   .bottom__text h1 {
-    font-size: 64px;
+    font-size: 4vw;
     font-family: "Gilroy - SemiBold";
     font-style: normal;
     color: #FFFFFF;
   }
   .bottom__text h1 span {
-    font-size: 64px;
+    font-size: 4vw;
     font-family: "Gilroy - SemiBold";
     font-style: normal;
     color: #CB9C68;
   }
 
-  .student_level_dies {
+  .student__level {
     width: 100%;
   }
-  .student_level_dies .die {
+  .student__level .student_level_dies {
+    width: 100%;
+  }
+  .student__level .student_level_dies .container {
+    flex-wrap: wrap;
+  }
+  .student__level .student_level_dies .container .die {
     position: relative;
     box-sizing: border-box;
-    flex-basis: 570px;
-    flex-shrink: 1;
+    flex-basis: calc(2/4*100% - (1 - 2/4)*40px);
+    flex-grow: 0;
     background: #362B27;
     border-radius: 16px;
     padding-top: 15px;
@@ -249,7 +274,7 @@
     margin-top: 20px;
     margin-bottom: 20px;
   }
-  .student_level_dies .die h5 {
+  .student__level .student_level_dies .container .die h5 {
     min-width: 482px;
     font-size: 20px;
     font-family: "Gilroy - Regular";
@@ -266,6 +291,10 @@
     background: #8F6F4E;
     padding-top: 32px;
     padding-bottom: 32px;
+  }
+  .course__overview .container {
+    display: flex;
+    justify-content: space-between;
   }
   .course__overview .course_overview_left {
     width: 50%;
@@ -341,16 +370,13 @@
   .advantages .right_side_callout {
     position: absolute;
     top: 110px;
-    left: 34%;
+    left: 50%;
     right: 0px;
-    height: 165px;
-    background: linear-gradient(94.4deg, rgba(44, 35, 31, 0.68) 4.85%, rgba(203, 156, 104, 0.68) 95.02%);
+    height: 10vw;
+    background: linear-gradient(-94.4deg, rgba(44, 35, 31, 0.68) 4.85%, rgba(203, 156, 104, 0.68) 95.02%);
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
     backdrop-filter: blur(28px);
     border-radius: 14px 0px 0px 14px;
-  }
-  .advantages .right_side_callout .bottom__text {
-    width: 500px;
   }
   .advantages .advantages__dies {
     position: relative;
@@ -359,8 +385,7 @@
   .advantages .advantages__dies .die__advantages {
     position: relative;
     box-sizing: border-box;
-    flex-basis: 330px;
-    flex-shrink: 1;
+    flex-basis: calc(1/3*100% - (1 - 1/3)*40px);
     border: 1px solid #FFFFFF;
     border-radius: 6px;
     padding-top: 20px;
@@ -551,6 +576,10 @@
   .mentors .mentors__dies {
     width: 100%;
   }
+  .mentors .mentors__dies .container {
+    display: flex;
+    justify-content: space-between;
+  }
   .mentors .mentors__dies .die_with_mentor {
     box-sizing: border-box;
     flex-basis: calc(1/3*100% - (1 - 1/3)*40px);
@@ -623,6 +652,10 @@
     background: rgba(203, 156, 104, 0.68);
     padding-top: 68px;
     padding-bottom: 30px;
+  }
+  .advantages__course .container {
+    display: flex;
+    justify-content: space-between;
   }
   .advantages__course .advantages_course_left {
     width: 50%;
@@ -844,6 +877,10 @@
     width: 100%;
     padding-top: 50px;
     padding-bottom: 110px;
+  }
+  .training__programs .program__dies .container {
+    display: flex;
+    justify-content: space-between;
   }
   .training__programs .program__dies .program__die {
     position: relative;
@@ -1209,52 +1246,32 @@
     align-content: space-between;
   }
   .our__projects .project__images .container .project__image {
+    flex-basis: 20vw;
+    flex-grow: 1;
+    margin: 15px 15px 15px 15px;
     border: 1px solid transparent;
   }
-  .our__projects .project__images .container .project__image:nth-child(1) {
-    margin-top: 0px;
-    margin-left: 0px;
-    margin-right: auto;
-    margin-bottom: 15px;
-  }
-  .our__projects .project__images .container .project__image:nth-child(2) {
-    margin-top: 0px;
-    margin-left: auto;
-    margin-right: auto;
-    margin-bottom: 15px;
-  }
-  .our__projects .project__images .container .project__image:nth-child(3) {
-    margin-top: 0px;
-    margin-left: auto;
-    margin-right: 0px;
-    margin-bottom: 15px;
-  }
-  .our__projects .project__images .container .project__image:nth-child(4) {
-    margin-top: 15px;
-    margin-left: 0px;
-    margin-right: auto;
-    margin-bottom: 0px;
-  }
-  .our__projects .project__images .container .project__image:nth-child(5) {
-    margin-top: 15px;
-    margin-left: auto;
-    margin-right: auto;
-    margin-bottom: 0px;
-  }
-  .our__projects .project__images .container .project__image:nth-child(6) {
-    margin-top: 15px;
-    margin-left: auto;
-    margin-right: 0px;
-    margin-bottom: 0px;
+  .our__projects .project__images .container .project__image img {
+    width: 100%;
+    height: 100%;
   }
 
   footer {
     width: 100%;
     background: #362B27;
   }
-  footer .logotip {
-    flex-basis: 10%;
+  footer .footer__logotip {
+    position: relative;
+    flex-basis: 9vw;
     flex-grow: 0;
+    outline: 1px solid red;
+  }
+  footer .footer__logotip img {
+    position: absolute;
+    width: 100%;
+    top: 0;
+    bottom: 0;
+    margin: auto 0;
   }
   footer .columns__menu {
     box-sizing: border-box;
@@ -1264,10 +1281,12 @@
     padding-top: 30px;
     padding-bottom: 30px;
     justify-content: center;
+    outline: 1px solid red;
   }
   footer .columns__menu .column {
     margin-left: 70px;
     margin-right: 70px;
+    outline: 1px solid red;
   }
   footer .columns__menu .column h4 {
     font-size: 18px;
@@ -1290,6 +1309,5493 @@
   }
   footer .columns__menu .column:last-child {
     margin-left: 0px;
+  }
+}
+@media screen and (min-width: 1000px) and (max-width: 1439px) {
+  .container {
+    height: 100%;
+    margin-left: 10%;
+    margin-right: 10%;
+  }
+
+  header {
+    width: 100%;
+    background: url("../static/pictures/background/header.png");
+    background-size: cover;
+    background-position: 50% 50%;
+    background-repeat: no-repeat;
+  }
+
+  .darkening__background {
+    box-sizing: border-box;
+    width: 100%;
+    height: 100%;
+    padding-bottom: 196px;
+    background: linear-gradient(90deg, rgba(16, 15, 23, 0.7) 50.81%, rgba(16, 15, 23, 0.265374) 123.69%, rgba(16, 15, 23, 0) 137.81%);
+  }
+
+  .header__top {
+    box-sizing: border-box;
+    width: 100vw;
+    height: 16vh;
+  }
+
+  .logotip {
+    position: relative;
+    height: 100%;
+  }
+  .logotip img {
+    position: absolute;
+    width: 10vw;
+    top: 0;
+    bottom: 0;
+    margin: auto 0;
+  }
+
+  .menu {
+    position: relative;
+    width: 30vw;
+    height: inherit;
+  }
+
+  .entrance {
+    position: relative;
+    height: 100%;
+    display: flex;
+    flex-grow: 1;
+  }
+  .entrance a {
+    position: relative;
+    display: flex;
+    height: 100%;
+    text-decoration: none;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .entrance a h4 {
+    height: 26px;
+    font-size: 1.5vw;
+    font-family: "Gilroy - Light";
+    font-weight: lighter;
+    font-style: normal;
+    text-transform: uppercase;
+    color: #FFFFFF;
+    text-align: center;
+    margin: auto;
+  }
+  .entrance a h4:hover {
+    border-bottom: 1px solid white;
+  }
+
+  .contacts {
+    position: relative;
+    height: 100%;
+    display: flex;
+    flex-grow: 1;
+  }
+  .contacts a {
+    position: relative;
+    display: flex;
+    height: 100%;
+    text-decoration: none;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .contacts a h4 {
+    height: 26px;
+    font-size: 1.5vw;
+    font-family: "Gilroy - Light";
+    font-weight: lighter;
+    font-style: normal;
+    text-transform: uppercase;
+    color: #FFFFFF;
+    text-align: center;
+    margin: auto;
+  }
+  .contacts a h4:hover {
+    border-bottom: 1px solid white;
+  }
+
+  .header__bottom {
+    width: 100%;
+  }
+  .header__bottom .header__title {
+    position: relative;
+    width: 80%;
+    margin-top: 10%;
+  }
+  .header__bottom .header__title h1 {
+    font-size: 4.8vw;
+    font-family: "Gilroy - SemiBold";
+    font-style: normal;
+    color: #FFFFFF;
+  }
+  .header__bottom .header__title h1 span {
+    font-size: 1.6vw;
+    font-family: "Gilroy - UltraLight";
+    font-style: normal;
+    color: #FFFFFF;
+    margin-right: 20px;
+  }
+  .header__bottom .header__subtitle {
+    position: relative;
+    width: 100%;
+    margin-top: 2%;
+  }
+  .header__bottom .header__subtitle h4 {
+    font-size: 1.8vw;
+    font-family: "Gilroy - Medium";
+    font-weight: lighter;
+    font-style: normal;
+    color: #CB9C68;
+  }
+  .header__bottom .learn_more_button {
+    position: relative;
+    width: 100%;
+    margin-top: 5%;
+  }
+  .header__bottom .learn_more_button button {
+    width: 22vw;
+    height: 7vh;
+    cursor: pointer;
+    border: none;
+    border-radius: 5px;
+    background: #CB9C68;
+  }
+  .header__bottom .learn_more_button button h4 {
+    font-size: 2vw;
+    font-family: "Gilroy - UltraLight";
+    font-weight: lighter;
+    font-style: normal;
+    color: #FFFFFF;
+    letter-spacing: 0.02em;
+  }
+
+  section {
+    width: 100%;
+    background: #100F17;
+  }
+  section .student__level {
+    position: relative;
+    width: 100%;
+    box-sizing: border-box;
+    padding-top: 320px;
+    padding-bottom: 95px;
+  }
+  section .student__level .left_side_callout {
+    box-sizing: border-box;
+    position: absolute;
+    top: 110px;
+    left: 0;
+    right: 50%;
+    background: linear-gradient(-94.4deg, rgba(44, 35, 31, 0.68) 4.85%, rgba(203, 156, 104, 0.68) 95.02%);
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    backdrop-filter: blur(28px);
+    border-radius: 0px 14px 14px 0px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+  }
+
+  .upper__text {
+    position: relative;
+    display: inline-block;
+    height: 50%;
+    left: 20%;
+    text-transform: uppercase;
+  }
+  .upper__text h1 {
+    position: relative;
+    top: 10%;
+    font-size: 5vw;
+    font-family: "Gilroy - SemiBold";
+    font-style: normal;
+    color: #FFFFFF;
+  }
+  .upper__text h1 span {
+    font-size: 5vw;
+    font-family: "Gilroy - SemiBold";
+    font-style: normal;
+    color: #CB9C68;
+  }
+
+  .bottom__text {
+    position: relative;
+    width: 750px;
+    left: 35%;
+    text-transform: uppercase;
+  }
+  .bottom__text h1 {
+    position: relative;
+    top: 10%;
+    font-size: 5vw;
+    font-family: "Gilroy - SemiBold";
+    font-style: normal;
+    color: #FFFFFF;
+  }
+  .bottom__text h1 span {
+    font-size: 5vw;
+    font-family: "Gilroy - SemiBold";
+    font-style: normal;
+    color: #CB9C68;
+  }
+
+  .student__level {
+    width: 100%;
+  }
+  .student__level .student_level_dies {
+    width: 100%;
+  }
+  .student__level .student_level_dies .container {
+    flex-wrap: wrap;
+  }
+  .student__level .student_level_dies .container .die {
+    position: relative;
+    box-sizing: border-box;
+    width: 48%;
+    background: #362B27;
+    border-radius: 16px;
+    padding-top: 15px;
+    padding-left: 28px;
+    padding-right: 52px;
+    padding-bottom: 20px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+  }
+  .student__level .student_level_dies .container .die h5 {
+    width: 100%;
+    font-size: 20px;
+    font-family: "Gilroy - Regular";
+    font-style: normal;
+    color: #FFFFFF;
+    line-height: 140%;
+    letter-spacing: 0.02em;
+  }
+
+  .course__overview {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    background: #8F6F4E;
+    padding-top: 32px;
+    padding-bottom: 32px;
+  }
+  .course__overview .container {
+    display: flex;
+    justify-content: space-between;
+  }
+  .course__overview .course_overview_left {
+    position: relative;
+    width: 50%;
+  }
+  .course__overview .course_overview_left .title {
+    width: 100%;
+  }
+  .course__overview .course_overview_left .title h2 {
+    display: inline;
+    font-size: 3vw;
+    font-family: "Gilroy - SemiBold";
+    font-weight: lighter;
+    font-style: normal;
+    color: #FFFFFF;
+    margin-right: 5px;
+    letter-spacing: 0.02em;
+    text-transform: uppercase;
+  }
+  .course__overview .course_overview_left .title .arrow {
+    position: relative;
+    display: inline;
+    top: -10px;
+  }
+  .course__overview .course_overview_left .title .arrow img {
+    width: 14vw;
+  }
+  .course__overview .course_overview_left .subtitle {
+    position: absolute;
+    display: block;
+    height: 10%;
+    top: 0;
+    bottom: 0;
+    margin: auto 0;
+  }
+  .course__overview .course_overview_left .subtitle h4 {
+    font-size: 2vw;
+    font-family: "Gilroy - Regular";
+    font-weight: lighter;
+    font-style: normal;
+    color: #FFFFFF;
+    letter-spacing: 0.02em;
+    text-transform: uppercase;
+    white-space: nowrap;
+  }
+  .course__overview .course_overview_left .start__button {
+    position: absolute;
+    width: 100%;
+    left: 0;
+    bottom: 16px;
+  }
+  .course__overview .course_overview_left .start__button button {
+    width: 283px;
+    height: 67px;
+    background: #CB9C68;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+  }
+  .course__overview .course_overview_left .start__button button h4 {
+    font-size: 25px;
+    font-family: "Gilroy - Regular";
+    font-weight: lighter;
+    font-style: normal;
+    color: #FFFFFF;
+  }
+  .course__overview .course_overview_right {
+    width: 50%;
+  }
+  .course__overview .course_overview_right img {
+    width: 100%;
+  }
+
+  .advantages {
+    position: relative;
+    box-sizing: border-box;
+    width: 100%;
+    padding-top: 320px;
+    padding-bottom: 110px;
+  }
+  .advantages .right_side_callout {
+    position: absolute;
+    top: 110px;
+    left: 34%;
+    right: 0px;
+    height: 165px;
+    background: linear-gradient(94.4deg, rgba(44, 35, 31, 0.68) 4.85%, rgba(203, 156, 104, 0.68) 95.02%);
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    backdrop-filter: blur(28px);
+    border-radius: 14px 0px 0px 14px;
+  }
+  .advantages .right_side_callout .upper__text {
+    display: inline-block;
+  }
+  .advantages .right_side_callout .upper__text h1 {
+    position: relative;
+  }
+  .advantages .right_side_callout .bottom__text {
+    display: inline-block;
+  }
+  .advantages .right_side_callout .bottom__text h1 {
+    position: relative;
+    display: inline-block;
+  }
+  .advantages .advantages__dies {
+    position: relative;
+    width: 100%;
+  }
+  .advantages .advantages__dies .die__advantages {
+    position: relative;
+    box-sizing: border-box;
+    flex-basis: calc(1/3*100% - (1 - 1/3)*40px);
+    border: 1px solid #FFFFFF;
+    border-radius: 6px;
+    margin-top: 10px;
+    padding-top: 20px;
+    padding-left: 15px;
+    padding-right: 15px;
+    padding-bottom: 20px;
+  }
+  .advantages .advantages__dies .die__advantages .title__advantages {
+    position: relative;
+    width: 100%;
+  }
+  .advantages .advantages__dies .die__advantages .title__advantages h4 {
+    font-size: 20px;
+    font-family: "Gilroy - SemiBold";
+    font-weight: lighter;
+    font-style: normal;
+    color: #FFFFFF;
+    line-height: 24px;
+    letter-spacing: 0.02em;
+  }
+  .advantages .advantages__dies .die__advantages .subtitle__advantages {
+    position: relative;
+    width: 92%;
+    padding-top: 13px;
+  }
+  .advantages .advantages__dies .die__advantages .subtitle__advantages h5 {
+    font-size: 17px;
+    font-family: "Gilroy - Regular";
+    font-weight: lighter;
+    font-style: normal;
+    color: #FFFFFF;
+    line-height: 20px;
+    letter-spacing: 0.02em;
+  }
+
+  .buyer__acquisition {
+    position: relative;
+    width: 100%;
+  }
+  .buyer__acquisition .upper__inscription {
+    box-sizing: border-box;
+    width: 100%;
+    background: linear-gradient(93.26deg, rgba(44, 35, 31, 0.68) 3.49%, rgba(203, 156, 104, 0.68) 50.41%, rgba(54, 43, 36, 0.68) 97.32%);
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    backdrop-filter: blur(28px);
+    padding-bottom: 20px;
+  }
+  .buyer__acquisition .upper__inscription .upper__text {
+    margin-bottom: 20px;
+  }
+  .buyer__acquisition .upper__inscription .bottom__text {
+    margin-top: 20px;
+  }
+  .buyer__acquisition .upper__inscription .bottom__text h1 {
+    left: 28%;
+  }
+  .buyer__acquisition .knowledge__map {
+    width: 100%;
+    box-sizing: border-box;
+    padding-top: 45px;
+    padding-bottom: 45px;
+  }
+  .buyer__acquisition .knowledge__map .top_text_items {
+    display: flex;
+    width: 100%;
+  }
+  .buyer__acquisition .knowledge__map .top_text_items .top_text_container {
+    position: relative;
+    width: 25%;
+  }
+  .buyer__acquisition .knowledge__map .top_text_items .top_text_container h5 {
+    width: 86%;
+    font-size: 18px;
+    font-family: "Gilroy - SemiBold";
+    font-weight: lighter;
+    font-style: normal;
+    color: #FFFFFF;
+  }
+  .buyer__acquisition .knowledge__map .item__designations {
+    height: 100%;
+    display: flex;
+    position: relative;
+    width: 100%;
+    margin-top: 10px;
+    margin-bottom: 10px;
+  }
+  .buyer__acquisition .knowledge__map .item__designations .map__row {
+    flex-basis: calc(75% + 32px);
+    flex-grow: 0;
+    height: inherit;
+  }
+  .buyer__acquisition .knowledge__map .item__designations .map__row .top_row_designation {
+    height: 50%;
+  }
+  .buyer__acquisition .knowledge__map .item__designations .map__row .top_row_designation .item__circle {
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    background: #CB9C68;
+  }
+  .buyer__acquisition .knowledge__map .item__designations .map__row .top_row_designation .item__circle h5 {
+    position: relative;
+    font-size: 24px;
+    font-family: "Gilroy - SemiBold";
+    font-weight: lighter;
+    font-style: normal;
+    color: #FFFFFF;
+    text-align: center;
+    line-height: 1.3;
+  }
+  .buyer__acquisition .knowledge__map .item__designations .map__row .top_row_designation .upper_infirmary_line {
+    flex-grow: 1;
+    height: 2px;
+    margin-top: 15px;
+    background: #CB9C68;
+  }
+  .buyer__acquisition .knowledge__map .item__designations .map__row .designation_bottom_row {
+    height: 50%;
+    margin-top: 100px;
+  }
+  .buyer__acquisition .knowledge__map .item__designations .map__row .designation_bottom_row .item__circle {
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    background: #CB9C68;
+  }
+  .buyer__acquisition .knowledge__map .item__designations .map__row .designation_bottom_row .item__circle h5 {
+    position: relative;
+    font-size: 24px;
+    font-family: "Gilroy - SemiBold";
+    font-weight: lighter;
+    font-style: normal;
+    color: #FFFFFF;
+    text-align: center;
+    line-height: 1.3;
+  }
+  .buyer__acquisition .knowledge__map .item__designations .map__row .designation_bottom_row .lower_infirmary_line {
+    flex-grow: 1;
+    height: 2px;
+    margin-top: 15px;
+    background: #CB9C68;
+  }
+  .buyer__acquisition .knowledge__map .item__designations .map_rotation_designation {
+    flex-basis: calc(25% - 32px);
+    flex-grow: 0;
+  }
+  .buyer__acquisition .knowledge__map .item__designations .map_rotation_designation .upper_infirmary_line {
+    flex-grow: 1;
+    height: 2px;
+    margin-top: 15px;
+    background: #CB9C68;
+  }
+  .buyer__acquisition .knowledge__map .item__designations .map_rotation_designation .vertical_line_map {
+    width: 2px;
+    height: calc(100% - 34px);
+    margin-left: auto;
+    margin-right: 0px;
+    background: #CB9C68;
+  }
+  .buyer__acquisition .knowledge__map .item__designations .map_rotation_designation .lower_infirmary_line {
+    flex-grow: 1;
+    height: 2px;
+    background: #CB9C68;
+  }
+  .buyer__acquisition .knowledge__map .bottom_text_items {
+    display: flex;
+    width: 100%;
+  }
+  .buyer__acquisition .knowledge__map .bottom_text_items .bottom_text_container {
+    position: relative;
+    width: 25%;
+  }
+  .buyer__acquisition .knowledge__map .bottom_text_items .bottom_text_container h5 {
+    width: 86%;
+    font-size: 18px;
+    font-family: "Gilroy - SemiBold";
+    font-weight: lighter;
+    font-style: normal;
+    color: #FFFFFF;
+  }
+
+  .mentors {
+    position: relative;
+    width: 100%;
+    padding-top: 320px;
+    padding-bottom: 200px;
+  }
+  .mentors .left_side_callout {
+    position: absolute;
+    top: 110px;
+    left: 0;
+    right: 50%;
+    height: 165px;
+    background: linear-gradient(-94.4deg, rgba(44, 35, 31, 0.68) 4.85%, rgba(203, 156, 104, 0.68) 95.02%);
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    backdrop-filter: blur(28px);
+    border-radius: 0px 14px 14px 0px;
+  }
+  .mentors .mentors__dies {
+    width: 100%;
+  }
+  .mentors .mentors__dies .container {
+    display: flex;
+    justify-content: space-between;
+  }
+  .mentors .mentors__dies .die_with_mentor {
+    box-sizing: border-box;
+    flex-basis: calc(1/3*100% - (1 - 1/3)*40px);
+    flex-grow: 0;
+    border-radius: 10px;
+    background: #362B27;
+    padding-top: 30px;
+    padding-bottom: 30px;
+  }
+  .mentors .mentors__dies .die_with_mentor .mentor__image {
+    width: 100%;
+  }
+  .mentors .mentors__dies .die_with_mentor .mentor__image img {
+    position: relative;
+    display: block;
+    width: 20vw;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .mentors .mentors__dies .die_with_mentor .name__mentor {
+    width: 100%;
+    text-align: center;
+    margin-top: 20px;
+    margin-bottom: 10px;
+  }
+  .mentors .mentors__dies .die_with_mentor .name__mentor h4 {
+    font-size: 22px;
+    font-family: "Gilroy - Bold";
+    font-weight: lighter;
+    font-style: normal;
+    color: #FFFFFF;
+  }
+  .mentors .mentors__dies .die_with_mentor .mentor__description {
+    width: 100%;
+    text-align: center;
+  }
+  .mentors .mentors__dies .die_with_mentor .mentor__description h5 {
+    position: relative;
+    width: 90%;
+    font-size: 1.5vw;
+    font-family: "Gilroy - Regular";
+    font-weight: lighter;
+    font-style: normal;
+    color: #FFFFFF;
+    line-height: 21px;
+    letter-spacing: 0.02em;
+    margin: 0 auto 0 auto;
+  }
+  .mentors .mentor__question_button {
+    width: 100%;
+    margin-top: 30px;
+  }
+  .mentors .mentor__question_button button {
+    position: relative;
+    display: block;
+    width: 380px;
+    height: 70px;
+    margin-left: auto;
+    margin-right: auto;
+    border: 1px solid #CB9C68;
+    border-radius: 8px;
+    background: rgba(0, 0, 0, 0);
+  }
+  .mentors .mentor__question_button button h4 {
+    font-size: 22px;
+    font-family: "Gilroy - Regular";
+    font-weight: lighter;
+    font-style: normal;
+    color: #FFFFFF;
+  }
+
+  .advantages__course {
+    width: 100%;
+    background: rgba(203, 156, 104, 0.68);
+    padding-top: 68px;
+    padding-bottom: 30px;
+  }
+  .advantages__course .container {
+    display: flex;
+    justify-content: space-between;
+  }
+  .advantages__course .advantages_course_left {
+    width: 50%;
+  }
+  .advantages__course .advantages_course_left .advantages_course_title {
+    width: 100%;
+    margin-bottom: 20px;
+  }
+  .advantages__course .advantages_course_left .advantages_course_title h2 {
+    width: 90%;
+    font-size: 40px;
+    font-family: "Gilroy - Medium";
+    font-weight: lighter;
+    font-style: normal;
+    color: #FFFFFF;
+    text-transform: uppercase;
+  }
+  .advantages__course .advantages_course_left .advantages_course_subtitle {
+    width: 100%;
+  }
+  .advantages__course .advantages_course_left .advantages_course_subtitle h5 {
+    width: 99%;
+    font-size: 20px;
+    font-family: "Gilroy - Regular";
+    font-weight: lighter;
+    font-style: normal;
+    color: #FFFFFF;
+    line-height: 140%;
+    letter-spacing: 0.02em;
+  }
+  .advantages__course .advantages_course_right {
+    width: 50%;
+  }
+  .advantages__course .advantages_course_right .advantage__columns {
+    box-sizing: border-box;
+    width: 90%;
+    align-items: flex-end;
+    margin-left: auto;
+    margin-right: 0px;
+    padding-top: 20px;
+    outline: 1px solid red;
+  }
+  .advantages__course .advantages_course_right .advantage__columns .column {
+    flex-basis: calc(1/3*100% - (1 - 1/3)*6vw);
+    flex-grow: 0;
+  }
+  .advantages__course .advantages_course_right .advantage__columns .column .column__header {
+    text-align: center;
+  }
+  .advantages__course .advantages_course_right .advantage__columns .column .column__header h4 {
+    width: 100%;
+    font-size: 25px;
+    font-family: "Gilroy - Medium";
+    font-weight: lighter;
+    font-style: normal;
+    color: #FFFFFF;
+  }
+  .advantages__course .advantages_course_right .signature_advantage_columns {
+    position: relative;
+    width: 90%;
+    text-align: center;
+    margin-left: auto;
+    margin-right: 0px;
+  }
+  .advantages__course .advantages_course_right .signature_advantage_columns h3 {
+    font-size: 2.5vw;
+    font-family: "Gilroy - Regular";
+    font-weight: lighter;
+    font-style: normal;
+    line-height: 43px;
+    color: #FFFFFF;
+    margin-top: 10px;
+    text-transform: uppercase;
+  }
+
+  .further__path {
+    position: relative;
+    box-sizing: border-box;
+    width: 100%;
+    padding-top: 320px;
+    padding-bottom: 110px;
+  }
+  .further__path .right_side_callout {
+    position: absolute;
+    top: 110px;
+    left: 34%;
+    right: 0px;
+    height: 165px;
+    background: linear-gradient(94.4deg, rgba(44, 35, 31, 0.68) 4.85%, rgba(203, 156, 104, 0.68) 95.02%);
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    backdrop-filter: blur(28px);
+    border-radius: 14px 0px 0px 14px;
+  }
+  .further__path .right_side_callout .upper__text {
+    left: 5%;
+  }
+  .further__path .right_side_callout .bottom__text {
+    left: 10%;
+  }
+  .further__path .right_side_callout .bottom__text h1 span {
+    font-size: 40px;
+  }
+  .further__path .map_further_path {
+    position: relative;
+    width: 100%;
+  }
+  .further__path .map_further_path .top_map__further_path {
+    position: relative;
+    width: 100%;
+  }
+  .further__path .map_further_path .top_map__further_path .item__circle {
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    background: #FFFFFF;
+  }
+  .further__path .map_further_path .top_map__further_path .item__circle h5 {
+    position: relative;
+    font-size: 24px;
+    font-family: "Gilroy - SemiBold";
+    font-weight: lighter;
+    font-style: normal;
+    color: #000000;
+    text-align: center;
+    line-height: 1.4;
+  }
+  .further__path .map_further_path .top_map__further_path .first_text_map {
+    position: relative;
+    width: 100%;
+    margin-left: 10px;
+    margin-top: 3px;
+  }
+  .further__path .map_further_path .top_map__further_path .first_text_map h5 {
+    font-size: 22px;
+    font-family: "Gilroy - SemiBold";
+    font-weight: lighter;
+    font-style: normal;
+    color: #FFFFFF;
+    line-height: 26px;
+    letter-spacing: 0.02em;
+  }
+  .further__path .map_further_path .bottom_map__further_path {
+    position: relative;
+    width: 100%;
+  }
+  .further__path .map_further_path .bottom_map__further_path .vertical_line {
+    position: relative;
+    width: 2px;
+    height: 68px;
+    background: #CB9C68;
+    margin-left: 14px;
+  }
+  .further__path .map_further_path .bottom_map__further_path .map_item_container {
+    position: relative;
+    width: 100%;
+    flex-wrap: 0;
+  }
+  .further__path .map_further_path .bottom_map__further_path .map_item_container .item__circle {
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    background: #FFFFFF;
+  }
+  .further__path .map_further_path .bottom_map__further_path .map_item_container .item__circle h5 {
+    position: relative;
+    font-size: 24px;
+    font-family: "Gilroy - SemiBold";
+    font-weight: lighter;
+    font-style: normal;
+    color: #000000;
+    text-align: center;
+    line-height: 1.4;
+  }
+  .further__path .map_further_path .bottom_map__further_path .map_item_container .upper_infirmary_line {
+    flex-grow: 1;
+    height: 2px;
+    margin-top: 15px;
+    background: #CB9C68;
+  }
+  .further__path .map_further_path .bottom_map__further_path .map__item {
+    position: relative;
+    width: 33%;
+  }
+  .further__path .map_further_path .bottom_map__further_path .map__item .item__title {
+    position: relative;
+    margin-top: 20px;
+    margin-bottom: 70px;
+  }
+  .further__path .map_further_path .bottom_map__further_path .map__item .item__title h4 {
+    font-size: 22px;
+    font-family: "Gilroy - SemiBold";
+    font-weight: lighter;
+    font-style: normal;
+    color: #FFFFFF;
+  }
+  .further__path .map_further_path .bottom_map__further_path .map__item .subtitle__paragraph {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+  }
+  .further__path .map_further_path .bottom_map__further_path .map__item .subtitle__paragraph h5 {
+    font-size: 18px;
+    font-family: "Gilroy - Regular";
+    font-weight: lighter;
+    font-style: normal;
+    color: #FFFFFF;
+  }
+
+  .training__programs {
+    width: 100%;
+  }
+  .training__programs .upper__inscription {
+    width: 100%;
+    background: linear-gradient(93.26deg, rgba(44, 35, 31, 0.68) 3.49%, rgba(203, 156, 104, 0.68) 50.41%, rgba(54, 43, 36, 0.68) 97.32%);
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    backdrop-filter: blur(28px);
+  }
+  .training__programs .program__dies {
+    box-sizing: border-box;
+    width: 100%;
+    padding-top: 50px;
+    padding-bottom: 110px;
+  }
+  .training__programs .program__dies .container {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+  }
+  .training__programs .program__dies .program__die {
+    position: relative;
+    flex-basis: 260px;
+    flex-shrink: 1;
+    background: #1E2022;
+    z-index: 1;
+    border-radius: 7px;
+    margin: 10vw 0px 0px 0px;
+  }
+  .training__programs .program__dies .program__die .substrate_program_die {
+    position: absolute;
+    width: 90%;
+    height: 100%;
+    margin: auto;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: -1;
+    border-radius: 7px;
+  }
+  .training__programs .program__dies .program__die .program__wrapper {
+    width: 100%;
+    height: 100%;
+    z-index: 2;
+    border-radius: 7px;
+  }
+  .training__programs .program__dies .program__die .program__wrapper .program__image {
+    box-sizing: border-box;
+    width: 100%;
+    padding-top: 15px;
+  }
+  .training__programs .program__dies .program__die .program__wrapper .program__image img {
+    position: relative;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .training__programs .program__dies .program__die .program__wrapper .program__title {
+    width: 100%;
+    margin-top: 20px;
+  }
+  .training__programs .program__dies .program__die .program__wrapper .program__title h4 {
+    position: relative;
+    font-size: 20px;
+    font-family: "Gilroy - SemiBold";
+    font-weight: lighter;
+    font-style: normal;
+    color: #FFFFFF;
+    margin-left: 15px;
+  }
+  .training__programs .program__dies .program__die .program__wrapper .program__subtitle {
+    width: 100%;
+    margin-top: 30px;
+    margin-bottom: 80px;
+  }
+  .training__programs .program__dies .program__die .program__wrapper .program__subtitle h5 {
+    font-size: 18px;
+    font-family: "Gilroy - Regular";
+    font-weight: lighter;
+    font-style: normal;
+    color: #FFFFFF;
+    margin-left: 15px;
+  }
+  .training__programs .program__dies .program__die .program__wrapper .record__button {
+    position: absolute;
+    box-sizing: border-box;
+    width: 100%;
+    left: 0;
+    bottom: 0;
+    margin-top: 40px;
+    margin-bottom: 15px;
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+  .training__programs .program__dies .program__die .program__wrapper .record__button button {
+    position: relative;
+    display: flex;
+    width: 100%;
+    height: 50px;
+    border: none;
+    border-radius: 7px;
+    background: #CB9C68;
+    cursor: pointer;
+  }
+  .training__programs .program__dies .program__die .program__wrapper .record__button button h4 {
+    font-size: 18px;
+    font-family: "Gilroy - SemiBold";
+    font-weight: lighter;
+    font-style: normal;
+    color: #FFFFFF;
+    line-height: 50px;
+    margin-left: 19%;
+    margin-right: 2%;
+  }
+  .training__programs .program__dies .program__die .program__wrapper .record__button button img {
+    display: block;
+    top: 0;
+    bottom: 0;
+    margin: auto 0;
+    width: 23px;
+    height: 7px;
+    margin-left: 2%;
+  }
+  .training__programs .program__dies .program__die:nth-child(1) .substrate_program_die {
+    background: #151617;
+  }
+  .training__programs .program__dies .program__die:nth-child(1) .program__wrapper {
+    background: #1E2022;
+  }
+  .training__programs .program__dies .program__die:nth-child(2) .substrate_program_die {
+    background: #261F1C;
+  }
+  .training__programs .program__dies .program__die:nth-child(2) .program__wrapper {
+    background: #362B27;
+  }
+  .training__programs .program__dies .program__die:nth-child(3) .substrate_program_die {
+    background: #695238;
+  }
+  .training__programs .program__dies .program__die:nth-child(3) .program__wrapper {
+    background: #8F6F4E;
+  }
+  .training__programs .program__dies .program__die:nth-child(4) .substrate_program_die {
+    background: #CDD3DD;
+  }
+  .training__programs .program__dies .program__die:nth-child(4) .program__wrapper {
+    background: #FFFFFF;
+  }
+
+  .student__reviews {
+    box-sizing: border-box;
+    position: relative;
+    width: 100%;
+    padding-top: 350px;
+  }
+  .student__reviews .left_side_callout {
+    position: absolute;
+    top: 110px;
+    left: 0;
+    right: 40%;
+    height: 165px;
+    background: linear-gradient(-94.4deg, rgba(44, 35, 31, 0.68) 4.85%, rgba(203, 156, 104, 0.68) 95.02%);
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    backdrop-filter: blur(28px);
+    border-radius: 0px 14px 14px 0px;
+  }
+  .student__reviews .left_side_callout .upper__text {
+    left: 18%;
+  }
+  .student__reviews .left_side_callout .bottom__text {
+    left: 29%;
+  }
+  .student__reviews .slider__location {
+    width: 100%;
+  }
+  .student__reviews .slider__location .feedback__slider {
+    width: 100%;
+    overflow: hidden;
+  }
+  .student__reviews .slider__location .feedback__slider .feedback_slider__line {
+    position: relative;
+    box-sizing: border-box;
+    display: flex;
+    width: 100%;
+    padding-top: 1px;
+    padding-left: 1px;
+    padding-bottom: 1px;
+  }
+  .student__reviews .slider__location .feedback__slider .feedback_slider__line .slide_with_review {
+    box-sizing: border-box;
+    display: flex;
+    flex-basis: calc(1.9/4*100% - (1 - 1.9/4)*0px);
+    flex-shrink: 0;
+    border-radius: 10px;
+    margin-left: 2.4%;
+    margin-right: 2.4%;
+    padding-top: 10px;
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-bottom: 10px;
+    outline: 1px solid #FFFFFF;
+  }
+  .student__reviews .slider__location .feedback__slider .feedback_slider__line .slide_with_review .feedback__field {
+    box-sizing: border-box;
+    padding-top: 10px;
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-bottom: 10px;
+  }
+  .student__reviews .slider__location .feedback__slider .feedback_slider__line .slide_with_review .feedback__field .reviewer__name {
+    width: 100%;
+  }
+  .student__reviews .slider__location .feedback__slider .feedback_slider__line .slide_with_review .feedback__field .reviewer__name h4 {
+    font-size: 18px;
+    font-family: "Gilroy - SemiBold";
+    font-weight: lighter;
+    font-style: normal;
+    color: #CB9C68;
+  }
+  .student__reviews .slider__location .feedback__slider .feedback_slider__line .slide_with_review .feedback__field .review__text {
+    width: 100%;
+    margin-top: 15px;
+  }
+  .student__reviews .slider__location .feedback__slider .feedback_slider__line .slide_with_review .feedback__field .review__text h5 {
+    font-size: 16px;
+    font-family: "Gilroy - Regular";
+    font-weight: lighter;
+    font-style: normal;
+    color: #FFFFFF;
+  }
+  .student__reviews .slider__location .feedback__slider .feedback_slider__line .slide_with_review:first-child {
+    margin-left: 0;
+  }
+  .student__reviews .slider__location .feedback__slider .feedback_slider__line .slide_with_review:last-child {
+    margin-right: 0;
+  }
+  .student__reviews .slider__location .slider__buttons {
+    box-sizing: border-box;
+    display: flex;
+    width: 100%;
+    justify-content: flex-end;
+    padding-top: 20px;
+  }
+  .student__reviews .slider__location .slider__buttons .left_slider_button {
+    position: relative;
+    margin-right: 10px;
+  }
+  .student__reviews .slider__location .slider__buttons .left_slider_button button {
+    width: 33px;
+    height: 33px;
+    border: none;
+    border-radius: 50%;
+    cursor: pointer;
+    background: rgba(0, 0, 0, 0);
+    outline: 1px solid #FFFFFF;
+  }
+  .student__reviews .slider__location .slider__buttons .right_slider_button {
+    position: relative;
+    margin-left: 10px;
+  }
+  .student__reviews .slider__location .slider__buttons .right_slider_button button {
+    width: 33px;
+    height: 33px;
+    border: none;
+    border-radius: 50%;
+    cursor: pointer;
+    background: rgba(0, 0, 0, 0);
+    outline: 1px solid #FFFFFF;
+  }
+
+  .successful__cooperation {
+    position: relative;
+    display: flex;
+    width: 100%;
+    margin-top: 110px;
+  }
+  .successful__cooperation .indoor__unit {
+    flex-basis: 48%;
+    flex-grow: 0;
+    box-sizing: border-box;
+    margin-top: 8px;
+    margin-left: 6%;
+    margin-bottom: 8px;
+    padding-top: 20px;
+    padding-left: 12px;
+    padding-right: 20px;
+    padding-bottom: 0px;
+    border-radius: 7px 0 0 7px;
+    outline: 2px solid #2A2222;
+  }
+  .successful__cooperation .indoor__unit .indoor_unit_header {
+    width: 100%;
+  }
+  .successful__cooperation .indoor__unit .indoor_unit_header h3 {
+    font-size: 5vw;
+    font-family: "Gilroy - SemiBOld";
+    font-weight: lighter;
+    font-style: normal;
+    color: #FFFFFF;
+    text-transform: uppercase;
+  }
+  .successful__cooperation .indoor__unit .indoor_unit_header h3 span {
+    color: #CB9C68;
+  }
+  .successful__cooperation .indoor__unit .slider_toggle_buttons {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    margin-top: 15px;
+    margin-bottom: 15px;
+  }
+  .successful__cooperation .indoor__unit .slider_toggle_buttons .left_logo_slider_button {
+    margin-right: 10px;
+  }
+  .successful__cooperation .indoor__unit .slider_toggle_buttons .left_logo_slider_button button {
+    width: 52px;
+    height: 52px;
+    cursor: pointer;
+    border: none;
+    border-radius: 50%;
+    background: rgba(0, 0, 0, 0);
+    outline: 1px solid #FFFFFF;
+  }
+  .successful__cooperation .indoor__unit .slider_toggle_buttons .right_logo_slider_button {
+    margin-left: 10px;
+  }
+  .successful__cooperation .indoor__unit .slider_toggle_buttons .right_logo_slider_button button {
+    width: 52px;
+    height: 52px;
+    cursor: pointer;
+    border: none;
+    border-radius: 50%;
+    background: rgba(0, 0, 0, 0);
+    outline: 1px solid #FFFFFF;
+  }
+  .successful__cooperation .logo__slider {
+    flex-basis: 52%;
+    flex-grow: 0;
+    overflow: hidden;
+  }
+  .successful__cooperation .logo__slider .logo_slider__line {
+    width: 100%;
+    height: 100%;
+    border-radius: 7px 0 0 7px;
+    background: #2A2222;
+  }
+  .successful__cooperation .logo__slider .logo_slider__line .slide_with_logo {
+    box-sizing: border-box;
+    padding-top: 20px;
+    padding-left: 20px;
+    padding-bottom: 20px;
+  }
+  .successful__cooperation .logo__slider .logo_slider__line .slide_with_logo img {
+    max-width: 328px;
+    min-width: 15vw;
+    min-height: 32vh;
+    max-height: 249px;
+    height: 120px;
+  }
+
+  .our__projects {
+    box-sizing: border-box;
+    position: relative;
+    width: 100%;
+    padding-top: 320px;
+    padding-bottom: 90px;
+  }
+  .our__projects .right_side_callout {
+    position: absolute;
+    top: 110px;
+    left: 34%;
+    right: 0px;
+    height: 165px;
+    background: linear-gradient(94.4deg, rgba(44, 35, 31, 0.68) 4.85%, rgba(203, 156, 104, 0.68) 95.02%);
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    backdrop-filter: blur(28px);
+    border-radius: 14px 0px 0px 14px;
+  }
+  .our__projects .right_side_callout .upper__text {
+    width: 600px;
+    left: 5%;
+  }
+  .our__projects .right_side_callout .bottom__text {
+    width: 500px;
+    left: 42%;
+  }
+  .our__projects .project__images {
+    width: 100%;
+  }
+  .our__projects .project__images .container {
+    display: flex;
+    flex-wrap: wrap;
+    align-content: space-between;
+  }
+  .our__projects .project__images .container .project__image {
+    flex-basis: 20vw;
+    flex-grow: 1;
+    margin: 15px 15px 15px 15px;
+    border: 1px solid transparent;
+  }
+  .our__projects .project__images .container .project__image img {
+    width: 100%;
+    height: 100%;
+  }
+
+  footer {
+    width: 100%;
+    background: #362B27;
+  }
+  footer .footer__logotip {
+    position: relative;
+    flex-basis: 9vw;
+    flex-grow: 0;
+    outline: 1px solid red;
+  }
+  footer .footer__logotip img {
+    position: absolute;
+    width: 100%;
+    top: 0;
+    bottom: 0;
+    margin: auto 0;
+  }
+  footer .columns__menu {
+    box-sizing: border-box;
+    display: flex;
+    flex-basis: 90%;
+    flex-grow: 0;
+    padding-top: 30px;
+    padding-bottom: 30px;
+    justify-content: center;
+    outline: 1px solid red;
+  }
+  footer .columns__menu .column {
+    margin-left: 70px;
+    margin-right: 70px;
+    outline: 1px solid red;
+  }
+  footer .columns__menu .column h4 {
+    font-size: 1.5vw;
+    font-family: "Gilroy - SemiBold";
+    font-weight: lighter;
+    font-style: normal;
+  }
+  footer .columns__menu .column h4 a {
+    color: #FFFFFF;
+    text-decoration: none;
+  }
+  footer .columns__menu .column h4:first-child {
+    margin-bottom: 10px;
+  }
+  footer .columns__menu .column h4:last-child {
+    margin-top: 10px;
+  }
+  footer .columns__menu .column:first-child {
+    margin-right: 0px;
+  }
+  footer .columns__menu .column:last-child {
+    margin-left: 0px;
+  }
+}
+@media screen and (min-width: 760px) and (max-width: 999px) {
+  .container {
+    height: 100%;
+    margin-left: 10%;
+    margin-right: 10%;
+  }
+
+  header {
+    width: 100%;
+    background: url("../static/pictures/background/header.png");
+    background-size: cover;
+    background-position: 50% 50%;
+    background-repeat: no-repeat;
+  }
+
+  .darkening__background {
+    box-sizing: border-box;
+    width: 100%;
+    height: 100%;
+    padding-bottom: 196px;
+    background: linear-gradient(90deg, rgba(16, 15, 23, 0.7) 47.81%, rgba(16, 15, 23, 0.265374) 103.69%, rgba(16, 15, 23, 0) 137.81%);
+  }
+
+  .darkening__background {
+    box-sizing: border-box;
+    width: 100%;
+    height: 100%;
+    padding-bottom: 196px;
+    background: linear-gradient(90deg, rgba(16, 15, 23, 0.7) 60.81%, rgba(16, 15, 23, 0.265374) 123.69%, rgba(16, 15, 23, 0) 137.81%);
+  }
+
+  .header__top {
+    box-sizing: border-box;
+    width: 100vw;
+    height: 16vh;
+  }
+
+  .logotip {
+    position: relative;
+    height: 100%;
+  }
+  .logotip img {
+    position: absolute;
+    width: 10vw;
+    height: 7vh;
+    top: 0;
+    bottom: 0;
+    margin: auto 0;
+  }
+
+  .menu {
+    position: relative;
+    width: 20vw;
+    height: inherit;
+  }
+
+  .entrance {
+    position: relative;
+    height: 100%;
+    flex-grow: 1;
+  }
+  .entrance a {
+    position: relative;
+    height: 60%;
+    text-decoration: none;
+    text-align: center;
+  }
+  .entrance a h4 {
+    position: relative;
+    width: 81%;
+    height: 20px;
+    font-size: 2vw;
+    font-family: "Gilroy - Light";
+    font-weight: lighter;
+    font-style: normal;
+    text-transform: uppercase;
+    color: #FFFFFF;
+    margin: auto;
+    top: 40%;
+  }
+  .entrance a h4:hover {
+    border-bottom: 1px solid white;
+  }
+
+  .header__bottom {
+    width: 100%;
+  }
+  .header__bottom .header__title {
+    position: relative;
+    width: 85%;
+    margin-top: 10%;
+  }
+  .header__bottom .header__title h1 {
+    font-size: 5.2vw;
+    font-family: "Gilroy - SemiBold";
+    font-style: normal;
+    color: #FFFFFF;
+  }
+  .header__bottom .header__title h1 span {
+    font-size: 2.2vw;
+    font-family: "Gilroy - UltraLight";
+    font-weight: lighter;
+    font-style: normal;
+    color: #FFFFFF;
+    margin-right: 20px;
+  }
+  .header__bottom .header__subtitle {
+    position: relative;
+    width: 100%;
+    margin-top: 2%;
+  }
+  .header__bottom .header__subtitle h4 {
+    font-size: 2vw;
+    font-family: "Gilroy - Medium";
+    font-weight: lighter;
+    font-style: normal;
+    color: #CB9C68;
+  }
+  .header__bottom .learn_more_button {
+    position: relative;
+    width: 100%;
+    margin-top: 5%;
+  }
+  .header__bottom .learn_more_button button {
+    width: 28vw;
+    height: 7vh;
+    cursor: pointer;
+    border: none;
+    border-radius: 5px;
+    background: #CB9C68;
+  }
+  .header__bottom .learn_more_button button h4 {
+    font-size: 2.4vw;
+    font-family: "Gilroy - Light";
+    font-weight: lighter;
+    font-style: normal;
+    color: #FFFFFF;
+    letter-spacing: 0.02em;
+  }
+
+  section {
+    width: 100%;
+    background: #100F17;
+  }
+  section .student__level {
+    position: relative;
+    width: 100%;
+    box-sizing: border-box;
+    padding-top: 320px;
+    padding-bottom: 95px;
+  }
+  section .student__level .left_side_callout {
+    box-sizing: border-box;
+    position: absolute;
+    top: 110px;
+    left: 0;
+    right: 50%;
+    background: linear-gradient(-94.4deg, rgba(44, 35, 31, 0.68) 4.85%, rgba(203, 156, 104, 0.68) 95.02%);
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    backdrop-filter: blur(28px);
+    border-radius: 0px 14px 14px 0px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+  }
+
+  .upper__text {
+    position: relative;
+    display: inline-block;
+    height: 50%;
+    left: 20%;
+    text-transform: uppercase;
+  }
+  .upper__text h1 {
+    position: relative;
+    top: 10%;
+    font-size: 5vw;
+    font-family: "Gilroy - SemiBold";
+    font-style: normal;
+    color: #FFFFFF;
+  }
+  .upper__text h1 span {
+    font-size: 5vw;
+    font-family: "Gilroy - SemiBold";
+    font-style: normal;
+    color: #CB9C68;
+  }
+
+  .bottom__text {
+    position: relative;
+    width: 750px;
+    left: 35%;
+    text-transform: uppercase;
+  }
+  .bottom__text h1 {
+    position: relative;
+    top: 10%;
+    font-size: 5vw;
+    font-family: "Gilroy - SemiBold";
+    font-style: normal;
+    color: #FFFFFF;
+  }
+  .bottom__text h1 span {
+    font-size: 5vw;
+    font-family: "Gilroy - SemiBold";
+    font-style: normal;
+    color: #CB9C68;
+  }
+
+  .student__level {
+    width: 100%;
+  }
+  .student__level .student_level_dies {
+    width: 100%;
+  }
+  .student__level .student_level_dies .container {
+    flex-wrap: wrap;
+  }
+  .student__level .student_level_dies .container .die {
+    position: relative;
+    box-sizing: border-box;
+    width: 48%;
+    background: #362B27;
+    border-radius: 16px;
+    padding-top: 15px;
+    padding-left: 28px;
+    padding-right: 52px;
+    padding-bottom: 20px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+  }
+  .student__level .student_level_dies .container .die h5 {
+    width: 100%;
+    font-size: 20px;
+    font-family: "Gilroy - Regular";
+    font-style: normal;
+    color: #FFFFFF;
+    line-height: 140%;
+    letter-spacing: 0.02em;
+  }
+
+  .course__overview {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    background: #8F6F4E;
+    padding-top: 32px;
+    padding-bottom: 32px;
+  }
+  .course__overview .container {
+    display: flex;
+    justify-content: space-between;
+  }
+  .course__overview .course_overview_left {
+    position: relative;
+    width: 50%;
+  }
+  .course__overview .course_overview_left .title {
+    width: 100%;
+  }
+  .course__overview .course_overview_left .title h2 {
+    display: inline;
+    font-size: 3vw;
+    font-family: "Gilroy - SemiBold";
+    font-weight: lighter;
+    font-style: normal;
+    color: #FFFFFF;
+    margin-right: 5px;
+    letter-spacing: 0.02em;
+    text-transform: uppercase;
+  }
+  .course__overview .course_overview_left .title .arrow {
+    position: relative;
+    display: inline;
+    top: -10px;
+  }
+  .course__overview .course_overview_left .title .arrow img {
+    width: 14vw;
+  }
+  .course__overview .course_overview_left .subtitle {
+    position: absolute;
+    display: block;
+    height: 10%;
+    top: 0;
+    bottom: 0;
+    margin: auto 0;
+  }
+  .course__overview .course_overview_left .subtitle h4 {
+    font-size: 2vw;
+    font-family: "Gilroy - Regular";
+    font-weight: lighter;
+    font-style: normal;
+    color: #FFFFFF;
+    letter-spacing: 0.02em;
+    text-transform: uppercase;
+    white-space: nowrap;
+  }
+  .course__overview .course_overview_left .start__button {
+    position: absolute;
+    width: 100%;
+    left: 0;
+    bottom: 16px;
+  }
+  .course__overview .course_overview_left .start__button button {
+    width: 283px;
+    height: 67px;
+    background: #CB9C68;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+  }
+  .course__overview .course_overview_left .start__button button h4 {
+    font-size: 25px;
+    font-family: "Gilroy - Regular";
+    font-weight: lighter;
+    font-style: normal;
+    color: #FFFFFF;
+  }
+  .course__overview .course_overview_right {
+    width: 50%;
+  }
+  .course__overview .course_overview_right img {
+    width: 100%;
+  }
+
+  .course_overview__mobile {
+    box-sizing: border-box;
+    position: relative;
+    width: 100%;
+    height: 100%;
+    background: #8F6F4E;
+    padding-top: 32px;
+    padding-bottom: 32px;
+  }
+  .course_overview__mobile .course_overview_top {
+    position: relative;
+    width: 100%;
+    display: flex;
+  }
+  .course_overview__mobile .course_overview_top .left__subpart {
+    position: relative;
+    width: 70%;
+  }
+  .course_overview__mobile .course_overview_top .left__subpart .title {
+    width: 100%;
+  }
+  .course_overview__mobile .course_overview_top .left__subpart .title h2 {
+    font-size: 4vw;
+    font-family: "Gilroy - SemiBold";
+    font-weight: lighter;
+    font-style: normal;
+    color: #FFFFFF;
+    margin-right: 5px;
+    letter-spacing: 0.02em;
+    text-transform: uppercase;
+  }
+  .course_overview__mobile .course_overview_top .left__subpart .subtitle {
+    position: relative;
+    width: 80%;
+    margin-top: 5vw;
+    margin-bottom: 5vw;
+  }
+  .course_overview__mobile .course_overview_top .left__subpart .subtitle h4 {
+    font-size: 22px;
+    font-family: "Gilroy - Regular";
+    font-weight: lighter;
+    font-style: normal;
+    color: #FFFFFF;
+    letter-spacing: 0.02em;
+    text-transform: uppercase;
+  }
+  .course_overview__mobile .course_overview_top .right__subpart {
+    position: relative;
+    height: inherit;
+  }
+  .course_overview__mobile .course_overview_top .right__subpart img {
+    position: absolute;
+    transform: rotate(90deg);
+    top: 46%;
+  }
+  .course_overview__mobile .course_overview_bottom {
+    width: 100%;
+  }
+  .course_overview__mobile .course_overview_bottom .course_overview__bottom_img {
+    width: 100%;
+    height: 50vh;
+    background: url(../static/pictures/cover.png);
+    background-position: 50% 50%;
+    background-size: 100%;
+    background-repeat: no-repeat;
+  }
+  .course_overview__mobile .course_overview_bottom .start__button {
+    position: relative;
+    width: 100%;
+  }
+  .course_overview__mobile .course_overview_bottom .start__button button {
+    width: 100%;
+    height: 67px;
+    background: #CB9C68;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    margin-top: 20px;
+  }
+  .course_overview__mobile .course_overview_bottom .start__button button h4 {
+    font-size: 25px;
+    font-family: "Gilroy - Regular";
+    font-weight: lighter;
+    font-style: normal;
+    color: #FFFFFF;
+  }
+
+  .advantages {
+    position: relative;
+    box-sizing: border-box;
+    width: 100%;
+    padding-top: 320px;
+    padding-bottom: 110px;
+  }
+  .advantages .right_side_callout {
+    position: absolute;
+    top: 110px;
+    left: 50%;
+    right: 0%;
+    height: 165px;
+    background: linear-gradient(-94.4deg, rgba(44, 35, 31, 0.68) 4.85%, rgba(203, 156, 104, 0.68) 95.02%);
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    backdrop-filter: blur(28px);
+    border-radius: 14px 0px 0px 14px;
+  }
+  .advantages .advantages__dies {
+    position: relative;
+    width: 100%;
+  }
+  .advantages .advantages__dies .die__advantages {
+    position: relative;
+    box-sizing: border-box;
+    flex-basis: 100%;
+    border: 1px solid #FFFFFF;
+    border-radius: 6px;
+    margin-top: 10px;
+    padding-top: 20px;
+    padding-left: 15px;
+    padding-right: 15px;
+    padding-bottom: 20px;
+  }
+  .advantages .advantages__dies .die__advantages .title__advantages {
+    position: relative;
+    width: 100%;
+  }
+  .advantages .advantages__dies .die__advantages .title__advantages h4 {
+    font-size: 20px;
+    font-family: "Gilroy - SemiBold";
+    font-weight: lighter;
+    font-style: normal;
+    color: #FFFFFF;
+    line-height: 24px;
+    letter-spacing: 0.02em;
+  }
+  .advantages .advantages__dies .die__advantages .subtitle__advantages {
+    position: relative;
+    width: 92%;
+    padding-top: 13px;
+  }
+  .advantages .advantages__dies .die__advantages .subtitle__advantages h5 {
+    font-size: 17px;
+    font-family: "Gilroy - Regular";
+    font-weight: lighter;
+    font-style: normal;
+    color: #FFFFFF;
+    line-height: 20px;
+    letter-spacing: 0.02em;
+  }
+
+  .buyer__acquisition {
+    position: relative;
+    width: 100%;
+  }
+  .buyer__acquisition .upper__inscription {
+    box-sizing: border-box;
+    width: 100%;
+    background: linear-gradient(93.26deg, rgba(44, 35, 31, 0.68) 3.49%, rgba(203, 156, 104, 0.68) 50.41%, rgba(54, 43, 36, 0.68) 97.32%);
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    backdrop-filter: blur(28px);
+    padding-bottom: 20px;
+  }
+  .buyer__acquisition .upper__inscription .upper__text {
+    margin-bottom: 20px;
+  }
+  .buyer__acquisition .upper__inscription .bottom__text {
+    margin-top: 20px;
+  }
+  .buyer__acquisition .upper__inscription .bottom__text h1 {
+    left: 28%;
+  }
+  .buyer__acquisition .knowledge_map__mobile {
+    width: 100%;
+    box-sizing: border-box;
+    padding-top: 45px;
+    padding-bottom: 45px;
+  }
+  .buyer__acquisition .knowledge_map__mobile .left_part_map {
+    flex-basis: 10%;
+    flex-grow: 0;
+  }
+  .buyer__acquisition .knowledge_map__mobile .left_part_map .map__row {
+    width: 100%;
+  }
+  .buyer__acquisition .knowledge_map__mobile .left_part_map .map__row .item__circle {
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    background: #CB9C68;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .buyer__acquisition .knowledge_map__mobile .left_part_map .map__row .item__circle h5 {
+    position: relative;
+    font-size: 24px;
+    font-family: "Gilroy - SemiBold";
+    font-weight: lighter;
+    font-style: normal;
+    color: #FFFFFF;
+    text-align: center;
+    line-height: 1.3;
+  }
+  .buyer__acquisition .knowledge_map__mobile .left_part_map .map__row .infirmary_line {
+    width: 2px;
+    height: 40px;
+    margin-left: auto;
+    margin-right: auto;
+    background: #CB9C68;
+  }
+  .buyer__acquisition .knowledge_map__mobile .right_part_map {
+    flex-basis: 90%;
+    flex-grow: 1;
+  }
+  .buyer__acquisition .knowledge_map__mobile .right_part_map .text_container {
+    width: 90%;
+    margin-top: 8%;
+  }
+  .buyer__acquisition .knowledge_map__mobile .right_part_map .text_container h5 {
+    width: 86%;
+    font-size: 16px;
+    font-family: "Gilroy - SemiBold";
+    font-weight: lighter;
+    font-style: normal;
+    color: #FFFFFF;
+  }
+  .buyer__acquisition .knowledge_map__mobile .right_part_map .text_container:first-child {
+    margin-top: 0;
+  }
+
+  .mentors {
+    position: relative;
+    width: 100%;
+    padding-top: 320px;
+    padding-bottom: 200px;
+  }
+  .mentors .left_side_callout {
+    position: absolute;
+    top: 110px;
+    left: 0;
+    right: 50%;
+    height: 165px;
+    background: linear-gradient(-94.4deg, rgba(44, 35, 31, 0.68) 4.85%, rgba(203, 156, 104, 0.68) 95.02%);
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    backdrop-filter: blur(28px);
+    border-radius: 0px 14px 14px 0px;
+  }
+  .mentors .mentors__dies {
+    width: 100%;
+  }
+  .mentors .mentors__dies .container {
+    display: flex;
+    justify-content: space-between;
+  }
+  .mentors .mentors__dies .die_with_mentor {
+    box-sizing: border-box;
+    flex-basis: calc(1/3*100% - (1 - 1/3)*40px);
+    flex-grow: 0;
+    border-radius: 10px;
+    background: #362B27;
+    padding-top: 30px;
+    padding-bottom: 30px;
+  }
+  .mentors .mentors__dies .die_with_mentor .mentor__image {
+    width: 100%;
+  }
+  .mentors .mentors__dies .die_with_mentor .mentor__image img {
+    position: relative;
+    display: block;
+    width: 20vw;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .mentors .mentors__dies .die_with_mentor .name__mentor {
+    width: 100%;
+    text-align: center;
+    margin-top: 20px;
+    margin-bottom: 10px;
+  }
+  .mentors .mentors__dies .die_with_mentor .name__mentor h4 {
+    font-size: 22px;
+    font-family: "Gilroy - Bold";
+    font-weight: lighter;
+    font-style: normal;
+    color: #FFFFFF;
+  }
+  .mentors .mentors__dies .die_with_mentor .mentor__description {
+    width: 100%;
+    text-align: center;
+  }
+  .mentors .mentors__dies .die_with_mentor .mentor__description h5 {
+    position: relative;
+    width: 90%;
+    font-size: 1.5vw;
+    font-family: "Gilroy - Regular";
+    font-weight: lighter;
+    font-style: normal;
+    color: #FFFFFF;
+    line-height: 21px;
+    letter-spacing: 0.02em;
+    margin: 0 auto 0 auto;
+  }
+  .mentors .mentor__question_button {
+    width: 100%;
+    margin-top: 30px;
+  }
+  .mentors .mentor__question_button button {
+    position: relative;
+    display: block;
+    width: 380px;
+    height: 70px;
+    margin-left: auto;
+    margin-right: auto;
+    border: 1px solid #CB9C68;
+    border-radius: 8px;
+    background: rgba(0, 0, 0, 0);
+  }
+  .mentors .mentor__question_button button h4 {
+    font-size: 22px;
+    font-family: "Gilroy - Regular";
+    font-weight: lighter;
+    font-style: normal;
+    color: #FFFFFF;
+  }
+
+  .advantages__course {
+    width: 100%;
+    background: rgba(203, 156, 104, 0.68);
+    padding-top: 68px;
+    padding-bottom: 30px;
+  }
+  .advantages__course .advantages_course_left {
+    width: 100%;
+  }
+  .advantages__course .advantages_course_left .advantages_course_title {
+    width: 100%;
+    margin-bottom: 20px;
+  }
+  .advantages__course .advantages_course_left .advantages_course_title h2 {
+    width: 100%;
+    font-size: 40px;
+    font-family: "Gilroy - Medium";
+    font-weight: lighter;
+    font-style: normal;
+    color: #FFFFFF;
+    text-transform: uppercase;
+  }
+  .advantages__course .advantages_course_left .advantages_course_subtitle {
+    width: 100%;
+  }
+  .advantages__course .advantages_course_left .advantages_course_subtitle h5 {
+    width: 100%;
+    font-size: 20px;
+    font-family: "Gilroy - Regular";
+    font-weight: lighter;
+    font-style: normal;
+    color: #FFFFFF;
+    line-height: 140%;
+    letter-spacing: 0.02em;
+  }
+  .advantages__course .advantages_course_right {
+    width: 100%;
+  }
+  .advantages__course .advantages_course_right .advantage__columns {
+    box-sizing: border-box;
+    width: 100%;
+    align-items: flex-end;
+    margin-left: auto;
+    margin-right: 0px;
+    padding-top: 20px;
+  }
+  .advantages__course .advantages_course_right .advantage__columns .column {
+    flex-basis: 15%;
+    flex-grow: 0;
+  }
+  .advantages__course .advantages_course_right .advantage__columns .column .column__header {
+    text-align: center;
+    margin-bottom: 10px;
+  }
+  .advantages__course .advantages_course_right .advantage__columns .column .column__header h4 {
+    width: 100%;
+    font-size: 25px;
+    font-family: "Gilroy - Medium";
+    font-weight: lighter;
+    font-style: normal;
+    color: #FFFFFF;
+    line-height: 100%;
+  }
+  .advantages__course .advantages_course_right .signature_advantage_columns {
+    position: relative;
+    width: 100%;
+    text-align: center;
+    margin-left: auto;
+    margin-right: 0px;
+  }
+  .advantages__course .advantages_course_right .signature_advantage_columns h3 {
+    font-size: 37px;
+    font-family: "Gilroy - UltraLight";
+    font-weight: lighter;
+    font-style: normal;
+    line-height: 43px;
+    color: #FFFFFF;
+    margin-top: 10px;
+    text-transform: uppercase;
+  }
+
+  .further__path {
+    position: relative;
+    box-sizing: border-box;
+    width: 100%;
+    padding-top: 320px;
+    padding-bottom: 110px;
+  }
+  .further__path .right_side_callout {
+    position: absolute;
+    top: 110px;
+    left: 34%;
+    right: 0px;
+    height: 165px;
+    background: linear-gradient(94.4deg, rgba(44, 35, 31, 0.68) 4.85%, rgba(203, 156, 104, 0.68) 95.02%);
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    backdrop-filter: blur(28px);
+    border-radius: 14px 0px 0px 14px;
+  }
+  .further__path .right_side_callout .upper__text {
+    left: 5%;
+  }
+  .further__path .right_side_callout .bottom__text {
+    left: 10%;
+  }
+  .further__path .right_side_callout .bottom__text h1 span {
+    font-size: 40px;
+  }
+  .further__path .map_further_path {
+    position: relative;
+    width: 100%;
+  }
+  .further__path .map_further_path .top_map__further_path {
+    position: relative;
+    width: 100%;
+  }
+  .further__path .map_further_path .top_map__further_path .item__circle {
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    background: #FFFFFF;
+  }
+  .further__path .map_further_path .top_map__further_path .item__circle h5 {
+    position: relative;
+    font-size: 24px;
+    font-family: "Gilroy - SemiBold";
+    font-weight: lighter;
+    font-style: normal;
+    color: #000000;
+    text-align: center;
+    line-height: 1.4;
+  }
+  .further__path .map_further_path .top_map__further_path .first_text_map {
+    position: relative;
+    width: 100%;
+    margin-left: 10px;
+    margin-top: 3px;
+  }
+  .further__path .map_further_path .top_map__further_path .first_text_map h5 {
+    font-size: 22px;
+    font-family: "Gilroy - SemiBold";
+    font-weight: lighter;
+    font-style: normal;
+    color: #FFFFFF;
+    line-height: 26px;
+    letter-spacing: 0.02em;
+  }
+  .further__path .map_further_path .bottom_map__further_path {
+    position: relative;
+    width: 100%;
+  }
+  .further__path .map_further_path .bottom_map__further_path .vertical_line {
+    position: relative;
+    width: 2px;
+    height: 68px;
+    background: #CB9C68;
+    margin-left: 14px;
+  }
+  .further__path .map_further_path .bottom_map__further_path .map_item_container {
+    position: relative;
+    width: 100%;
+    flex-wrap: 0;
+  }
+  .further__path .map_further_path .bottom_map__further_path .map_item_container .item__circle {
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    background: #FFFFFF;
+  }
+  .further__path .map_further_path .bottom_map__further_path .map_item_container .item__circle h5 {
+    position: relative;
+    font-size: 24px;
+    font-family: "Gilroy - SemiBold";
+    font-weight: lighter;
+    font-style: normal;
+    color: #000000;
+    text-align: center;
+    line-height: 1.4;
+  }
+  .further__path .map_further_path .bottom_map__further_path .map_item_container .upper_infirmary_line {
+    flex-grow: 1;
+    height: 2px;
+    margin-top: 15px;
+    background: #CB9C68;
+  }
+  .further__path .map_further_path .bottom_map__further_path .map__item {
+    position: relative;
+    width: 33%;
+  }
+  .further__path .map_further_path .bottom_map__further_path .map__item .item__title {
+    position: relative;
+    margin-top: 20px;
+    margin-bottom: 70px;
+  }
+  .further__path .map_further_path .bottom_map__further_path .map__item .item__title h4 {
+    font-size: 22px;
+    font-family: "Gilroy - SemiBold";
+    font-weight: lighter;
+    font-style: normal;
+    color: #FFFFFF;
+  }
+  .further__path .map_further_path .bottom_map__further_path .map__item .subtitle__paragraph {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+  }
+  .further__path .map_further_path .bottom_map__further_path .map__item .subtitle__paragraph h5 {
+    font-size: 18px;
+    font-family: "Gilroy - Regular";
+    font-weight: lighter;
+    font-style: normal;
+    color: #FFFFFF;
+  }
+
+  .training__programs {
+    width: 100%;
+  }
+  .training__programs .upper__inscription {
+    width: 100%;
+    background: linear-gradient(93.26deg, rgba(44, 35, 31, 0.68) 3.49%, rgba(203, 156, 104, 0.68) 50.41%, rgba(54, 43, 36, 0.68) 97.32%);
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    backdrop-filter: blur(28px);
+  }
+  .training__programs .program__dies {
+    box-sizing: border-box;
+    width: 100%;
+    padding-top: 50px;
+    padding-bottom: 10px;
+  }
+  .training__programs .program__dies .program__die {
+    position: relative;
+    width: 100%;
+    background: #1E2022;
+    z-index: 1;
+    margin: 10% 0 10% 0;
+  }
+  .training__programs .program__dies .program__die .substrate_program_die {
+    position: absolute;
+    width: 90%;
+    height: 100%;
+    margin: auto;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: -1;
+    border-radius: 7px;
+  }
+  .training__programs .program__dies .program__die .program__wrapper {
+    box-sizing: border-box;
+    width: 100%;
+    height: 100%;
+    z-index: 2;
+    border-radius: 7px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+  }
+  .training__programs .program__dies .program__die .program__wrapper .program__image {
+    box-sizing: border-box;
+    width: 100%;
+    padding-top: 15px;
+  }
+  .training__programs .program__dies .program__die .program__wrapper .program__image img {
+    position: relative;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .training__programs .program__dies .program__die .program__wrapper .program__title {
+    width: 100%;
+    margin-top: 20px;
+  }
+  .training__programs .program__dies .program__die .program__wrapper .program__title h4 {
+    position: relative;
+    font-size: 20px;
+    font-family: "Gilroy - SemiBold";
+    font-weight: lighter;
+    font-style: normal;
+    color: #FFFFFF;
+    margin-left: 15px;
+  }
+  .training__programs .program__dies .program__die .program__wrapper .program__title:nth-child(4) h4 {
+    color: #362B27;
+  }
+  .training__programs .program__dies .program__die .program__wrapper .program__subtitle {
+    width: 100%;
+    margin-top: 30px;
+    margin-bottom: 20px;
+  }
+  .training__programs .program__dies .program__die .program__wrapper .program__subtitle h5 {
+    font-size: 18px;
+    font-family: "Gilroy - Regular";
+    font-weight: lighter;
+    font-style: normal;
+    color: #FFFFFF;
+    margin-left: 15px;
+  }
+  .training__programs .program__dies .program__die .program__wrapper .record__button {
+    position: relative;
+    box-sizing: border-box;
+    width: 100%;
+    left: 0;
+    bottom: 0;
+    margin-top: 40px;
+    margin-bottom: 15px;
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+  .training__programs .program__dies .program__die .program__wrapper .record__button button {
+    position: relative;
+    display: flex;
+    width: 100%;
+    height: 50px;
+    border: none;
+    border-radius: 7px;
+    background: #CB9C68;
+    cursor: pointer;
+    justify-content: center;
+  }
+  .training__programs .program__dies .program__die .program__wrapper .record__button button h4 {
+    font-size: 18px;
+    font-family: "Gilroy - SemiBold";
+    font-weight: lighter;
+    font-style: normal;
+    color: #FFFFFF;
+    line-height: 50px;
+    margin-right: 2%;
+  }
+  .training__programs .program__dies .program__die .program__wrapper .record__button button img {
+    display: block;
+    top: 0;
+    bottom: 0;
+    margin: auto 0;
+    width: 23px;
+    height: 7px;
+    margin-left: 2%;
+  }
+  .training__programs .program__dies .program__die:nth-child(1) .substrate_program_die {
+    background: #151617;
+  }
+  .training__programs .program__dies .program__die:nth-child(1) .program__wrapper {
+    background: #1E2022;
+  }
+  .training__programs .program__dies .program__die:nth-child(2) .substrate_program_die {
+    background: #261F1C;
+  }
+  .training__programs .program__dies .program__die:nth-child(2) .program__wrapper {
+    background: #362B27;
+  }
+  .training__programs .program__dies .program__die:nth-child(3) .substrate_program_die {
+    background: #695238;
+  }
+  .training__programs .program__dies .program__die:nth-child(3) .program__wrapper {
+    background: #8F6F4E;
+  }
+  .training__programs .program__dies .program__die:nth-child(4) .substrate_program_die {
+    background: #CDD3DD;
+  }
+  .training__programs .program__dies .program__die:nth-child(4) .program__wrapper {
+    background: #FFFFFF;
+  }
+
+  .student__reviews {
+    box-sizing: border-box;
+    position: relative;
+    width: 100%;
+    padding-top: 350px;
+  }
+  .student__reviews .left_side_callout {
+    position: absolute;
+    top: 110px;
+    left: 0;
+    right: 40%;
+    height: 165px;
+    background: linear-gradient(-94.4deg, rgba(44, 35, 31, 0.68) 4.85%, rgba(203, 156, 104, 0.68) 95.02%);
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    backdrop-filter: blur(28px);
+    border-radius: 0px 14px 14px 0px;
+  }
+  .student__reviews .left_side_callout .upper__text {
+    left: 18%;
+  }
+  .student__reviews .left_side_callout .bottom__text {
+    left: 29%;
+  }
+  .student__reviews .slider__location {
+    width: 100%;
+  }
+  .student__reviews .slider__location .feedback__slider {
+    width: 100%;
+    overflow: hidden;
+  }
+  .student__reviews .slider__location .feedback__slider .feedback_slider__line {
+    position: relative;
+    box-sizing: border-box;
+    display: flex;
+    width: 100%;
+    padding-top: 1px;
+    padding-left: 1px;
+    padding-bottom: 1px;
+  }
+  .student__reviews .slider__location .feedback__slider .feedback_slider__line .slide_with_review {
+    box-sizing: border-box;
+    display: flex;
+    flex-basis: calc(1.9/4*100% - (1 - 1.9/4)*0px);
+    flex-shrink: 0;
+    border-radius: 10px;
+    margin-left: 2.4%;
+    margin-right: 2.4%;
+    padding-top: 10px;
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-bottom: 10px;
+    outline: 1px solid #FFFFFF;
+  }
+  .student__reviews .slider__location .feedback__slider .feedback_slider__line .slide_with_review .feedback__field {
+    box-sizing: border-box;
+    padding-top: 10px;
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-bottom: 10px;
+  }
+  .student__reviews .slider__location .feedback__slider .feedback_slider__line .slide_with_review .feedback__field .reviewer__name {
+    width: 100%;
+  }
+  .student__reviews .slider__location .feedback__slider .feedback_slider__line .slide_with_review .feedback__field .reviewer__name h4 {
+    font-size: 18px;
+    font-family: "Gilroy - SemiBold";
+    font-weight: lighter;
+    font-style: normal;
+    color: #CB9C68;
+  }
+  .student__reviews .slider__location .feedback__slider .feedback_slider__line .slide_with_review .feedback__field .review__text {
+    width: 100%;
+    margin-top: 15px;
+  }
+  .student__reviews .slider__location .feedback__slider .feedback_slider__line .slide_with_review .feedback__field .review__text h5 {
+    font-size: 16px;
+    font-family: "Gilroy - Regular";
+    font-weight: lighter;
+    font-style: normal;
+    color: #FFFFFF;
+  }
+  .student__reviews .slider__location .feedback__slider .feedback_slider__line .slide_with_review:first-child {
+    margin-left: 0;
+  }
+  .student__reviews .slider__location .feedback__slider .feedback_slider__line .slide_with_review:last-child {
+    margin-right: 0;
+  }
+  .student__reviews .slider__location .slider__buttons {
+    box-sizing: border-box;
+    display: flex;
+    width: 100%;
+    justify-content: flex-end;
+    padding-top: 20px;
+  }
+  .student__reviews .slider__location .slider__buttons .left_slider_button {
+    position: relative;
+    margin-right: 10px;
+  }
+  .student__reviews .slider__location .slider__buttons .left_slider_button button {
+    width: 33px;
+    height: 33px;
+    border: none;
+    border-radius: 50%;
+    cursor: pointer;
+    background: rgba(0, 0, 0, 0);
+    outline: 1px solid #FFFFFF;
+  }
+  .student__reviews .slider__location .slider__buttons .right_slider_button {
+    position: relative;
+    margin-left: 10px;
+  }
+  .student__reviews .slider__location .slider__buttons .right_slider_button button {
+    width: 33px;
+    height: 33px;
+    border: none;
+    border-radius: 50%;
+    cursor: pointer;
+    background: rgba(0, 0, 0, 0);
+    outline: 1px solid #FFFFFF;
+  }
+
+  .successful__cooperation {
+    position: relative;
+    display: flex;
+    width: 100%;
+    margin-top: 110px;
+  }
+  .successful__cooperation .indoor__unit {
+    flex-basis: 48%;
+    flex-grow: 0;
+    box-sizing: border-box;
+    margin-top: 8px;
+    margin-left: 6%;
+    margin-bottom: 8px;
+    padding-top: 20px;
+    padding-left: 12px;
+    padding-right: 20px;
+    padding-bottom: 0px;
+    border-radius: 7px 0 0 7px;
+    outline: 2px solid #2A2222;
+  }
+  .successful__cooperation .indoor__unit .indoor_unit_header {
+    width: 100%;
+  }
+  .successful__cooperation .indoor__unit .indoor_unit_header h3 {
+    font-size: 5vw;
+    font-family: "Gilroy - SemiBOld";
+    font-weight: lighter;
+    font-style: normal;
+    color: #FFFFFF;
+    text-transform: uppercase;
+  }
+  .successful__cooperation .indoor__unit .indoor_unit_header h3 span {
+    color: #CB9C68;
+  }
+  .successful__cooperation .indoor__unit .slider_toggle_buttons {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    margin-top: 15px;
+    margin-bottom: 15px;
+  }
+  .successful__cooperation .indoor__unit .slider_toggle_buttons .left_logo_slider_button {
+    margin-right: 10px;
+  }
+  .successful__cooperation .indoor__unit .slider_toggle_buttons .left_logo_slider_button button {
+    width: 33px;
+    height: 33px;
+    cursor: pointer;
+    border: none;
+    border-radius: 50%;
+    background: rgba(0, 0, 0, 0);
+    outline: 1px solid #FFFFFF;
+  }
+  .successful__cooperation .indoor__unit .slider_toggle_buttons .right_logo_slider_button {
+    margin-left: 10px;
+  }
+  .successful__cooperation .indoor__unit .slider_toggle_buttons .right_logo_slider_button button {
+    width: 33px;
+    height: 33px;
+    cursor: pointer;
+    border: none;
+    border-radius: 50%;
+    background: rgba(0, 0, 0, 0);
+    outline: 1px solid #FFFFFF;
+  }
+  .successful__cooperation .logo__slider {
+    flex-basis: 52%;
+    flex-grow: 0;
+    overflow: hidden;
+  }
+  .successful__cooperation .logo__slider .logo_slider__line {
+    width: 100%;
+    height: 100%;
+    border-radius: 7px 0 0 7px;
+    background: #2A2222;
+  }
+  .successful__cooperation .logo__slider .logo_slider__line .slide_with_logo {
+    box-sizing: border-box;
+    padding-top: 20px;
+    padding-left: 20px;
+    padding-bottom: 20px;
+  }
+  .successful__cooperation .logo__slider .logo_slider__line .slide_with_logo img {
+    max-width: 328px;
+    min-width: 25vw;
+    min-height: 25vh;
+    max-height: 249px;
+    height: 120px;
+  }
+
+  .our__projects {
+    box-sizing: border-box;
+    position: relative;
+    width: 100%;
+    padding-top: 320px;
+    padding-bottom: 90px;
+  }
+  .our__projects .right_side_callout {
+    position: absolute;
+    top: 110px;
+    left: 34%;
+    right: 0px;
+    height: 165px;
+    background: linear-gradient(94.4deg, rgba(44, 35, 31, 0.68) 4.85%, rgba(203, 156, 104, 0.68) 95.02%);
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    backdrop-filter: blur(28px);
+    border-radius: 14px 0px 0px 14px;
+  }
+  .our__projects .right_side_callout .upper__text {
+    width: 600px;
+    left: 5%;
+  }
+  .our__projects .right_side_callout .bottom__text {
+    width: 500px;
+    left: 42%;
+  }
+  .our__projects .project__images {
+    width: 100%;
+  }
+  .our__projects .project__images .container {
+    display: flex;
+    flex-wrap: wrap;
+    align-content: space-between;
+  }
+  .our__projects .project__images .container .project__image {
+    min-width: calc( 100%/3 );
+    flex-basis: 20vw;
+    flex-grow: 1;
+    margin: 15px 15px 15px 15px;
+    border: 1px solid transparent;
+  }
+  .our__projects .project__images .container .project__image img {
+    width: 100%;
+    height: 100%;
+  }
+
+  footer {
+    box-sizing: border-box;
+    width: 100%;
+    background: #362B27;
+    padding-top: 5vh;
+    padding-bottom: 5vh;
+  }
+  footer .footer__logotip {
+    position: relative;
+    width: 100%;
+    outline: 1px solid red;
+  }
+  footer .footer__logotip img {
+    position: relative;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  footer .columns__menu {
+    box-sizing: border-box;
+    display: flex;
+    width: 100%;
+    padding-top: 30px;
+    padding-bottom: 30px;
+    justify-content: space-between;
+    outline: 1px solid red;
+  }
+  footer .columns__menu .column {
+    flex-basis: calc(1/3*100% - (1 - 1/3)*40px);
+    outline: 1px solid red;
+  }
+  footer .columns__menu .column h4 {
+    font-size: 15px;
+    font-family: "Gilroy - SemiBold";
+    font-weight: lighter;
+    font-style: normal;
+  }
+  footer .columns__menu .column h4 a {
+    color: #FFFFFF;
+    text-decoration: none;
+  }
+  footer .columns__menu .column h4:first-child {
+    margin-bottom: 10px;
+  }
+  footer .columns__menu .column h4:last-child {
+    margin-top: 10px;
+  }
+  footer .columns__menu .column:first-child {
+    margin-right: 0px;
+  }
+  footer .columns__menu .column:last-child {
+    margin-left: 0px;
+  }
+}
+@media screen and (min-width: 860px) and (max-width: 999px) {
+  .entrance {
+    position: relative;
+    height: 100%;
+    flex-grow: 1;
+  }
+  .entrance a {
+    position: relative;
+    height: 60%;
+    text-decoration: none;
+    text-align: center;
+  }
+  .entrance a h4 {
+    position: relative;
+    width: 81%;
+    height: 24px;
+    font-size: 2vw;
+    font-family: "Gilroy - Light";
+    font-weight: lighter;
+    font-style: normal;
+    text-transform: uppercase;
+    color: #FFFFFF;
+    margin: auto;
+    top: 40%;
+  }
+  .entrance a h4:hover {
+    border-bottom: 1px solid white;
+  }
+
+  .advantages {
+    position: relative;
+    box-sizing: border-box;
+    width: 100%;
+    padding-top: 320px;
+    padding-bottom: 110px;
+  }
+  .advantages .right_side_callout {
+    position: absolute;
+    top: 110px;
+    left: 50%;
+    right: 0%;
+    height: 165px;
+    background: linear-gradient(-94.4deg, rgba(44, 35, 31, 0.68) 4.85%, rgba(203, 156, 104, 0.68) 95.02%);
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    backdrop-filter: blur(28px);
+    border-radius: 14px 0px 0px 14px;
+  }
+  .advantages .advantages__dies {
+    position: relative;
+    width: 100%;
+  }
+  .advantages .advantages__dies .die__advantages {
+    position: relative;
+    box-sizing: border-box;
+    flex-basis: calc(1/3*100% - (1 - 1/3)*40px);
+    border: 1px solid #FFFFFF;
+    border-radius: 6px;
+    margin-top: 10px;
+    padding-top: 20px;
+    padding-left: 15px;
+    padding-right: 15px;
+    padding-bottom: 20px;
+  }
+  .advantages .advantages__dies .die__advantages .title__advantages {
+    position: relative;
+    width: 100%;
+  }
+  .advantages .advantages__dies .die__advantages .title__advantages h4 {
+    font-size: 20px;
+    font-family: "Gilroy - SemiBold";
+    font-weight: lighter;
+    font-style: normal;
+    color: #FFFFFF;
+    line-height: 24px;
+    letter-spacing: 0.02em;
+  }
+  .advantages .advantages__dies .die__advantages .subtitle__advantages {
+    position: relative;
+    width: 92%;
+    padding-top: 13px;
+  }
+  .advantages .advantages__dies .die__advantages .subtitle__advantages h5 {
+    font-size: 17px;
+    font-family: "Gilroy - Regular";
+    font-weight: lighter;
+    font-style: normal;
+    color: #FFFFFF;
+    line-height: 20px;
+    letter-spacing: 0.02em;
+  }
+}
+@media screen and (min-width: 480px) and (max-width: 759px) {
+  .container {
+    height: 100%;
+    margin-left: 5%;
+    margin-right: 5%;
+  }
+
+  header {
+    width: 100%;
+    background: url("../static/pictures/background/header.png");
+    background-size: cover;
+    background-position: 50% 50%;
+    background-repeat: no-repeat;
+  }
+
+  .darkening__background {
+    box-sizing: border-box;
+    width: 100%;
+    height: 100%;
+    padding-bottom: 196px;
+    background: linear-gradient(90deg, rgba(16, 15, 23, 0.7) 60.81%, rgba(16, 15, 23, 0.265374) 180.69%, rgba(16, 15, 23, 0) 50.81%);
+  }
+
+  .header__top {
+    box-sizing: border-box;
+    width: 100vw;
+    height: 16vh;
+  }
+
+  .logotip {
+    position: relative;
+    height: 100%;
+  }
+  .logotip img {
+    position: absolute;
+    width: 19vw;
+    top: 0;
+    bottom: 0;
+    margin: auto 0;
+  }
+
+  .menu {
+    position: relative;
+    width: 40vw;
+    height: inherit;
+  }
+
+  .social_media {
+    width: 12vw;
+    height: 100%;
+  }
+  .social_media ul {
+    width: 100%;
+    height: 100%;
+    list-style-type: none;
+  }
+  .social_media ul li {
+    position: relative;
+    flex-grow: 1;
+    height: 100%;
+  }
+  .social_media ul li img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin: auto;
+  }
+
+  .entrance {
+    position: relative;
+    height: 100%;
+    flex-grow: 1;
+  }
+  .entrance a {
+    position: relative;
+    height: 60%;
+    text-decoration: none;
+    text-align: center;
+  }
+  .entrance a h4 {
+    position: relative;
+    width: 73%;
+    height: 30px;
+    font-size: 3.6vw;
+    font-family: "Gilroy - Light";
+    font-weight: lighter;
+    font-style: normal;
+    text-transform: uppercase;
+    color: #FFFFFF;
+    margin: auto;
+    top: 40%;
+  }
+  .entrance a h4:hover {
+    border-bottom: 1px solid white;
+  }
+
+  .header__bottom {
+    width: 100%;
+  }
+  .header__bottom .header__title {
+    position: relative;
+    width: 100%;
+    margin-top: 20vh;
+  }
+  .header__bottom .header__title h1 {
+    font-size: 10vw;
+    font-family: "Gilroy - SemiBold";
+    font-style: normal;
+    color: #FFFFFF;
+  }
+  .header__bottom .header__title h1 span {
+    font-size: 3.6vw;
+    font-family: "Gilroy - UltraLight";
+    font-weight: lighter;
+    font-style: normal;
+    color: #FFFFFF;
+    margin-right: 20px;
+  }
+  .header__bottom .header__subtitle {
+    position: relative;
+    width: 96%;
+    margin-top: 3vh;
+  }
+  .header__bottom .header__subtitle h4 {
+    font-size: 3vh;
+    font-family: "Gilroy - Medium";
+    font-weight: lighter;
+    font-style: normal;
+    color: #CB9C68;
+  }
+  .header__bottom .learn_more_button {
+    position: relative;
+    width: 100%;
+    margin-top: 9vh;
+  }
+  .header__bottom .learn_more_button button {
+    width: 100%;
+    height: 9vh;
+    cursor: pointer;
+    border: none;
+    border-radius: 5px;
+    background: #CB9C68;
+  }
+  .header__bottom .learn_more_button button h4 {
+    font-size: 5.2vw;
+    font-family: "Gilroy - Regular";
+    font-weight: lighter;
+    font-style: normal;
+    color: #FFFFFF;
+    letter-spacing: 0.02em;
+  }
+
+  section {
+    width: 100%;
+    background: #100F17;
+  }
+  section .student__level {
+    position: relative;
+    width: 100%;
+    box-sizing: border-box;
+    padding-top: 24vw;
+    padding-bottom: 95px;
+  }
+  section .student__level .left_side_callout {
+    box-sizing: border-box;
+    position: absolute;
+    top: 4%;
+    left: 0;
+    right: 40%;
+    background: linear-gradient(-94.4deg, rgba(44, 35, 31, 0.68) 4.85%, rgba(203, 156, 104, 0.68) 95.02%);
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    backdrop-filter: blur(28px);
+    border-radius: 0px 14px 14px 0px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+  }
+
+  .upper__text {
+    position: relative;
+    display: inline-block;
+    height: 50%;
+    left: 20%;
+    text-transform: uppercase;
+  }
+  .upper__text h1 {
+    position: relative;
+    top: 10%;
+    font-size: 5vw;
+    font-family: "Gilroy - SemiBold";
+    font-style: normal;
+    color: #FFFFFF;
+  }
+  .upper__text h1 span {
+    font-size: 5vw;
+    font-family: "Gilroy - SemiBold";
+    font-style: normal;
+    color: #CB9C68;
+  }
+
+  .bottom__text {
+    position: relative;
+    width: 750px;
+    left: 35%;
+    text-transform: uppercase;
+  }
+  .bottom__text h1 {
+    position: relative;
+    top: 10%;
+    font-size: 5vw;
+    font-family: "Gilroy - SemiBold";
+    font-style: normal;
+    color: #FFFFFF;
+  }
+  .bottom__text h1 span {
+    font-size: 5vw;
+    font-family: "Gilroy - SemiBold";
+    font-style: normal;
+    color: #CB9C68;
+  }
+
+  .student_level_dies {
+    width: 100%;
+  }
+  .student_level_dies .die {
+    position: relative;
+    width: 100%;
+    box-sizing: border-box;
+    background: #362B27;
+    border-radius: 16px;
+    padding-top: 15px;
+    padding-left: 28px;
+    padding-right: 52px;
+    padding-bottom: 20px;
+    margin-top: 20px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 20px;
+  }
+  .student_level_dies .die img {
+    margin-bottom: 10px;
+  }
+  .student_level_dies .die h5 {
+    font-size: 20px;
+    font-family: "Gilroy - Regular";
+    font-style: normal;
+    color: #FFFFFF;
+    line-height: 140%;
+  }
+
+  .course_overview__mobile {
+    box-sizing: border-box;
+    position: relative;
+    width: 100%;
+    height: 100%;
+    background: #8F6F4E;
+    padding-top: 32px;
+    padding-bottom: 32px;
+  }
+  .course_overview__mobile .course_overview_top {
+    position: relative;
+    width: 100%;
+    display: flex;
+  }
+  .course_overview__mobile .course_overview_top .left__subpart {
+    position: relative;
+    width: 70%;
+  }
+  .course_overview__mobile .course_overview_top .left__subpart .title {
+    width: 100%;
+  }
+  .course_overview__mobile .course_overview_top .left__subpart .title h2 {
+    font-size: 7vw;
+    font-family: "Gilroy - SemiBold";
+    font-weight: lighter;
+    font-style: normal;
+    color: #FFFFFF;
+    margin-right: 5px;
+    letter-spacing: 0.02em;
+    text-transform: uppercase;
+  }
+  .course_overview__mobile .course_overview_top .left__subpart .subtitle {
+    position: relative;
+    width: 80%;
+    margin-top: 5vw;
+    margin-bottom: 5vw;
+  }
+  .course_overview__mobile .course_overview_top .left__subpart .subtitle h4 {
+    font-size: 4vw;
+    font-family: "Gilroy - Regular";
+    font-weight: lighter;
+    font-style: normal;
+    color: #FFFFFF;
+    letter-spacing: 0.02em;
+    text-transform: uppercase;
+  }
+  .course_overview__mobile .course_overview_top .right__subpart {
+    position: relative;
+    flex-grow: 1;
+    height: inherit;
+  }
+  .course_overview__mobile .course_overview_top .right__subpart img {
+    position: absolute;
+    width: 36vw;
+    height: 10vw;
+    top: 35%;
+    left: -30%;
+    transform: rotate(90deg);
+  }
+  .course_overview__mobile .course_overview_bottom {
+    width: 100%;
+  }
+  .course_overview__mobile .course_overview_bottom .course_overview__bottom_img {
+    width: 100%;
+    height: 50vh;
+    background: url(../static/pictures/cover.png);
+    background-position: 50% 50%;
+    background-size: 100%;
+    background-repeat: no-repeat;
+  }
+  .course_overview__mobile .course_overview_bottom .start__button {
+    position: relative;
+    width: 100%;
+  }
+  .course_overview__mobile .course_overview_bottom .start__button button {
+    width: 100%;
+    height: 67px;
+    background: #CB9C68;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    margin-top: 20px;
+  }
+  .course_overview__mobile .course_overview_bottom .start__button button h4 {
+    font-size: 25px;
+    font-family: "Gilroy - Regular";
+    font-weight: lighter;
+    font-style: normal;
+    color: #FFFFFF;
+  }
+
+  .advantages {
+    position: relative;
+    box-sizing: border-box;
+    width: 100%;
+    padding-top: 200px;
+    padding-bottom: 110px;
+  }
+  .advantages .right_side_callout {
+    position: absolute;
+    top: 80px;
+    left: 34%;
+    right: 0px;
+    height: 12vh;
+    background: linear-gradient(94.4deg, rgba(44, 35, 31, 0.68) 4.85%, rgba(203, 156, 104, 0.68) 95.02%);
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    backdrop-filter: blur(28px);
+    border-radius: 7px 0px 0px 7px;
+  }
+  .advantages .right_side_callout .upper__text h1 {
+    position: relative;
+  }
+  .advantages .right_side_callout .bottom__text {
+    display: inline-block;
+  }
+  .advantages .right_side_callout .bottom__text h1 {
+    position: relative;
+    display: inline-block;
+  }
+  .advantages .advantages__dies {
+    position: relative;
+    width: 100%;
+  }
+  .advantages .advantages__dies .die__advantages {
+    position: relative;
+    box-sizing: border-box;
+    width: 100%;
+    border: 1px solid #FFFFFF;
+    border-radius: 6px;
+    margin-top: 10px;
+    padding-top: 20px;
+    padding-left: 15px;
+    padding-right: 15px;
+    padding-bottom: 20px;
+  }
+  .advantages .advantages__dies .die__advantages .title__advantages {
+    position: relative;
+    width: 100%;
+  }
+  .advantages .advantages__dies .die__advantages .title__advantages h4 {
+    font-size: 20px;
+    font-family: "Gilroy - SemiBold";
+    font-weight: lighter;
+    font-style: normal;
+    color: #FFFFFF;
+    line-height: 24px;
+    letter-spacing: 0.02em;
+  }
+  .advantages .advantages__dies .die__advantages .subtitle__advantages {
+    position: relative;
+    width: 100%;
+    padding-top: 13px;
+  }
+  .advantages .advantages__dies .die__advantages .subtitle__advantages h5 {
+    font-size: 17px;
+    font-family: "Gilroy - Regular";
+    font-weight: lighter;
+    font-style: normal;
+    color: #FFFFFF;
+    line-height: 20px;
+    letter-spacing: 0.02em;
+  }
+
+  .buyer__acquisition {
+    position: relative;
+    width: 100%;
+  }
+  .buyer__acquisition .upper__inscription {
+    box-sizing: border-box;
+    width: 100%;
+    background: linear-gradient(93.26deg, rgba(44, 35, 31, 0.68) 3.49%, rgba(203, 156, 104, 0.68) 50.41%, rgba(54, 43, 36, 0.68) 97.32%);
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    backdrop-filter: blur(28px);
+    padding-bottom: 20px;
+  }
+  .buyer__acquisition .upper__inscription .upper__text {
+    margin-bottom: 20px;
+  }
+  .buyer__acquisition .upper__inscription .bottom__text {
+    margin-top: 20px;
+  }
+  .buyer__acquisition .upper__inscription .bottom__text h1 {
+    left: 28%;
+  }
+  .buyer__acquisition .knowledge_map__mobile {
+    width: 100%;
+    box-sizing: border-box;
+    padding-top: 45px;
+    padding-bottom: 45px;
+  }
+  .buyer__acquisition .knowledge_map__mobile .left_part_map {
+    flex-basis: 10%;
+    flex-grow: 0;
+  }
+  .buyer__acquisition .knowledge_map__mobile .left_part_map .map__row {
+    width: 100%;
+  }
+  .buyer__acquisition .knowledge_map__mobile .left_part_map .map__row .item__circle {
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    background: #CB9C68;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .buyer__acquisition .knowledge_map__mobile .left_part_map .map__row .item__circle h5 {
+    position: relative;
+    font-size: 24px;
+    font-family: "Gilroy - SemiBold";
+    font-weight: lighter;
+    font-style: normal;
+    color: #FFFFFF;
+    text-align: center;
+    line-height: 1.3;
+  }
+  .buyer__acquisition .knowledge_map__mobile .left_part_map .map__row .infirmary_line {
+    width: 2px;
+    height: 40px;
+    margin-left: auto;
+    margin-right: auto;
+    background: #CB9C68;
+  }
+  .buyer__acquisition .knowledge_map__mobile .right_part_map {
+    flex-basis: 90%;
+    flex-grow: 1;
+  }
+  .buyer__acquisition .knowledge_map__mobile .right_part_map .text_container {
+    width: 90%;
+    margin-top: 8%;
+  }
+  .buyer__acquisition .knowledge_map__mobile .right_part_map .text_container h5 {
+    width: 86%;
+    font-size: 16px;
+    font-family: "Gilroy - SemiBold";
+    font-weight: lighter;
+    font-style: normal;
+    color: #FFFFFF;
+  }
+  .buyer__acquisition .knowledge_map__mobile .right_part_map .text_container:first-child {
+    margin-top: 0;
+  }
+
+  .mentors {
+    position: relative;
+    width: 100%;
+    padding-top: 320px;
+    padding-bottom: 10px;
+  }
+  .mentors .left_side_callout {
+    position: absolute;
+    top: 110px;
+    left: 0;
+    right: 50%;
+    height: 165px;
+    background: linear-gradient(-94.4deg, rgba(44, 35, 31, 0.68) 4.85%, rgba(203, 156, 104, 0.68) 95.02%);
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    backdrop-filter: blur(28px);
+    border-radius: 0px 14px 14px 0px;
+  }
+  .mentors .mentors__dies {
+    width: 100%;
+  }
+  .mentors .mentors__dies .die_with_mentor {
+    box-sizing: border-box;
+    width: 100%;
+    border-radius: 10px;
+    background: #362B27;
+    padding-top: 30px;
+    padding-bottom: 30px;
+    margin-bottom: 6%;
+  }
+  .mentors .mentors__dies .die_with_mentor .mentor__image {
+    width: 100%;
+  }
+  .mentors .mentors__dies .die_with_mentor .mentor__image img {
+    position: relative;
+    display: block;
+    width: 50vw;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .mentors .mentors__dies .die_with_mentor .name__mentor {
+    width: 100%;
+    text-align: center;
+    margin-top: 20px;
+    margin-bottom: 10px;
+  }
+  .mentors .mentors__dies .die_with_mentor .name__mentor h4 {
+    font-size: 22px;
+    font-family: "Gilroy - Bold";
+    font-weight: lighter;
+    font-style: normal;
+    color: #FFFFFF;
+  }
+  .mentors .mentors__dies .die_with_mentor .mentor__description {
+    width: 94%;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .mentors .mentors__dies .die_with_mentor .mentor__description h5 {
+    position: relative;
+    width: 95%;
+    font-size: 4vw;
+    font-family: "Gilroy - Regular";
+    font-weight: lighter;
+    font-style: normal;
+    color: #FFFFFF;
+    line-height: 24px;
+    letter-spacing: 0.02em;
+    margin: 0 auto 0 auto;
+  }
+
+  .advantages__course {
+    width: 100%;
+    background: rgba(203, 156, 104, 0.68);
+    padding-top: 38px;
+    padding-bottom: 30px;
+  }
+  .advantages__course .advantages_course_left {
+    width: 100%;
+  }
+  .advantages__course .advantages_course_left .advantages_course_title {
+    width: 100%;
+    margin-bottom: 20px;
+  }
+  .advantages__course .advantages_course_left .advantages_course_title h2 {
+    width: 100%;
+    font-size: 40px;
+    font-family: "Gilroy - Medium";
+    font-weight: lighter;
+    font-style: normal;
+    color: #FFFFFF;
+    text-transform: uppercase;
+  }
+  .advantages__course .advantages_course_left .advantages_course_subtitle {
+    width: 100%;
+  }
+  .advantages__course .advantages_course_left .advantages_course_subtitle h5 {
+    width: 100%;
+    font-size: 20px;
+    font-family: "Gilroy - Regular";
+    font-weight: lighter;
+    font-style: normal;
+    color: #FFFFFF;
+    line-height: 140%;
+    letter-spacing: 0.02em;
+  }
+  .advantages__course .advantages_course_right {
+    width: 100%;
+  }
+  .advantages__course .advantages_course_right .advantage__columns {
+    box-sizing: border-box;
+    width: 100%;
+    align-items: flex-end;
+    margin-left: auto;
+    margin-right: 0px;
+    padding-top: 20px;
+  }
+  .advantages__course .advantages_course_right .advantage__columns .column {
+    flex-basis: 15%;
+    flex-grow: 0;
+  }
+  .advantages__course .advantages_course_right .advantage__columns .column .column__header {
+    text-align: center;
+    margin-bottom: 10px;
+  }
+  .advantages__course .advantages_course_right .advantage__columns .column .column__header h4 {
+    width: 100%;
+    font-size: 25px;
+    font-family: "Gilroy - Medium";
+    font-weight: lighter;
+    font-style: normal;
+    color: #FFFFFF;
+    line-height: 100%;
+  }
+  .advantages__course .advantages_course_right .signature_advantage_columns {
+    position: relative;
+    width: 100%;
+    text-align: center;
+    margin-left: auto;
+    margin-right: 0px;
+  }
+  .advantages__course .advantages_course_right .signature_advantage_columns h3 {
+    font-size: 37px;
+    font-family: "Gilroy - UltraLight";
+    font-weight: lighter;
+    font-style: normal;
+    line-height: 43px;
+    color: #FFFFFF;
+    margin-top: 10px;
+    text-transform: uppercase;
+  }
+
+  .further_path__mobile {
+    position: relative;
+    box-sizing: border-box;
+    width: 100%;
+    padding-top: 320px;
+    padding-bottom: 110px;
+  }
+  .further_path__mobile .right_side_callout {
+    position: absolute;
+    top: 110px;
+    left: 34%;
+    right: 0px;
+    height: 165px;
+    background: linear-gradient(94.4deg, rgba(44, 35, 31, 0.68) 4.85%, rgba(203, 156, 104, 0.68) 95.02%);
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    backdrop-filter: blur(28px);
+    border-radius: 14px 0px 0px 14px;
+  }
+  .further_path__mobile .right_side_callout .upper__text {
+    left: 5%;
+  }
+  .further_path__mobile .right_side_callout .bottom__text {
+    left: 10%;
+  }
+  .further_path__mobile .right_side_callout .bottom__text h1 span {
+    font-size: 40px;
+  }
+  .further_path__mobile .map_further_path {
+    position: relative;
+    width: 100%;
+  }
+  .further_path__mobile .map_further_path .left_part__futher_path {
+    flex-basis: 10%;
+    flex-grow: 0;
+  }
+  .further_path__mobile .map_further_path .left_part__futher_path .item__circle {
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    background: #FFFFFF;
+  }
+  .further_path__mobile .map_further_path .left_part__futher_path .item__circle h5 {
+    position: relative;
+    font-size: 24px;
+    font-family: "Gilroy - SemiBold";
+    font-weight: lighter;
+    font-style: normal;
+    color: #000000;
+    text-align: center;
+    line-height: 1.4;
+  }
+  .further_path__mobile .map_further_path .left_part__futher_path .infirmary_line__first {
+    position: relative;
+    width: 2px;
+    height: 68px;
+    background: #CB9C68;
+    margin-left: 14px;
+  }
+  .further_path__mobile .map_further_path .left_part__futher_path .infirmary_line__second {
+    position: relative;
+    width: 2px;
+    height: 80px;
+    background: #CB9C68;
+    margin-left: 14px;
+  }
+  .further_path__mobile .map_further_path .left_part__futher_path .infirmary_line__third {
+    position: relative;
+    width: 2px;
+    height: 120px;
+    background: #CB9C68;
+    margin-left: 14px;
+  }
+  .further_path__mobile .map_further_path .right_part__futher_path {
+    flex-basis: 90%;
+    flex-grow: 1;
+  }
+  .further_path__mobile .map_further_path .right_part__futher_path .map__item {
+    position: relative;
+    width: 90%;
+    margin-top: 10%;
+  }
+  .further_path__mobile .map_further_path .right_part__futher_path .map__item .item__title h4 {
+    font-size: 22px;
+    font-family: "Gilroy - SemiBold";
+    font-weight: lighter;
+    font-style: normal;
+    color: #FFFFFF;
+  }
+  .further_path__mobile .map_further_path .right_part__futher_path .map__item .subtitle__paragraph {
+    position: relative;
+    margin-top: 10px;
+  }
+  .further_path__mobile .map_further_path .right_part__futher_path .map__item .subtitle__paragraph h5 {
+    font-size: 20px;
+    font-family: "Gilroy - UltraLight";
+    font-weight: lighter;
+    font-style: normal;
+    color: #FFFFFF;
+  }
+  .further_path__mobile .map_further_path .right_part__futher_path .map__item:first-child {
+    margin-top: 0px;
+  }
+  .further_path__mobile .map_further_path .right_part__futher_path .map__item:nth-child(2) {
+    margin-top: 12%;
+  }
+  .further_path__mobile .map_further_path .right_part__futher_path .map__item:nth-child(3) {
+    margin-top: 8%;
+  }
+  .further_path__mobile .map_further_path .right_part__futher_path .map__item:nth-child(4) {
+    margin-top: 13%;
+  }
+  .further_path__mobile .map_further_path .top_map__further_path {
+    position: relative;
+    width: 100%;
+  }
+  .further_path__mobile .map_further_path .top_map__further_path .item__circle {
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    background: #FFFFFF;
+  }
+  .further_path__mobile .map_further_path .top_map__further_path .item__circle h5 {
+    position: relative;
+    font-size: 24px;
+    font-family: "Gilroy - SemiBold";
+    font-weight: lighter;
+    font-style: normal;
+    color: #000000;
+    text-align: center;
+    line-height: 1.4;
+  }
+  .further_path__mobile .map_further_path .top_map__further_path .first_text_map {
+    position: relative;
+    width: 100%;
+    margin-left: 10px;
+    margin-top: 3px;
+  }
+  .further_path__mobile .map_further_path .top_map__further_path .first_text_map h5 {
+    font-size: 22px;
+    font-family: "Gilroy - SemiBold";
+    font-weight: lighter;
+    font-style: normal;
+    color: #FFFFFF;
+    line-height: 26px;
+    letter-spacing: 0.02em;
+  }
+  .further_path__mobile .map_further_path .bottom_map__further_path {
+    position: relative;
+    width: 100%;
+  }
+  .further_path__mobile .map_further_path .bottom_map__further_path .vertical_line {
+    position: relative;
+    width: 2px;
+    height: 68px;
+    background: #CB9C68;
+    margin-left: 14px;
+  }
+  .further_path__mobile .map_further_path .bottom_map__further_path .map_item_container {
+    position: relative;
+    width: 100%;
+    flex-wrap: 0;
+  }
+  .further_path__mobile .map_further_path .bottom_map__further_path .map_item_container .item__circle {
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    background: #FFFFFF;
+  }
+  .further_path__mobile .map_further_path .bottom_map__further_path .map_item_container .item__circle h5 {
+    position: relative;
+    font-size: 24px;
+    font-family: "Gilroy - SemiBold";
+    font-weight: lighter;
+    font-style: normal;
+    color: #000000;
+    text-align: center;
+    line-height: 1.4;
+  }
+  .further_path__mobile .map_further_path .bottom_map__further_path .map_item_container .upper_infirmary_line {
+    flex-grow: 1;
+    height: 2px;
+    margin-top: 15px;
+    background: #CB9C68;
+  }
+  .further_path__mobile .map_further_path .bottom_map__further_path .map__item {
+    position: relative;
+    width: 33%;
+  }
+  .further_path__mobile .map_further_path .bottom_map__further_path .map__item .item__title {
+    position: relative;
+    margin-top: 20px;
+    margin-bottom: 70px;
+  }
+  .further_path__mobile .map_further_path .bottom_map__further_path .map__item .item__title h4 {
+    font-size: 22px;
+    font-family: "Gilroy - SemiBold";
+    font-weight: lighter;
+    font-style: normal;
+    color: #FFFFFF;
+  }
+  .further_path__mobile .map_further_path .bottom_map__further_path .map__item .subtitle__paragraph {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+  }
+  .further_path__mobile .map_further_path .bottom_map__further_path .map__item .subtitle__paragraph h5 {
+    font-size: 18px;
+    font-family: "Gilroy - Regular";
+    font-weight: lighter;
+    font-style: normal;
+    color: #FFFFFF;
+  }
+
+  .training__programs {
+    width: 100%;
+  }
+  .training__programs .upper__inscription {
+    width: 100%;
+    background: linear-gradient(93.26deg, rgba(44, 35, 31, 0.68) 3.49%, rgba(203, 156, 104, 0.68) 50.41%, rgba(54, 43, 36, 0.68) 97.32%);
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    backdrop-filter: blur(28px);
+  }
+  .training__programs .program__dies {
+    box-sizing: border-box;
+    width: 100%;
+    padding-top: 50px;
+    padding-bottom: 10px;
+  }
+  .training__programs .program__dies .program__die {
+    position: relative;
+    width: 100%;
+    background: #1E2022;
+    z-index: 1;
+    margin: 10% 0 10% 0;
+  }
+  .training__programs .program__dies .program__die .substrate_program_die {
+    position: absolute;
+    width: 90%;
+    height: 100%;
+    margin: auto;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: -1;
+    border-radius: 7px;
+  }
+  .training__programs .program__dies .program__die .program__wrapper {
+    box-sizing: border-box;
+    width: 100%;
+    height: 100%;
+    z-index: 2;
+    border-radius: 7px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+  }
+  .training__programs .program__dies .program__die .program__wrapper .program__image {
+    box-sizing: border-box;
+    width: 100%;
+    padding-top: 15px;
+  }
+  .training__programs .program__dies .program__die .program__wrapper .program__image img {
+    position: relative;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .training__programs .program__dies .program__die .program__wrapper .program__title {
+    width: 100%;
+    margin-top: 20px;
+  }
+  .training__programs .program__dies .program__die .program__wrapper .program__title h4 {
+    position: relative;
+    font-size: 20px;
+    font-family: "Gilroy - SemiBold";
+    font-weight: lighter;
+    font-style: normal;
+    color: #FFFFFF;
+    margin-left: 15px;
+  }
+  .training__programs .program__dies .program__die .program__wrapper .program__title:nth-child(4) h4 {
+    color: #362B27;
+  }
+  .training__programs .program__dies .program__die .program__wrapper .program__subtitle {
+    width: 100%;
+    margin-top: 30px;
+    margin-bottom: 20px;
+  }
+  .training__programs .program__dies .program__die .program__wrapper .program__subtitle h5 {
+    font-size: 18px;
+    font-family: "Gilroy - Regular";
+    font-weight: lighter;
+    font-style: normal;
+    color: #FFFFFF;
+    margin-left: 15px;
+  }
+  .training__programs .program__dies .program__die .program__wrapper .record__button {
+    position: relative;
+    box-sizing: border-box;
+    width: 100%;
+    left: 0;
+    bottom: 0;
+    margin-top: 40px;
+    margin-bottom: 15px;
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+  .training__programs .program__dies .program__die .program__wrapper .record__button button {
+    position: relative;
+    display: flex;
+    width: 100%;
+    height: 50px;
+    border: none;
+    border-radius: 7px;
+    background: #CB9C68;
+    cursor: pointer;
+    justify-content: center;
+  }
+  .training__programs .program__dies .program__die .program__wrapper .record__button button h4 {
+    font-size: 18px;
+    font-family: "Gilroy - SemiBold";
+    font-weight: lighter;
+    font-style: normal;
+    color: #FFFFFF;
+    line-height: 50px;
+    margin-right: 2%;
+  }
+  .training__programs .program__dies .program__die .program__wrapper .record__button button img {
+    display: block;
+    top: 0;
+    bottom: 0;
+    margin: auto 0;
+    width: 23px;
+    height: 7px;
+    margin-left: 2%;
+  }
+  .training__programs .program__dies .program__die:nth-child(1) .substrate_program_die {
+    background: #151617;
+  }
+  .training__programs .program__dies .program__die:nth-child(1) .program__wrapper {
+    background: #1E2022;
+  }
+  .training__programs .program__dies .program__die:nth-child(2) .substrate_program_die {
+    background: #261F1C;
+  }
+  .training__programs .program__dies .program__die:nth-child(2) .program__wrapper {
+    background: #362B27;
+  }
+  .training__programs .program__dies .program__die:nth-child(3) .substrate_program_die {
+    background: #695238;
+  }
+  .training__programs .program__dies .program__die:nth-child(3) .program__wrapper {
+    background: #8F6F4E;
+  }
+  .training__programs .program__dies .program__die:nth-child(4) .substrate_program_die {
+    background: #CDD3DD;
+  }
+  .training__programs .program__dies .program__die:nth-child(4) .program__wrapper {
+    background: #FFFFFF;
+  }
+
+  .student__reviews {
+    box-sizing: border-box;
+    position: relative;
+    width: 100%;
+    padding-top: 350px;
+  }
+  .student__reviews .left_side_callout {
+    position: absolute;
+    top: 110px;
+    left: 0;
+    right: 40%;
+    height: 165px;
+    background: linear-gradient(-94.4deg, rgba(44, 35, 31, 0.68) 4.85%, rgba(203, 156, 104, 0.68) 95.02%);
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    backdrop-filter: blur(28px);
+    border-radius: 0px 14px 14px 0px;
+  }
+  .student__reviews .left_side_callout .upper__text {
+    left: 18%;
+  }
+  .student__reviews .left_side_callout .bottom__text {
+    left: 29%;
+  }
+  .student__reviews .slider__location {
+    width: 100%;
+  }
+  .student__reviews .slider__location .feedback__slider {
+    width: 100%;
+    overflow: hidden;
+  }
+  .student__reviews .slider__location .feedback__slider .feedback_slider__line {
+    position: relative;
+    box-sizing: border-box;
+    display: flex;
+    width: 100%;
+    padding-top: 1px;
+    padding-left: 1px;
+    padding-bottom: 1px;
+  }
+  .student__reviews .slider__location .feedback__slider .feedback_slider__line .slide_with_review {
+    box-sizing: border-box;
+    flex-basis: calc(3.9/4*100% - (1 - 3.9/4)*0px);
+    flex-shrink: 0;
+    border-radius: 10px;
+    margin-left: 2.4%;
+    margin-right: 2.4%;
+    padding-top: 10px;
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-bottom: 10px;
+    outline: 1px solid #FFFFFF;
+  }
+  .student__reviews .slider__location .feedback__slider .feedback_slider__line .slide_with_review .top__slide_review {
+    width: 100%;
+    display: flex;
+  }
+  .student__reviews .slider__location .feedback__slider .feedback_slider__line .slide_with_review .top__slide_review .reviewer__name {
+    width: 100%;
+    margin-left: 10px;
+  }
+  .student__reviews .slider__location .feedback__slider .feedback_slider__line .slide_with_review .top__slide_review .reviewer__name h4 {
+    position: relative;
+    font-size: 18px;
+    font-family: "Gilroy - SemiBold";
+    font-weight: lighter;
+    font-style: normal;
+    color: #CB9C68;
+    margin-top: 10px;
+  }
+  .student__reviews .slider__location .feedback__slider .feedback_slider__line .slide_with_review .bottom__slide_review {
+    width: 100%;
+  }
+  .student__reviews .slider__location .feedback__slider .feedback_slider__line .slide_with_review .bottom__slide_review .review__text {
+    width: 100%;
+    margin-top: 15px;
+  }
+  .student__reviews .slider__location .feedback__slider .feedback_slider__line .slide_with_review .bottom__slide_review .review__text h5 {
+    font-size: 16px;
+    font-family: "Gilroy - Regular";
+    font-weight: lighter;
+    font-style: normal;
+    color: #FFFFFF;
+  }
+  .student__reviews .slider__location .feedback__slider .feedback_slider__line .slide_with_review .feedback__field {
+    box-sizing: border-box;
+    padding-top: 10px;
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-bottom: 10px;
+  }
+  .student__reviews .slider__location .feedback__slider .feedback_slider__line .slide_with_review .feedback__field .reviewer__name {
+    width: 100%;
+  }
+  .student__reviews .slider__location .feedback__slider .feedback_slider__line .slide_with_review .feedback__field .reviewer__name h4 {
+    font-size: 18px;
+    font-family: "Gilroy - SemiBold";
+    font-weight: lighter;
+    font-style: normal;
+    color: #CB9C68;
+  }
+  .student__reviews .slider__location .feedback__slider .feedback_slider__line .slide_with_review .feedback__field .review__text {
+    width: 100%;
+    margin-top: 15px;
+  }
+  .student__reviews .slider__location .feedback__slider .feedback_slider__line .slide_with_review .feedback__field .review__text h5 {
+    font-size: 16px;
+    font-family: "Gilroy - Regular";
+    font-weight: lighter;
+    font-style: normal;
+    color: #FFFFFF;
+  }
+  .student__reviews .slider__location .feedback__slider .feedback_slider__line .slide_with_review:first-child {
+    margin-left: 0;
+  }
+  .student__reviews .slider__location .feedback__slider .feedback_slider__line .slide_with_review:last-child {
+    margin-right: 0;
+  }
+  .student__reviews .slider__location .slider__buttons {
+    box-sizing: border-box;
+    display: flex;
+    width: 100%;
+    justify-content: flex-end;
+    padding-top: 20px;
+  }
+  .student__reviews .slider__location .slider__buttons .left_slider_button {
+    position: relative;
+    margin-right: 10px;
+  }
+  .student__reviews .slider__location .slider__buttons .left_slider_button button {
+    width: 33px;
+    height: 33px;
+    border: none;
+    border-radius: 50%;
+    cursor: pointer;
+    background: rgba(0, 0, 0, 0);
+    outline: 1px solid #FFFFFF;
+  }
+  .student__reviews .slider__location .slider__buttons .right_slider_button {
+    position: relative;
+    margin-left: 10px;
+  }
+  .student__reviews .slider__location .slider__buttons .right_slider_button button {
+    width: 33px;
+    height: 33px;
+    border: none;
+    border-radius: 50%;
+    cursor: pointer;
+    background: rgba(0, 0, 0, 0);
+    outline: 1px solid #FFFFFF;
+  }
+
+  .successful__cooperation {
+    position: relative;
+    display: flex;
+    width: 100%;
+    margin-top: 110px;
+  }
+  .successful__cooperation .indoor__unit {
+    flex-basis: 48%;
+    flex-grow: 0;
+    box-sizing: border-box;
+    margin-top: 8px;
+    margin-left: 6%;
+    margin-bottom: 8px;
+    padding-top: 20px;
+    padding-left: 12px;
+    padding-right: 20px;
+    padding-bottom: 0px;
+    border-radius: 7px 0 0 7px;
+    outline: 2px solid #2A2222;
+  }
+  .successful__cooperation .indoor__unit .indoor_unit_header {
+    width: 100%;
+  }
+  .successful__cooperation .indoor__unit .indoor_unit_header h3 {
+    font-size: 5vw;
+    font-family: "Gilroy - SemiBOld";
+    font-weight: lighter;
+    font-style: normal;
+    color: #FFFFFF;
+    text-transform: uppercase;
+  }
+  .successful__cooperation .indoor__unit .indoor_unit_header h3 span {
+    color: #CB9C68;
+  }
+  .successful__cooperation .indoor__unit .slider_toggle_buttons {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    margin-top: 15px;
+    margin-bottom: 15px;
+  }
+  .successful__cooperation .indoor__unit .slider_toggle_buttons .left_logo_slider_button {
+    margin-right: 10px;
+  }
+  .successful__cooperation .indoor__unit .slider_toggle_buttons .left_logo_slider_button button {
+    width: 33px;
+    height: 33px;
+    cursor: pointer;
+    border: none;
+    border-radius: 50%;
+    background: rgba(0, 0, 0, 0);
+    outline: 1px solid #FFFFFF;
+  }
+  .successful__cooperation .indoor__unit .slider_toggle_buttons .right_logo_slider_button {
+    margin-left: 10px;
+  }
+  .successful__cooperation .indoor__unit .slider_toggle_buttons .right_logo_slider_button button {
+    width: 33px;
+    height: 33px;
+    cursor: pointer;
+    border: none;
+    border-radius: 50%;
+    background: rgba(0, 0, 0, 0);
+    outline: 1px solid #FFFFFF;
+  }
+  .successful__cooperation .logo__slider {
+    flex-basis: 52%;
+    flex-grow: 0;
+    overflow: hidden;
+  }
+  .successful__cooperation .logo__slider .logo_slider__line {
+    width: 100%;
+    height: 100%;
+    border-radius: 7px 0 0 7px;
+    background: #2A2222;
+  }
+  .successful__cooperation .logo__slider .logo_slider__line .slide_with_logo {
+    box-sizing: border-box;
+    padding-top: 20px;
+    padding-left: 20px;
+    padding-bottom: 20px;
+  }
+  .successful__cooperation .logo__slider .logo_slider__line .slide_with_logo img {
+    max-width: 328px;
+    min-width: 25vw;
+    min-height: 25vh;
+    max-height: 249px;
+    height: 120px;
+  }
+
+  .our__projects {
+    box-sizing: border-box;
+    position: relative;
+    width: 100%;
+    padding-top: 320px;
+    padding-bottom: 90px;
+  }
+  .our__projects .right_side_callout {
+    position: absolute;
+    top: 110px;
+    left: 34%;
+    right: 0px;
+    height: 165px;
+    background: linear-gradient(94.4deg, rgba(44, 35, 31, 0.68) 4.85%, rgba(203, 156, 104, 0.68) 95.02%);
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    backdrop-filter: blur(28px);
+    border-radius: 14px 0px 0px 14px;
+  }
+  .our__projects .right_side_callout .upper__text {
+    width: 600px;
+    left: 5%;
+  }
+  .our__projects .right_side_callout .bottom__text {
+    width: 500px;
+    left: 42%;
+  }
+  .our__projects .project__images {
+    width: 100%;
+  }
+  .our__projects .project__images .container {
+    display: flex;
+    flex-wrap: wrap;
+    align-content: space-between;
+  }
+  .our__projects .project__images .container .project__image {
+    min-width: calc( 100%/3 );
+    flex-basis: 20vw;
+    flex-grow: 1;
+    margin: 15px 15px 15px 15px;
+    border: 1px solid transparent;
+  }
+  .our__projects .project__images .container .project__image img {
+    width: 100%;
+    height: 100%;
+  }
+
+  footer {
+    box-sizing: border-box;
+    width: 100%;
+    background: #362B27;
+    padding-top: 5vh;
+    padding-bottom: 5vh;
+  }
+  footer .footer__logotip {
+    position: relative;
+    width: 100%;
+    outline: 1px solid red;
+  }
+  footer .footer__logotip img {
+    position: relative;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  footer .columns__menu {
+    box-sizing: border-box;
+    display: flex;
+    width: 100%;
+    padding-top: 30px;
+    padding-bottom: 30px;
+    justify-content: space-between;
+    outline: 1px solid red;
+  }
+  footer .columns__menu .column {
+    flex-basis: calc(1/3*100% - (1 - 1/3)*40px);
+    outline: 1px solid red;
+  }
+  footer .columns__menu .column h4 {
+    font-size: 15px;
+    font-family: "Gilroy - SemiBold";
+    font-weight: lighter;
+    font-style: normal;
+  }
+  footer .columns__menu .column h4 a {
+    color: #FFFFFF;
+    text-decoration: none;
+  }
+  footer .columns__menu .column h4:first-child {
+    margin-bottom: 10px;
+  }
+  footer .columns__menu .column h4:last-child {
+    margin-top: 10px;
+  }
+  footer .columns__menu .column:first-child {
+    margin-right: 0px;
+  }
+  footer .columns__menu .column:last-child {
+    margin-left: 0px;
+  }
+}
+@media screen and (min-width: 700px) and (max-width: 759px) {
+  .entrance {
+    position: relative;
+    height: 100%;
+    flex-grow: 1;
+  }
+  .entrance a {
+    position: relative;
+    height: 60%;
+    text-decoration: none;
+    text-align: center;
+  }
+  .entrance a h4 {
+    position: relative;
+    width: 73%;
+    height: 34px;
+    font-size: 3.6vw;
+    font-family: "Gilroy - Light";
+    font-weight: lighter;
+    font-style: normal;
+    text-transform: uppercase;
+    color: #FFFFFF;
+    margin: auto;
+    top: 40%;
+  }
+  .entrance a h4:hover {
+    border-bottom: 1px solid white;
+  }
+}
+@media screen and (min-width: 320px) and (max-width: 479px) {
+  .container {
+    height: 100%;
+    margin-left: 5%;
+    margin-right: 5%;
+  }
+
+  header {
+    width: 100%;
+    background: url("../static/pictures/background/header.png");
+    background-size: cover;
+    background-position: 50% 50%;
+    background-repeat: no-repeat;
+  }
+
+  .darkening__background {
+    box-sizing: border-box;
+    width: 100%;
+    height: 100%;
+    padding-bottom: 196px;
+    background: linear-gradient(90deg, rgba(16, 15, 23, 0.7) 80.81%, rgba(16, 15, 23, 0.265374) 160.69%);
+  }
+
+  .header__top {
+    box-sizing: border-box;
+    width: 100vw;
+    height: 10vh;
+  }
+
+  .logotip {
+    position: relative;
+    height: 100%;
+  }
+  .logotip img {
+    position: absolute;
+    width: 24vw;
+    top: 0;
+    bottom: 0;
+    margin: auto 0;
+  }
+
+  .menu {
+    position: relative;
+    width: 41vw;
+    height: inherit;
+  }
+
+  .social_media {
+    width: 12vw;
+    height: 100%;
+  }
+  .social_media ul {
+    width: 100%;
+    height: 100%;
+    list-style-type: none;
+  }
+  .social_media ul li {
+    position: relative;
+    flex-grow: 1;
+    height: 100%;
+  }
+  .social_media ul li img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin: auto;
+  }
+
+  .entrance {
+    position: relative;
+    height: 100%;
+    flex-grow: 1;
+  }
+  .entrance a {
+    position: relative;
+    height: 60%;
+    text-decoration: none;
+    text-align: center;
+  }
+  .entrance a h4 {
+    position: relative;
+    width: 100%;
+    height: 22px;
+    font-size: 5vw;
+    font-family: "Gilroy - Light";
+    font-weight: lighter;
+    font-style: normal;
+    text-transform: uppercase;
+    color: #FFFFFF;
+    margin: auto;
+    top: 40%;
+  }
+  .entrance a h4:hover {
+    border-bottom: 1px solid white;
+  }
+
+  .header__bottom {
+    width: 100%;
+  }
+  .header__bottom .header__title {
+    position: relative;
+    width: 100%;
+    margin-top: 20vh;
+  }
+  .header__bottom .header__title h1 {
+    font-size: 10vw;
+    font-family: "Gilroy - SemiBold";
+    font-style: normal;
+    color: #FFFFFF;
+  }
+  .header__bottom .header__title h1 span {
+    font-size: 4.4vw;
+    font-family: "Gilroy - UltraLight";
+    font-weight: lighter;
+    font-style: normal;
+    color: #FFFFFF;
+    margin-right: 20px;
+  }
+  .header__bottom .header__subtitle {
+    position: relative;
+    width: 86%;
+    margin-top: 3vh;
+  }
+  .header__bottom .header__subtitle h4 {
+    font-size: 2.6vh;
+    font-family: "Gilroy - Medium";
+    font-weight: lighter;
+    font-style: normal;
+    color: #CB9C68;
+  }
+  .header__bottom .learn_more_button {
+    position: relative;
+    width: 100%;
+    margin-top: 9vh;
+  }
+  .header__bottom .learn_more_button button {
+    width: 100%;
+    height: 9vh;
+    cursor: pointer;
+    border: none;
+    border-radius: 5px;
+    background: #CB9C68;
+  }
+  .header__bottom .learn_more_button button h4 {
+    font-size: 5.2vw;
+    font-family: "Gilroy - Regular";
+    font-weight: lighter;
+    font-style: normal;
+    color: #FFFFFF;
+    letter-spacing: 0.02em;
+  }
+
+  section {
+    width: 100%;
+    background: #100F17;
+  }
+  section .student__level {
+    position: relative;
+    width: 100%;
+    box-sizing: border-box;
+    padding-top: 140px;
+    padding-bottom: 95px;
+  }
+  section .student__level .left_side_callout {
+    box-sizing: border-box;
+    position: absolute;
+    top: 4%;
+    left: 0;
+    right: 40%;
+    background: linear-gradient(-94.4deg, rgba(44, 35, 31, 0.68) 4.85%, rgba(203, 156, 104, 0.68) 95.02%);
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    backdrop-filter: blur(28px);
+    border-radius: 0px 14px 14px 0px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+  }
+
+  .upper__text {
+    position: relative;
+    display: inline-block;
+    height: 50%;
+    left: 20%;
+    text-transform: uppercase;
+  }
+  .upper__text h1 {
+    position: relative;
+    top: 10%;
+    font-size: 5vw;
+    font-family: "Gilroy - SemiBold";
+    font-style: normal;
+    color: #FFFFFF;
+  }
+  .upper__text h1 span {
+    font-size: 5vw;
+    font-family: "Gilroy - SemiBold";
+    font-style: normal;
+    color: #CB9C68;
+  }
+
+  .bottom__text {
+    position: relative;
+    width: 750px;
+    left: 35%;
+    text-transform: uppercase;
+  }
+  .bottom__text h1 {
+    position: relative;
+    top: 10%;
+    font-size: 5vw;
+    font-family: "Gilroy - SemiBold";
+    font-style: normal;
+    color: #FFFFFF;
+  }
+  .bottom__text h1 span {
+    font-size: 5vw;
+    font-family: "Gilroy - SemiBold";
+    font-style: normal;
+    color: #CB9C68;
+  }
+
+  .student__level {
+    width: 100%;
+  }
+  .student__level .student_level_dies {
+    width: 100%;
+  }
+  .student__level .student_level_dies .container {
+    flex-wrap: wrap;
+  }
+  .student__level .student_level_dies .container .die {
+    position: relative;
+    box-sizing: border-box;
+    width: 100%;
+    background: #362B27;
+    border-radius: 16px;
+    padding-top: 15px;
+    padding-left: 28px;
+    padding-right: 52px;
+    padding-bottom: 20px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+  }
+  .student__level .student_level_dies .container .die h5 {
+    width: 100%;
+    font-size: 20px;
+    font-family: "Gilroy - Regular";
+    font-style: normal;
+    color: #FFFFFF;
+    line-height: 140%;
+    letter-spacing: 0.02em;
+  }
+
+  .course_overview__mobile {
+    box-sizing: border-box;
+    position: relative;
+    width: 100%;
+    height: 100%;
+    background: #8F6F4E;
+    padding-top: 32px;
+    padding-bottom: 32px;
+  }
+  .course_overview__mobile .course_overview_top {
+    position: relative;
+    width: 100%;
+    display: flex;
+    margin-bottom: 20px;
+  }
+  .course_overview__mobile .course_overview_top .left__subpart {
+    position: relative;
+    width: 70%;
+  }
+  .course_overview__mobile .course_overview_top .left__subpart .title {
+    width: 100%;
+  }
+  .course_overview__mobile .course_overview_top .left__subpart .title h2 {
+    font-size: 7vw;
+    font-family: "Gilroy - SemiBold";
+    font-weight: lighter;
+    font-style: normal;
+    color: #FFFFFF;
+    margin-right: 5px;
+    letter-spacing: 0.02em;
+    text-transform: uppercase;
+  }
+  .course_overview__mobile .course_overview_top .left__subpart .subtitle {
+    position: relative;
+    width: 80%;
+    margin-top: 5vw;
+    margin-bottom: 5vw;
+  }
+  .course_overview__mobile .course_overview_top .left__subpart .subtitle h4 {
+    font-size: 4vw;
+    font-family: "Gilroy - Regular";
+    font-weight: lighter;
+    font-style: normal;
+    color: #FFFFFF;
+    letter-spacing: 0.02em;
+    text-transform: uppercase;
+  }
+  .course_overview__mobile .course_overview_top .right__subpart {
+    position: relative;
+    flex-grow: 1;
+    height: inherit;
+  }
+  .course_overview__mobile .course_overview_top .right__subpart img {
+    position: absolute;
+    width: 160%;
+    height: 90%;
+    top: 5%;
+    left: -30%;
+    transform: rotate(90deg);
+  }
+  .course_overview__mobile .course_overview_bottom {
+    width: 100%;
+  }
+  .course_overview__mobile .course_overview_bottom .course_overview__bottom_img {
+    width: 100%;
+    height: 50vw;
+    background: url(../static/pictures/cover.png);
+    background-position: 50% 50%;
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+  .course_overview__mobile .course_overview_bottom .start__button {
+    position: relative;
+    width: 100%;
+  }
+  .course_overview__mobile .course_overview_bottom .start__button button {
+    width: 100%;
+    height: 67px;
+    background: #CB9C68;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    margin-top: 20px;
+  }
+  .course_overview__mobile .course_overview_bottom .start__button button h4 {
+    font-size: 25px;
+    font-family: "Gilroy - Regular";
+    font-weight: lighter;
+    font-style: normal;
+    color: #FFFFFF;
+  }
+
+  .advantages {
+    position: relative;
+    box-sizing: border-box;
+    width: 100%;
+    padding-top: 320px;
+    padding-bottom: 110px;
+  }
+  .advantages .right_side_callout {
+    position: absolute;
+    top: 110px;
+    left: 34%;
+    right: 0px;
+    height: 165px;
+    background: linear-gradient(94.4deg, rgba(44, 35, 31, 0.68) 4.85%, rgba(203, 156, 104, 0.68) 95.02%);
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    backdrop-filter: blur(28px);
+    border-radius: 14px 0px 0px 14px;
+  }
+  .advantages .right_side_callout .upper__text {
+    display: inline-block;
+  }
+  .advantages .right_side_callout .upper__text h1 {
+    position: relative;
+  }
+  .advantages .right_side_callout .bottom__text {
+    display: inline-block;
+  }
+  .advantages .right_side_callout .bottom__text h1 {
+    position: relative;
+    display: inline-block;
+  }
+  .advantages .advantages__dies {
+    position: relative;
+    width: 100%;
+  }
+  .advantages .advantages__dies .die__advantages {
+    position: relative;
+    box-sizing: border-box;
+    flex-basis: 100%;
+    border: 1px solid #FFFFFF;
+    border-radius: 6px;
+    margin-top: 10px;
+    padding-top: 20px;
+    padding-left: 15px;
+    padding-right: 15px;
+    padding-bottom: 20px;
+  }
+  .advantages .advantages__dies .die__advantages .title__advantages {
+    position: relative;
+    width: 100%;
+  }
+  .advantages .advantages__dies .die__advantages .title__advantages h4 {
+    font-size: 20px;
+    font-family: "Gilroy - SemiBold";
+    font-weight: lighter;
+    font-style: normal;
+    color: #FFFFFF;
+    line-height: 24px;
+    letter-spacing: 0.02em;
+  }
+  .advantages .advantages__dies .die__advantages .subtitle__advantages {
+    position: relative;
+    width: 100%;
+    padding-top: 13px;
+  }
+  .advantages .advantages__dies .die__advantages .subtitle__advantages h5 {
+    font-size: 17px;
+    font-family: "Gilroy - Regular";
+    font-weight: lighter;
+    font-style: normal;
+    color: #FFFFFF;
+    line-height: 20px;
+    letter-spacing: 0.02em;
+  }
+
+  .buyer__acquisition {
+    position: relative;
+    width: 100%;
+  }
+  .buyer__acquisition .upper__inscription {
+    box-sizing: border-box;
+    width: 100%;
+    background: linear-gradient(93.26deg, rgba(44, 35, 31, 0.68) 3.49%, rgba(203, 156, 104, 0.68) 50.41%, rgba(54, 43, 36, 0.68) 97.32%);
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    backdrop-filter: blur(28px);
+    padding-bottom: 20px;
+  }
+  .buyer__acquisition .upper__inscription .upper__text {
+    margin-bottom: 20px;
+  }
+  .buyer__acquisition .upper__inscription .bottom__text {
+    margin-top: 20px;
+  }
+  .buyer__acquisition .upper__inscription .bottom__text h1 {
+    left: 28%;
+  }
+  .buyer__acquisition .knowledge_map__mobile {
+    width: 100%;
+    box-sizing: border-box;
+    padding-top: 45px;
+    padding-bottom: 45px;
+  }
+  .buyer__acquisition .knowledge_map__mobile .left_part_map {
+    flex-basis: 10%;
+    flex-grow: 0;
+  }
+  .buyer__acquisition .knowledge_map__mobile .left_part_map .map__row {
+    width: 100%;
+  }
+  .buyer__acquisition .knowledge_map__mobile .left_part_map .map__row .item__circle {
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    background: #CB9C68;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .buyer__acquisition .knowledge_map__mobile .left_part_map .map__row .item__circle h5 {
+    position: relative;
+    font-size: 24px;
+    font-family: "Gilroy - SemiBold";
+    font-weight: lighter;
+    font-style: normal;
+    color: #FFFFFF;
+    text-align: center;
+    line-height: 1.3;
+  }
+  .buyer__acquisition .knowledge_map__mobile .left_part_map .map__row .infirmary_line {
+    width: 2px;
+    height: 40px;
+    margin-left: auto;
+    margin-right: auto;
+    background: #CB9C68;
+  }
+  .buyer__acquisition .knowledge_map__mobile .right_part_map {
+    flex-basis: 90%;
+    flex-grow: 1;
+  }
+  .buyer__acquisition .knowledge_map__mobile .right_part_map .text_container {
+    width: 90%;
+    margin-top: 8%;
+  }
+  .buyer__acquisition .knowledge_map__mobile .right_part_map .text_container h5 {
+    width: 86%;
+    font-size: 16px;
+    font-family: "Gilroy - SemiBold";
+    font-weight: lighter;
+    font-style: normal;
+    color: #FFFFFF;
+  }
+  .buyer__acquisition .knowledge_map__mobile .right_part_map .text_container:first-child {
+    margin-top: 0;
+  }
+
+  .mentors {
+    position: relative;
+    width: 100%;
+    padding-top: 320px;
+    padding-bottom: 200px;
+  }
+  .mentors .left_side_callout {
+    position: absolute;
+    top: 110px;
+    left: 0;
+    right: 50%;
+    height: 165px;
+    background: linear-gradient(-94.4deg, rgba(44, 35, 31, 0.68) 4.85%, rgba(203, 156, 104, 0.68) 95.02%);
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    backdrop-filter: blur(28px);
+    border-radius: 0px 14px 14px 0px;
+  }
+  .mentors .mentors__dies {
+    width: 100%;
+  }
+  .mentors .mentors__dies .die_with_mentor {
+    box-sizing: border-box;
+    width: 100%;
+    border-radius: 10px;
+    background: #362B27;
+    padding-top: 30px;
+    padding-bottom: 30px;
+    margin-bottom: 6%;
+  }
+  .mentors .mentors__dies .die_with_mentor .mentor__image {
+    width: 100%;
+  }
+  .mentors .mentors__dies .die_with_mentor .mentor__image img {
+    position: relative;
+    display: block;
+    width: 50vw;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .mentors .mentors__dies .die_with_mentor .name__mentor {
+    width: 100%;
+    text-align: center;
+    margin-top: 20px;
+    margin-bottom: 10px;
+  }
+  .mentors .mentors__dies .die_with_mentor .name__mentor h4 {
+    font-size: 22px;
+    font-family: "Gilroy - Bold";
+    font-weight: lighter;
+    font-style: normal;
+    color: #FFFFFF;
+  }
+  .mentors .mentors__dies .die_with_mentor .mentor__description {
+    width: 94%;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .mentors .mentors__dies .die_with_mentor .mentor__description h5 {
+    position: relative;
+    width: 95%;
+    font-size: 4vw;
+    font-family: "Gilroy - Regular";
+    font-weight: lighter;
+    font-style: normal;
+    color: #FFFFFF;
+    line-height: 24px;
+    letter-spacing: 0.02em;
+    margin: 0 auto 0 auto;
+  }
+  .mentors .mentor__question_button {
+    width: 100%;
+    margin-top: 30px;
+  }
+  .mentors .mentor__question_button button {
+    position: relative;
+    display: block;
+    width: 380px;
+    height: 70px;
+    margin-left: auto;
+    margin-right: auto;
+    border: 1px solid #CB9C68;
+    border-radius: 8px;
+    background: rgba(0, 0, 0, 0);
+  }
+  .mentors .mentor__question_button button h4 {
+    font-size: 22px;
+    font-family: "Gilroy - Regular";
+    font-weight: lighter;
+    font-style: normal;
+    color: #FFFFFF;
+  }
+
+  .advantages__course {
+    width: 100%;
+    background: rgba(203, 156, 104, 0.68);
+    padding-top: 68px;
+    padding-bottom: 30px;
+  }
+  .advantages__course .advantages_course_left {
+    width: 100%;
+  }
+  .advantages__course .advantages_course_left .advantages_course_title {
+    width: 100%;
+    margin-bottom: 20px;
+  }
+  .advantages__course .advantages_course_left .advantages_course_title h2 {
+    width: 90%;
+    font-size: 10vw;
+    font-family: "Gilroy - Medium";
+    font-weight: lighter;
+    font-style: normal;
+    color: #FFFFFF;
+    text-transform: uppercase;
+  }
+  .advantages__course .advantages_course_left .advantages_course_subtitle {
+    width: 100%;
+  }
+  .advantages__course .advantages_course_left .advantages_course_subtitle h5 {
+    width: 99%;
+    font-size: 5vw;
+    font-family: "Gilroy - Regular";
+    font-weight: lighter;
+    font-style: normal;
+    color: #FFFFFF;
+    line-height: 140%;
+    letter-spacing: 0.02em;
+  }
+  .advantages__course .advantages_course_right {
+    width: 100%;
+  }
+  .advantages__course .advantages_course_right .advantage__columns {
+    box-sizing: border-box;
+    width: 100%;
+    align-items: flex-end;
+    margin-left: auto;
+    margin-right: 0px;
+    padding-top: 20px;
+  }
+  .advantages__course .advantages_course_right .advantage__columns .column {
+    flex-basis: 15%;
+    flex-grow: 0;
+  }
+  .advantages__course .advantages_course_right .advantage__columns .column .column__header {
+    text-align: center;
+  }
+  .advantages__course .advantages_course_right .advantage__columns .column .column__header h4 {
+    width: 100%;
+    font-size: 6vw;
+    font-family: "Gilroy - Medium";
+    font-weight: lighter;
+    font-style: normal;
+    color: #FFFFFF;
+  }
+  .advantages__course .advantages_course_right .advantage__columns .column .advantage__image {
+    width: 28vw;
+  }
+  .advantages__course .advantages_course_right .advantage__columns .column .advantage__image img {
+    width: 28vw;
+  }
+  .advantages__course .advantages_course_right .signature_advantage_columns {
+    position: relative;
+    width: 100%;
+    text-align: center;
+    margin-left: auto;
+    margin-right: 0px;
+  }
+  .advantages__course .advantages_course_right .signature_advantage_columns h3 {
+    font-size: 7vw;
+    font-family: "Gilroy - Regular";
+    font-weight: lighter;
+    font-style: normal;
+    line-height: 43px;
+    color: #FFFFFF;
+    margin-top: 10px;
+    text-transform: uppercase;
+  }
+
+  .further_path__mobile {
+    position: relative;
+    box-sizing: border-box;
+    width: 100%;
+    padding-top: 320px;
+    padding-bottom: 110px;
+  }
+  .further_path__mobile .right_side_callout {
+    position: absolute;
+    top: 110px;
+    left: 34%;
+    right: 0px;
+    height: 165px;
+    background: linear-gradient(94.4deg, rgba(44, 35, 31, 0.68) 4.85%, rgba(203, 156, 104, 0.68) 95.02%);
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    backdrop-filter: blur(28px);
+    border-radius: 14px 0px 0px 14px;
+  }
+  .further_path__mobile .right_side_callout .upper__text {
+    left: 5%;
+  }
+  .further_path__mobile .right_side_callout .bottom__text {
+    left: 10%;
+  }
+  .further_path__mobile .right_side_callout .bottom__text h1 span {
+    font-size: 40px;
+  }
+  .further_path__mobile .map_further_path {
+    position: relative;
+    width: 100%;
+  }
+  .further_path__mobile .map_further_path .left_part__futher_path {
+    flex-basis: 10%;
+    flex-grow: 0;
+  }
+  .further_path__mobile .map_further_path .left_part__futher_path .item__circle {
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    background: #FFFFFF;
+  }
+  .further_path__mobile .map_further_path .left_part__futher_path .item__circle h5 {
+    position: relative;
+    font-size: 24px;
+    font-family: "Gilroy - SemiBold";
+    font-weight: lighter;
+    font-style: normal;
+    color: #000000;
+    text-align: center;
+    line-height: 1.4;
+  }
+  .further_path__mobile .map_further_path .left_part__futher_path .infirmary_line__first {
+    position: relative;
+    width: 2px;
+    height: 68px;
+    background: #CB9C68;
+    margin-left: 14px;
+  }
+  .further_path__mobile .map_further_path .left_part__futher_path .infirmary_line__second {
+    position: relative;
+    width: 2px;
+    height: 80px;
+    background: #CB9C68;
+    margin-left: 14px;
+  }
+  .further_path__mobile .map_further_path .left_part__futher_path .infirmary_line__third {
+    position: relative;
+    width: 2px;
+    height: 120px;
+    background: #CB9C68;
+    margin-left: 14px;
+  }
+  .further_path__mobile .map_further_path .right_part__futher_path {
+    flex-basis: 90%;
+    flex-grow: 1;
+  }
+  .further_path__mobile .map_further_path .right_part__futher_path .map__item {
+    position: relative;
+    width: 90%;
+    margin-top: 10%;
+  }
+  .further_path__mobile .map_further_path .right_part__futher_path .map__item .item__title h4 {
+    font-size: 22px;
+    font-family: "Gilroy - SemiBold";
+    font-weight: lighter;
+    font-style: normal;
+    color: #FFFFFF;
+  }
+  .further_path__mobile .map_further_path .right_part__futher_path .map__item .subtitle__paragraph {
+    position: relative;
+    margin-top: 10px;
+  }
+  .further_path__mobile .map_further_path .right_part__futher_path .map__item .subtitle__paragraph h5 {
+    font-size: 20px;
+    font-family: "Gilroy - UltraLight";
+    font-weight: lighter;
+    font-style: normal;
+    color: #FFFFFF;
+  }
+  .further_path__mobile .map_further_path .right_part__futher_path .map__item:first-child {
+    margin-top: 0px;
+  }
+  .further_path__mobile .map_further_path .right_part__futher_path .map__item:nth-child(2) {
+    margin-top: 12%;
+  }
+  .further_path__mobile .map_further_path .right_part__futher_path .map__item:nth-child(3) {
+    margin-top: 8%;
+  }
+  .further_path__mobile .map_further_path .right_part__futher_path .map__item:nth-child(4) {
+    margin-top: 13%;
+  }
+  .further_path__mobile .map_further_path .top_map__further_path {
+    position: relative;
+    width: 100%;
+  }
+  .further_path__mobile .map_further_path .top_map__further_path .item__circle {
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    background: #FFFFFF;
+  }
+  .further_path__mobile .map_further_path .top_map__further_path .item__circle h5 {
+    position: relative;
+    font-size: 24px;
+    font-family: "Gilroy - SemiBold";
+    font-weight: lighter;
+    font-style: normal;
+    color: #000000;
+    text-align: center;
+    line-height: 1.4;
+  }
+  .further_path__mobile .map_further_path .top_map__further_path .first_text_map {
+    position: relative;
+    width: 100%;
+    margin-left: 10px;
+    margin-top: 3px;
+  }
+  .further_path__mobile .map_further_path .top_map__further_path .first_text_map h5 {
+    font-size: 22px;
+    font-family: "Gilroy - SemiBold";
+    font-weight: lighter;
+    font-style: normal;
+    color: #FFFFFF;
+    line-height: 26px;
+    letter-spacing: 0.02em;
+  }
+  .further_path__mobile .map_further_path .bottom_map__further_path {
+    position: relative;
+    width: 100%;
+  }
+  .further_path__mobile .map_further_path .bottom_map__further_path .vertical_line {
+    position: relative;
+    width: 2px;
+    height: 68px;
+    background: #CB9C68;
+    margin-left: 14px;
+  }
+  .further_path__mobile .map_further_path .bottom_map__further_path .map_item_container {
+    position: relative;
+    width: 100%;
+    flex-wrap: 0;
+  }
+  .further_path__mobile .map_further_path .bottom_map__further_path .map_item_container .item__circle {
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    background: #FFFFFF;
+  }
+  .further_path__mobile .map_further_path .bottom_map__further_path .map_item_container .item__circle h5 {
+    position: relative;
+    font-size: 24px;
+    font-family: "Gilroy - SemiBold";
+    font-weight: lighter;
+    font-style: normal;
+    color: #000000;
+    text-align: center;
+    line-height: 1.4;
+  }
+  .further_path__mobile .map_further_path .bottom_map__further_path .map_item_container .upper_infirmary_line {
+    flex-grow: 1;
+    height: 2px;
+    margin-top: 15px;
+    background: #CB9C68;
+  }
+  .further_path__mobile .map_further_path .bottom_map__further_path .map__item {
+    position: relative;
+    width: 33%;
+  }
+  .further_path__mobile .map_further_path .bottom_map__further_path .map__item .item__title {
+    position: relative;
+    margin-top: 20px;
+    margin-bottom: 70px;
+  }
+  .further_path__mobile .map_further_path .bottom_map__further_path .map__item .item__title h4 {
+    font-size: 22px;
+    font-family: "Gilroy - SemiBold";
+    font-weight: lighter;
+    font-style: normal;
+    color: #FFFFFF;
+  }
+  .further_path__mobile .map_further_path .bottom_map__further_path .map__item .subtitle__paragraph {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+  }
+  .further_path__mobile .map_further_path .bottom_map__further_path .map__item .subtitle__paragraph h5 {
+    font-size: 18px;
+    font-family: "Gilroy - Regular";
+    font-weight: lighter;
+    font-style: normal;
+    color: #FFFFFF;
+  }
+
+  .training__programs {
+    width: 100%;
+  }
+  .training__programs .upper__inscription {
+    width: 100%;
+    background: linear-gradient(93.26deg, rgba(44, 35, 31, 0.68) 3.49%, rgba(203, 156, 104, 0.68) 50.41%, rgba(54, 43, 36, 0.68) 97.32%);
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    backdrop-filter: blur(28px);
+  }
+  .training__programs .program__dies {
+    box-sizing: border-box;
+    width: 100%;
+    padding-top: 50px;
+    padding-bottom: 10px;
+  }
+  .training__programs .program__dies .program__die {
+    position: relative;
+    width: 100%;
+    background: #1E2022;
+    z-index: 1;
+    margin: 10% 0 10% 0;
+  }
+  .training__programs .program__dies .program__die .substrate_program_die {
+    position: absolute;
+    width: 90%;
+    height: 100%;
+    margin: auto;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: -1;
+    border-radius: 7px;
+  }
+  .training__programs .program__dies .program__die .program__wrapper {
+    box-sizing: border-box;
+    width: 100%;
+    height: 100%;
+    z-index: 2;
+    border-radius: 7px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+  }
+  .training__programs .program__dies .program__die .program__wrapper .program__image {
+    box-sizing: border-box;
+    width: 100%;
+    padding-top: 15px;
+  }
+  .training__programs .program__dies .program__die .program__wrapper .program__image img {
+    position: relative;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .training__programs .program__dies .program__die .program__wrapper .program__title {
+    width: 100%;
+    margin-top: 20px;
+  }
+  .training__programs .program__dies .program__die .program__wrapper .program__title h4 {
+    position: relative;
+    font-size: 20px;
+    font-family: "Gilroy - SemiBold";
+    font-weight: lighter;
+    font-style: normal;
+    color: #FFFFFF;
+    margin-left: 15px;
+  }
+  .training__programs .program__dies .program__die .program__wrapper .program__title:nth-child(4) h4 {
+    color: #362B27;
+  }
+  .training__programs .program__dies .program__die .program__wrapper .program__subtitle {
+    width: 100%;
+    margin-top: 30px;
+    margin-bottom: 20px;
+  }
+  .training__programs .program__dies .program__die .program__wrapper .program__subtitle h5 {
+    font-size: 18px;
+    font-family: "Gilroy - Regular";
+    font-weight: lighter;
+    font-style: normal;
+    color: #FFFFFF;
+    margin-left: 15px;
+  }
+  .training__programs .program__dies .program__die .program__wrapper .record__button {
+    position: relative;
+    box-sizing: border-box;
+    width: 100%;
+    left: 0;
+    bottom: 0;
+    margin-top: 40px;
+    margin-bottom: 15px;
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+  .training__programs .program__dies .program__die .program__wrapper .record__button button {
+    position: relative;
+    display: flex;
+    width: 100%;
+    height: 50px;
+    border: none;
+    border-radius: 7px;
+    background: #CB9C68;
+    cursor: pointer;
+    justify-content: center;
+  }
+  .training__programs .program__dies .program__die .program__wrapper .record__button button h4 {
+    font-size: 18px;
+    font-family: "Gilroy - SemiBold";
+    font-weight: lighter;
+    font-style: normal;
+    color: #FFFFFF;
+    line-height: 50px;
+    margin-right: 2%;
+  }
+  .training__programs .program__dies .program__die .program__wrapper .record__button button img {
+    display: block;
+    top: 0;
+    bottom: 0;
+    margin: auto 0;
+    width: 23px;
+    height: 7px;
+    margin-left: 2%;
+  }
+  .training__programs .program__dies .program__die:nth-child(1) .substrate_program_die {
+    background: #151617;
+  }
+  .training__programs .program__dies .program__die:nth-child(1) .program__wrapper {
+    background: #1E2022;
+  }
+  .training__programs .program__dies .program__die:nth-child(2) .substrate_program_die {
+    background: #261F1C;
+  }
+  .training__programs .program__dies .program__die:nth-child(2) .program__wrapper {
+    background: #362B27;
+  }
+  .training__programs .program__dies .program__die:nth-child(3) .substrate_program_die {
+    background: #695238;
+  }
+  .training__programs .program__dies .program__die:nth-child(3) .program__wrapper {
+    background: #8F6F4E;
+  }
+  .training__programs .program__dies .program__die:nth-child(4) .substrate_program_die {
+    background: #CDD3DD;
+  }
+  .training__programs .program__dies .program__die:nth-child(4) .program__wrapper {
+    background: #FFFFFF;
+  }
+
+  .student__reviews {
+    box-sizing: border-box;
+    position: relative;
+    width: 100%;
+    padding-top: 350px;
+  }
+  .student__reviews .left_side_callout {
+    position: absolute;
+    top: 110px;
+    left: 0;
+    right: 40%;
+    height: 165px;
+    background: linear-gradient(-94.4deg, rgba(44, 35, 31, 0.68) 4.85%, rgba(203, 156, 104, 0.68) 95.02%);
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    backdrop-filter: blur(28px);
+    border-radius: 0px 14px 14px 0px;
+  }
+  .student__reviews .left_side_callout .upper__text {
+    left: 18%;
+  }
+  .student__reviews .left_side_callout .bottom__text {
+    left: 29%;
+  }
+  .student__reviews .slider__location {
+    width: 100%;
+  }
+  .student__reviews .slider__location .feedback__slider {
+    width: 100%;
+    overflow: hidden;
+  }
+  .student__reviews .slider__location .feedback__slider .feedback_slider__line {
+    position: relative;
+    box-sizing: border-box;
+    display: flex;
+    width: 100%;
+    padding-top: 1px;
+    padding-left: 1px;
+    padding-bottom: 1px;
+  }
+  .student__reviews .slider__location .feedback__slider .feedback_slider__line .slide_with_review {
+    box-sizing: border-box;
+    flex-basis: calc(3.9/4*100% - (1 - 3.9/4)*0px);
+    flex-shrink: 0;
+    border-radius: 10px;
+    margin-left: 2.4%;
+    margin-right: 2.4%;
+    padding-top: 10px;
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-bottom: 10px;
+    outline: 1px solid #FFFFFF;
+  }
+  .student__reviews .slider__location .feedback__slider .feedback_slider__line .slide_with_review .top__slide_review {
+    width: 100%;
+    display: flex;
+  }
+  .student__reviews .slider__location .feedback__slider .feedback_slider__line .slide_with_review .top__slide_review .reviewer__name {
+    width: 100%;
+    margin-left: 10px;
+  }
+  .student__reviews .slider__location .feedback__slider .feedback_slider__line .slide_with_review .top__slide_review .reviewer__name h4 {
+    position: relative;
+    font-size: 18px;
+    font-family: "Gilroy - SemiBold";
+    font-weight: lighter;
+    font-style: normal;
+    color: #CB9C68;
+    margin-top: 10px;
+  }
+  .student__reviews .slider__location .feedback__slider .feedback_slider__line .slide_with_review .bottom__slide_review {
+    width: 100%;
+  }
+  .student__reviews .slider__location .feedback__slider .feedback_slider__line .slide_with_review .bottom__slide_review .review__text {
+    width: 100%;
+    margin-top: 15px;
+  }
+  .student__reviews .slider__location .feedback__slider .feedback_slider__line .slide_with_review .bottom__slide_review .review__text h5 {
+    font-size: 16px;
+    font-family: "Gilroy - Regular";
+    font-weight: lighter;
+    font-style: normal;
+    color: #FFFFFF;
+  }
+  .student__reviews .slider__location .feedback__slider .feedback_slider__line .slide_with_review .feedback__field {
+    box-sizing: border-box;
+    padding-top: 10px;
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-bottom: 10px;
+  }
+  .student__reviews .slider__location .feedback__slider .feedback_slider__line .slide_with_review .feedback__field .reviewer__name {
+    width: 100%;
+  }
+  .student__reviews .slider__location .feedback__slider .feedback_slider__line .slide_with_review .feedback__field .reviewer__name h4 {
+    font-size: 18px;
+    font-family: "Gilroy - SemiBold";
+    font-weight: lighter;
+    font-style: normal;
+    color: #CB9C68;
+  }
+  .student__reviews .slider__location .feedback__slider .feedback_slider__line .slide_with_review .feedback__field .review__text {
+    width: 100%;
+    margin-top: 15px;
+  }
+  .student__reviews .slider__location .feedback__slider .feedback_slider__line .slide_with_review .feedback__field .review__text h5 {
+    font-size: 16px;
+    font-family: "Gilroy - Regular";
+    font-weight: lighter;
+    font-style: normal;
+    color: #FFFFFF;
+  }
+  .student__reviews .slider__location .feedback__slider .feedback_slider__line .slide_with_review:first-child {
+    margin-left: 0;
+  }
+  .student__reviews .slider__location .feedback__slider .feedback_slider__line .slide_with_review:last-child {
+    margin-right: 0;
+  }
+  .student__reviews .slider__location .slider__buttons {
+    box-sizing: border-box;
+    display: flex;
+    width: 100%;
+    justify-content: flex-end;
+    padding-top: 20px;
+  }
+  .student__reviews .slider__location .slider__buttons .left_slider_button {
+    position: relative;
+    margin-right: 10px;
+  }
+  .student__reviews .slider__location .slider__buttons .left_slider_button button {
+    width: 33px;
+    height: 33px;
+    border: none;
+    border-radius: 50%;
+    cursor: pointer;
+    background: rgba(0, 0, 0, 0);
+    outline: 1px solid #FFFFFF;
+  }
+  .student__reviews .slider__location .slider__buttons .right_slider_button {
+    position: relative;
+    margin-left: 10px;
+  }
+  .student__reviews .slider__location .slider__buttons .right_slider_button button {
+    width: 33px;
+    height: 33px;
+    border: none;
+    border-radius: 50%;
+    cursor: pointer;
+    background: rgba(0, 0, 0, 0);
+    outline: 1px solid #FFFFFF;
+  }
+
+  .successful__cooperation {
+    position: relative;
+    display: flex;
+    width: 100%;
+    margin-top: 110px;
+  }
+  .successful__cooperation .indoor__unit {
+    flex-basis: 48%;
+    flex-grow: 0;
+    box-sizing: border-box;
+    margin-top: 8px;
+    margin-left: 6%;
+    margin-bottom: 8px;
+    padding-top: 20px;
+    padding-left: 12px;
+    padding-right: 20px;
+    padding-bottom: 0px;
+    border-radius: 7px 0 0 7px;
+    outline: 2px solid #2A2222;
+  }
+  .successful__cooperation .indoor__unit .indoor_unit_header {
+    width: 100%;
+  }
+  .successful__cooperation .indoor__unit .indoor_unit_header h3 {
+    font-size: 5vw;
+    font-family: "Gilroy - SemiBOld";
+    font-weight: lighter;
+    font-style: normal;
+    color: #FFFFFF;
+    text-transform: uppercase;
+  }
+  .successful__cooperation .indoor__unit .indoor_unit_header h3 span {
+    color: #CB9C68;
+  }
+  .successful__cooperation .indoor__unit .slider_toggle_buttons {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    margin-top: 15px;
+    margin-bottom: 15px;
+  }
+  .successful__cooperation .indoor__unit .slider_toggle_buttons .left_logo_slider_button {
+    margin-right: 10px;
+  }
+  .successful__cooperation .indoor__unit .slider_toggle_buttons .left_logo_slider_button button {
+    width: 33px;
+    height: 33px;
+    cursor: pointer;
+    border: none;
+    border-radius: 50%;
+    background: rgba(0, 0, 0, 0);
+    outline: 1px solid #FFFFFF;
+  }
+  .successful__cooperation .indoor__unit .slider_toggle_buttons .right_logo_slider_button {
+    margin-left: 10px;
+  }
+  .successful__cooperation .indoor__unit .slider_toggle_buttons .right_logo_slider_button button {
+    width: 33px;
+    height: 33px;
+    cursor: pointer;
+    border: none;
+    border-radius: 50%;
+    background: rgba(0, 0, 0, 0);
+    outline: 1px solid #FFFFFF;
+  }
+  .successful__cooperation .logo__slider {
+    flex-basis: 52%;
+    flex-grow: 0;
+    overflow: hidden;
+  }
+  .successful__cooperation .logo__slider .logo_slider__line {
+    width: 100%;
+    height: 100%;
+    border-radius: 7px 0 0 7px;
+    background: #2A2222;
+  }
+  .successful__cooperation .logo__slider .logo_slider__line .slide_with_logo {
+    box-sizing: border-box;
+    padding-top: 20px;
+    padding-left: 20px;
+    padding-bottom: 20px;
+  }
+  .successful__cooperation .logo__slider .logo_slider__line .slide_with_logo img {
+    flex-basis: calc(1/8*100% - (1 - 1/8)*0px);
+    flex-shrink: 0;
+    height: 120px;
+  }
+
+  .our__projects {
+    box-sizing: border-box;
+    position: relative;
+    width: 100%;
+    padding-top: 320px;
+    padding-bottom: 90px;
+  }
+  .our__projects .right_side_callout {
+    position: absolute;
+    top: 110px;
+    left: 34%;
+    right: 0px;
+    height: 165px;
+    background: linear-gradient(94.4deg, rgba(44, 35, 31, 0.68) 4.85%, rgba(203, 156, 104, 0.68) 95.02%);
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    backdrop-filter: blur(28px);
+    border-radius: 14px 0px 0px 14px;
+  }
+  .our__projects .right_side_callout .upper__text {
+    width: 600px;
+    left: 5%;
+  }
+  .our__projects .right_side_callout .bottom__text {
+    width: 500px;
+    left: 42%;
+  }
+  .our__projects .project__images {
+    width: 100%;
+  }
+  .our__projects .project__images .container {
+    display: flex;
+    flex-wrap: wrap;
+    align-content: space-between;
+  }
+  .our__projects .project__images .container .project__image {
+    min-width: calc( 100%/3 );
+    flex-basis: 20vw;
+    flex-grow: 1;
+    margin: 15px 15px 15px 15px;
+    border: 1px solid transparent;
+  }
+  .our__projects .project__images .container .project__image img {
+    width: 100%;
+    height: 100%;
+  }
+
+  footer {
+    box-sizing: border-box;
+    width: 100%;
+    background: #362B27;
+    padding-top: 5vh;
+    padding-bottom: 5vh;
+  }
+  footer .footer__logotip {
+    position: relative;
+    width: 100%;
+  }
+  footer .footer__logotip img {
+    position: relative;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  footer .columns__menu {
+    box-sizing: border-box;
+    width: 100%;
+    padding-top: 10px;
+    padding-bottom: 10px;
+  }
+  footer .columns__menu .column {
+    flex-basis: calc(1/3*100% - (1 - 1/3)*40px);
+    margin-top: 20px;
+    margin-bottom: 20px;
+  }
+  footer .columns__menu .column h4 {
+    font-size: 15px;
+    font-family: "Gilroy - SemiBold";
+    font-weight: lighter;
+    font-style: normal;
+    text-align: center;
+  }
+  footer .columns__menu .column h4 a {
+    color: #FFFFFF;
+    text-decoration: none;
   }
 }
 

@@ -63,3 +63,184 @@ rightSliderButton.addEventListener( 'click', ( ) => {
     }
 
 });
+
+(function() {
+    var throttle = function(type, name, obj) {
+        obj = obj || window;
+        var running = false;
+        var func = function() {
+            if (running) { return; }
+            running = true;
+            requestAnimationFrame(function() {
+                obj.dispatchEvent(new CustomEvent(name));
+                running = false;
+            });
+        };
+        obj.addEventListener(type, func);
+    };
+
+    /* init - you can init any event */
+    throttle("resize", "optimizedResize");
+})();
+
+// handle event
+window.addEventListener("optimizedResize", function() {
+    ResizingTheWindow( );
+});
+
+function ResizingTheWindow( ) {
+
+    if ( window.innerWidth >= 1440 ) {
+
+        document.getElementById( 'student_level_dies' ).classList.add( 'flex' );
+
+        document.querySelector( '.course__overview' ).style.display = 'block';
+        document.querySelector( '.course_overview__mobile' ).style.display = 'none';
+
+        document.querySelector( '.knowledge__map' ).style.display = 'block';
+        document.querySelector( '.knowledge_map__mobile' ).style.display = 'none';
+
+        document.querySelector( '.further__path' ).style.display = 'block';
+        document.querySelector( '.further_path__mobile' ).style.display = 'none';
+
+        document.getElementById( 'advantages_dies__container' ).classList.remove( 'flex' );
+        document.getElementById( 'advantages_dies__container' ).classList.add( 'flex-wrap' );
+        document.getElementById( 'advantages_dies__container' ).style.justifyContent = 'space-between';
+
+        document.querySelector( '.slider__location' ).style.display = 'block';
+        document.querySelector( '.slider__location__mobile' ).style.display = 'none';
+
+    }
+
+    if ( window.innerWidth < 1440 ) {
+
+        document.querySelector( '.social_media' ).style.display = 'none';
+        document.querySelector( '.contacts' ).style.display = 'block';
+
+        document.getElementById( 'menu' ).classList.add( 'flex' );
+        document.getElementById( 'student_level_dies' ).classList.add( 'flex' );
+
+        document.querySelector( '.knowledge__map' ).style.display = 'block';
+        document.querySelector( '.knowledge_map__mobile' ).style.display = 'none';
+
+        document.querySelector( '.further__path' ).style.display = 'block';
+        document.querySelector( '.further_path__mobile' ).style.display = 'none';
+
+        document.querySelector( '.course__overview' ).style.display = 'block';
+        document.querySelector( '.course_overview__mobile' ).style.display = 'none';
+
+        document.getElementById( 'advantages_dies__container' ).classList.remove( 'flex' );
+        document.getElementById( 'advantages_dies__container' ).classList.add( 'flex-wrap' );
+
+        document.querySelector( '.slider__location' ).style.display = 'block';
+        document.querySelector( '.slider__location__mobile' ).style.display = 'none';
+
+    }
+
+    if ( window.innerWidth < 1000 ) {
+
+        document.querySelector( '.social_media' ).style.display = 'none';
+        document.querySelector( '.contacts' ).style.display = 'none';
+
+        document.getElementById( 'advantages_dies__container' ).classList.remove( 'flex' );
+        document.getElementById( 'advantages_dies__container' ).classList.add( 'flex-wrap' );
+
+        document.getElementById( 'menu' ).classList.remove( 'flex' );
+
+        document.querySelector( '.course__overview' ).style.display = 'block';
+        document.querySelector( '.course_overview__mobile' ).style.display = 'none';
+
+        document.querySelector( '.knowledge__map' ).style.display = 'none';
+        document.querySelector( '.knowledge_map__mobile' ).style.display = 'block';
+
+        document.querySelector( '.further__path' ).style.display = 'block';
+        document.querySelector( '.further_path__mobile' ).style.display = 'none';
+
+        document.querySelector( '.mentor__question_button' ).style.display = 'none';
+        
+        document.querySelector( '.slider__location' ).style.display = 'block';
+        document.querySelector( '.slider__location__mobile' ).style.display = 'none';
+
+    }
+
+    if ( window.innerWidth < 900 ) {
+
+        document.querySelector( '.course__overview' ).style.display = 'none';
+        document.querySelector( '.course_overview__mobile' ).style.display = 'block';
+
+        document.querySelector( '.knowledge__map' ).style.display = 'none';
+        document.querySelector( '.knowledge_map__mobile' ).style.display = 'block';
+
+        document.querySelector( '.further__path' ).style.display = 'block';
+        document.querySelector( '.further_path__mobile' ).style.display = 'none';
+
+    }
+
+    if ( window.innerWidth < 760 ) {
+
+        document.getElementById( 'student_level_dies' ).classList.remove( 'flex' );
+
+        document.querySelector( '.knowledge__map' ).style.display = 'none';
+        document.querySelector( '.knowledge_map__mobile' ).style.display = 'block';
+
+        document.querySelector( '.further__path' ).style.display = 'none';
+        document.querySelector( '.further_path__mobile' ).style.display = 'block';
+
+    }
+
+    if ( window.innerWidth < 480 ) {
+
+        document.getElementById( 'student_level_dies' ).classList.remove( 'flex' );
+
+        document.querySelector( '.course__overview' ).style.display = 'none';
+        document.querySelector( '.course_overview__mobile' ).style.display = 'block';
+
+        document.querySelector( '.knowledge__map' ).style.display = 'none';
+        document.querySelector( '.knowledge_map__mobile' ).style.display = 'block';
+
+        document.querySelector( '.further__path' ).style.display = 'none';
+        document.querySelector( '.further_path__mobile' ).style.display = 'block';
+
+    }
+
+    // if ( window.innerWidth <= 1099 ) {
+
+    //     document.querySelector( '.social_media' ).style.display = 'none';
+    //     document.querySelector( '.contacts' ).style.display = 'block';
+
+    //     document.getElementById( 'advantages_dies__container' ).classList.remove( 'flex' );
+    //     document.getElementById( 'advantages_dies__container' ).classList.add( 'flex-wrap' );
+
+    // } 
+    
+    // if ( window.innerWidth > 1190 ) {
+
+    //     document.querySelector( '.social_media' ).style.display = 'block';
+    //     document.getElementById( 'advantages_dies__container' ).classList.remove( 'flex' );
+    //     document.getElementById( 'advantages_dies__container' ).classList.add( 'flex-wrap' );
+
+    // } 
+    
+    // if ( window.innerWidth <= 759 ) {
+
+    //     document.querySelector( '.social_media' ).style.display = 'none';
+    //     document.querySelector( '.contacts' ).style.display = 'none';
+
+    //     document.getElementById( 'advantages_dies__container' ).classList.remove( 'flex' );
+    //     document.getElementById( 'advantages_dies__container' ).classList.add( 'flex-wrap' );
+
+    //     document.querySelector( '.course__overview' ).style.display = 'none';
+    //     document.getElementById( 'start__button' ).style.display = 'none';
+
+    //     document.querySelector( '.knowledge__map' ).style.display = 'none';
+    //     document.querySelector( '.mentor__question_button' ).style.display = 'none';
+    //     document.querySelector( '.further__path' ).style.display = 'none';
+    //     document.querySelector( '.slider__location' ).style.display = 'none';
+
+    //     console.log( 1 );
+        
+    // }
+
+}
+
+ResizingTheWindow( );
