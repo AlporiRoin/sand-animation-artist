@@ -110,6 +110,11 @@ function ResizingTheWindow( ) {
 
         document.querySelector( '.social_media' ).style.display = 'block';
 
+        document.querySelector( '.underlining__title>h4' ).style.color = '#362B27';
+        document.querySelector( '.underlining__subtitle>h5' ).style.color = '#362B27';
+
+        // document.querySelector( '.program__die' ).style.top = '50px';
+
     }
 
     if ( window.innerWidth < 1440 ) {
@@ -238,3 +243,25 @@ function ResizingTheWindow( ) {
 }
 
 ResizingTheWindow( );
+
+function ReductionOfTheSubstrate( id ) {
+
+    let elementIndex = `program_die__${ id }`;
+
+    console.log( document.getElementById( elementIndex ).children[0] );
+
+    document.getElementById( elementIndex ).children[0].style.top = '20px';
+    
+
+}
+
+function RaisingTheSubmarine( id ) {
+
+    let elementIndex = `program_die__${ id }`;
+
+    console.log( document.getElementById( elementIndex ).children[0] );
+
+    document.getElementById( elementIndex ).children[0].style.top = '0px';
+    
+
+}
