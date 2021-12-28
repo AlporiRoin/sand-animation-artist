@@ -388,6 +388,10 @@
     position: relative;
     width: 100%;
   }
+  .advantages .advantages__dies .container {
+    display: flex;
+    justify-content: space-between;
+  }
   .advantages .advantages__dies .die__advantages {
     position: relative;
     box-sizing: border-box;

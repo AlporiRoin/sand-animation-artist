@@ -664,6 +664,14 @@
 
             width: 100%;
 
+            .container {
+
+                display: flex;
+
+                justify-content: space-between;
+
+            }
+
             .die__advantages {
                 
                 position: relative;

@@ -92,6 +92,8 @@ function ResizingTheWindow( ) {
 
     if ( window.innerWidth >= 1440 ) {
 
+        document.querySelector( '.menu' ).classList.add( 'flex' );
+
         document.getElementById( 'student_level_dies' ).classList.add( 'flex' );
 
         document.querySelector( '.course__overview' ).style.display = 'block';
@@ -102,10 +104,6 @@ function ResizingTheWindow( ) {
 
         document.querySelector( '.further__path' ).style.display = 'block';
         document.querySelector( '.further_path__mobile' ).style.display = 'none';
-
-        document.getElementById( 'advantages_dies__container' ).classList.remove( 'flex' );
-        document.getElementById( 'advantages_dies__container' ).classList.add( 'flex-wrap' );
-        document.getElementById( 'advantages_dies__container' ).style.justifyContent = 'space-between';
 
         document.querySelector( '.slider__location' ).style.display = 'block';
         document.querySelector( '.slider__location__mobile' ).style.display = 'none';
