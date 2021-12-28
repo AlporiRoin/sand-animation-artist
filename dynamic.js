@@ -110,6 +110,8 @@ function ResizingTheWindow( ) {
         document.querySelector( '.slider__location' ).style.display = 'block';
         document.querySelector( '.slider__location__mobile' ).style.display = 'none';
 
+        document.querySelector( '.social_media' ).style.display = 'block';
+
     }
 
     if ( window.innerWidth < 1440 ) {
@@ -129,23 +131,17 @@ function ResizingTheWindow( ) {
         document.querySelector( '.course__overview' ).style.display = 'block';
         document.querySelector( '.course_overview__mobile' ).style.display = 'none';
 
-        document.getElementById( 'advantages_dies__container' ).classList.remove( 'flex' );
-        document.getElementById( 'advantages_dies__container' ).classList.add( 'flex-wrap' );
-
         document.querySelector( '.slider__location' ).style.display = 'block';
         document.querySelector( '.slider__location__mobile' ).style.display = 'none';
 
+        document.querySelector( '.mentor__question_button' ).style.display = 'block';
+
     }
 
-    if ( window.innerWidth < 1000 ) {
+    if ( window.innerWidth <= 1000 ) {
 
         document.querySelector( '.social_media' ).style.display = 'none';
         document.querySelector( '.contacts' ).style.display = 'none';
-
-        document.getElementById( 'advantages_dies__container' ).classList.remove( 'flex' );
-        document.getElementById( 'advantages_dies__container' ).classList.add( 'flex-wrap' );
-
-        document.getElementById( 'menu' ).classList.remove( 'flex' );
 
         document.querySelector( '.course__overview' ).style.display = 'block';
         document.querySelector( '.course_overview__mobile' ).style.display = 'none';
