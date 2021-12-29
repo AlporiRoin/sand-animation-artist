@@ -149,8 +149,8 @@ function ResizingTheWindow( ) {
         document.querySelector( '.course__overview' ).style.display = 'block';
         document.querySelector( '.course_overview__mobile' ).style.display = 'none';
 
-        document.querySelector( '.knowledge__map' ).style.display = 'none';
-        document.querySelector( '.knowledge_map__mobile' ).style.display = 'block';
+        document.querySelector( '.knowledge__map' ).style.display = 'block';
+        document.querySelector( '.knowledge_map__mobile' ).style.display = 'none';
 
         document.querySelector( '.further__path' ).style.display = 'block';
         document.querySelector( '.further_path__mobile' ).style.display = 'none';
@@ -162,7 +162,7 @@ function ResizingTheWindow( ) {
 
     }
 
-    if ( window.innerWidth < 900 ) {
+    if ( window.innerWidth <= 900 ) {
 
         document.querySelector( '.course__overview' ).style.display = 'none';
         document.querySelector( '.course_overview__mobile' ).style.display = 'block';

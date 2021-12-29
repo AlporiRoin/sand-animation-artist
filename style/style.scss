@@ -322,17 +322,13 @@
                 
                 background: #CB9C68;
 
-                h4 {
+                font-size: 1.5vw;
+                font-family: 'Gilroy - UltraLight';
+                font-style: normal;
+                
+                color: #FFFFFF;
 
-                    font-size: 1.5vw;
-                    font-family: 'Gilroy - UltraLight';
-                    font-style: normal;
-                    
-                    color: #FFFFFF;
-
-                    letter-spacing: 0.02em;
-
-                }
+                letter-spacing: 0.02em;
 
             }
 
@@ -599,7 +595,7 @@
 
                 position: absolute;
 
-                bottom: 2vw;
+                bottom: 0vw;
 
                 margin-top: 37px;
                 margin-bottom: 46px;
@@ -616,16 +612,12 @@
 
                     cursor: pointer;
 
-                    h4 {
+                    font-size: 25px;
+                    font-family: 'Gilroy - Regular';
+                    font-weight: lighter;
+                    font-style: normal;
 
-                        font-size: 25px;
-                        font-family: 'Gilroy - Regular';
-                        font-weight: lighter;
-                        font-style: normal;
-
-                        color: #FFFFFF;
-
-                    }
+                    color: #FFFFFF;
 
                 }
 
@@ -636,12 +628,12 @@
         .course_overview_right {
 
             width: 50%;
+            height: 22vw;
 
-            img {
-
-                width: 100%;
-
-            }
+            background: url(../static/pictures/cover.png);
+            background-position: 50% 50%;
+            background-size: 100%;
+            background-repeat: no-repeat;
 
         }
 
@@ -1123,16 +1115,12 @@
 
                 background: rgba(0, 0, 0, 0);
 
-                h4 {
+                font-size: 22px;
+                font-family: 'Gilroy - Regular';
+                font-weight: lighter;
+                font-style: normal;
 
-                    font-size: 22px;
-                    font-family: 'Gilroy - Regular';
-                    font-weight: lighter;
-                    font-style: normal;
-
-                    color: #FFFFFF;
-                    
-                }
+                color: #FFFFFF;
 
             }
 
@@ -1690,6 +1678,8 @@
                         button {
     
                             position: relative;
+
+                            box-sizing: border-box;
     
                             display: flex;
     
@@ -1702,22 +1692,18 @@
                             background: #CB9C68;
     
                             cursor: pointer;
-    
-                            h4 {
-    
-                                font-size: 18px;
-                                font-family: 'Gilroy - SemiBold';
-                                font-weight: lighter;
-                                font-style: normal;
-    
-                                color: #FFFFFF;
-    
-                                line-height: 50px;
-    
-                                margin-left: 19%;
-                                margin-right: 2%;
-    
-                            }
+
+                            font-size: 18px;
+                            font-family: 'Gilroy - SemiBold';
+                            font-weight: lighter;
+                            font-style: normal;
+
+                            color: #FFFFFF;
+
+                            line-height: 50px;
+
+                            padding-left: 19%;
+                            padding-right: 2%;
     
                             img {
     
@@ -1731,7 +1717,7 @@
                                 width: 23px;
                                 height: 7px;
     
-                                margin-left: 2%;
+                                margin-left: 6%;
     
                             }
                             
@@ -2554,18 +2540,14 @@
                 
                 background: #CB9C68;
 
-                h4 {
+                font-size: 1.7vw;
+                font-family: 'Gilroy - UltraLight';
+                font-weight: normal;
+                font-style: normal;
+                
+                color: #FFFFFF;
 
-                    font-size: 1.7vw;
-                    font-family: 'Gilroy - UltraLight';
-                    font-weight: normal;
-                    font-style: normal;
-                    
-                    color: #FFFFFF;
-
-                    letter-spacing: 0.02em;
-
-                }
+                letter-spacing: 0.02em;
 
             }
 
@@ -2845,9 +2827,7 @@
                     
                     background: #CB9C68;
     
-                    h4 {
-    
-                        font-size: 1.7vw;
+                    font-size: 1.7vw;
                         font-family: 'Gilroy - UltraLight';
                         font-weight: normal;
                         font-style: normal;
@@ -2855,8 +2835,6 @@
                         color: #FFFFFF;
     
                         letter-spacing: 0.02em;
-    
-                    }
     
                 }
 
@@ -2867,12 +2845,12 @@
         .course_overview_right {
 
             width: 50%;
+            height: 22vw;
 
-            img {
-
-                width: 100%;
-
-            }
+            background: url(../static/pictures/cover.png);
+            background-position: 50% 50%;
+            background-size: 100%;
+            background-repeat: no-repeat;
 
         }
 
@@ -3364,16 +3342,12 @@
 
                 background: rgba(0, 0, 0, 0);
 
-                h4 {
-
-                    font-size: 22px;
+                font-size: 22px;
                     font-family: 'Gilroy - Regular';
                     font-weight: lighter;
                     font-style: normal;
 
                     color: #FFFFFF;
-                    
-                }
 
             }
 
@@ -3936,6 +3910,8 @@
                         padding-right: 15px;
     
                         button {
+
+                            box-sizing: border-box;
     
                             position: relative;
     
@@ -3951,9 +3927,7 @@
     
                             cursor: pointer;
     
-                            h4 {
-    
-                                font-size: 18px;
+                            font-size: 18px;
                                 font-family: 'Gilroy - SemiBold';
                                 font-weight: lighter;
                                 font-style: normal;
@@ -3962,10 +3936,8 @@
     
                                 line-height: 50px;
     
-                                margin-left: 19%;
-                                margin-right: 2%;
-    
-                            }
+                                padding-left: 19%;
+                                padding-right: 2%;
     
                             img {
     
@@ -3979,7 +3951,7 @@
                                 width: 23px;
                                 height: 7px;
     
-                                margin-left: 2%;
+                                margin-left: 6%;
     
                             }
                             
@@ -4756,17 +4728,13 @@
                 
                 background: #CB9C68;
 
-                h4 {
+                font-size: 1.5vw;
+                font-family: 'Gilroy - UltraLight';
+                font-style: normal;
+                
+                color: #FFFFFF;
 
-                    font-size: 1.5vw;
-                    font-family: 'Gilroy - UltraLight';
-                    font-style: normal;
-                    
-                    color: #FFFFFF;
-
-                    letter-spacing: 0.02em;
-
-                }
+                letter-spacing: 0.02em;
 
             }
 
@@ -5055,16 +5023,12 @@
 
                     cursor: pointer;
 
-                    h4 {
+                    font-size: 25px;
+                    font-family: 'Gilroy - Regular';
+                    font-weight: lighter;
+                    font-style: normal;
 
-                        font-size: 25px;
-                        font-family: 'Gilroy - Regular';
-                        font-weight: lighter;
-                        font-style: normal;
-
-                        color: #FFFFFF;
-
-                    }
+                    color: #FFFFFF;
 
                 }
 
@@ -5227,16 +5191,12 @@
 
                     margin-top: 20px;
 
-                    h4 {
+                    font-size: 25px;
+                    font-family: 'Gilroy - Regular';
+                    font-weight: lighter;
+                    font-style: normal;
 
-                        font-size: 25px;
-                        font-family: 'Gilroy - Regular';
-                        font-weight: lighter;
-                        font-style: normal;
-
-                        color: #FFFFFF;
-
-                    }
+                    color: #FFFFFF;
 
                 }
 
@@ -5598,16 +5558,12 @@
 
                 background: rgba(0, 0, 0, 0);
 
-                h4 {
-
-                    font-size: 22px;
+                font-size: 22px;
                     font-family: 'Gilroy - Regular';
                     font-weight: lighter;
                     font-style: normal;
 
                     color: #FFFFFF;
-                    
-                }
 
             }
 
@@ -6160,6 +6116,8 @@
                         padding-right: 15px;
     
                         button {
+
+                            box-sizing: border-box;
     
                             position: relative;
     
@@ -6177,9 +6135,7 @@
 
                             justify-content: center;
     
-                            h4 {
-    
-                                font-size: 18px;
+                            font-size: 18px;
                                 font-family: 'Gilroy - SemiBold';
                                 font-weight: lighter;
                                 font-style: normal;
@@ -6188,9 +6144,7 @@
     
                                 line-height: 50px;
     
-                                margin-right: 2%;
-    
-                            }
+                                padding-right: 2%;
     
                             img {
     
@@ -6204,7 +6158,7 @@
                                 width: 23px;
                                 height: 7px;
     
-                                margin-left: 2%;
+                                margin-left: 6%;
     
                             }
                             
@@ -7089,17 +7043,13 @@
                 
                 background: #CB9C68;
 
-                h4 {
+                font-size: 2.8vw;
+                font-family: 'Gilroy - UltraLight';
+                font-style: normal;
+                
+                color: #FFFFFF;
 
-                    font-size: 2.8vw;
-                    font-family: 'Gilroy - UltraLight';
-                    font-style: normal;
-                    
-                    color: #FFFFFF;
-
-                    letter-spacing: 0.02em;
-
-                }
+                letter-spacing: 0.02em;
 
             }
 
@@ -7407,16 +7357,12 @@
 
                     margin-top: 20px;
 
-                    h4 {
+                    font-size: 25px;
+                    font-family: 'Gilroy - Regular';
+                    font-weight: lighter;
+                    font-style: normal;
 
-                        font-size: 25px;
-                        font-family: 'Gilroy - Regular';
-                        font-weight: lighter;
-                        font-style: normal;
-
-                        color: #FFFFFF;
-
-                    }
+                    color: #FFFFFF;
 
                 }
 
@@ -8489,6 +8435,8 @@
                         padding-right: 15px;
     
                         button {
+
+                            box-sizing: border-box;
     
                             position: relative;
     
@@ -8506,9 +8454,7 @@
 
                             justify-content: center;
     
-                            h4 {
-    
-                                font-size: 18px;
+                            font-size: 18px;
                                 font-family: 'Gilroy - SemiBold';
                                 font-weight: lighter;
                                 font-style: normal;
@@ -8517,9 +8463,7 @@
     
                                 line-height: 50px;
     
-                                margin-right: 2%;
-    
-                            }
+                                padding-right: 2%;
     
                             img {
     
@@ -8533,7 +8477,7 @@
                                 width: 23px;
                                 height: 7px;
     
-                                margin-left: 2%;
+                                margin-left: 6%;
     
                             }
                             
@@ -9366,17 +9310,13 @@
                 
                 background: #CB9C68;
 
-                h4 {
+                font-size: 6vw;
+                font-family: 'Gilroy - UltraLight';
+                font-style: normal;
+                
+                color: #FFFFFF;
 
-                    font-size: 6vw;
-                    font-family: 'Gilroy - UltraLight';
-                    font-style: normal;
-                    
-                    color: #FFFFFF;
-
-                    letter-spacing: 0.02em;
-
-                }
+                letter-spacing: 0.02em;
 
             }
 
@@ -9640,7 +9580,7 @@
 
                     position: absolute;
 
-                    width: 160%;
+                    width: 140%;
                     height: 90%;
 
                     top: 5%;
@@ -9690,16 +9630,12 @@
 
                     margin-top: 20px;
 
-                    h4 {
+                    font-size: 25px;
+                    font-family: 'Gilroy - Regular';
+                    font-weight: lighter;
+                    font-style: normal;
 
-                        font-size: 25px;
-                        font-family: 'Gilroy - Regular';
-                        font-weight: lighter;
-                        font-style: normal;
-
-                        color: #FFFFFF;
-
-                    }
+                    color: #FFFFFF;
 
                 }
 
@@ -10099,16 +10035,12 @@
 
                 background: rgba(0, 0, 0, 0);
 
-                h4 {
-
-                    font-size: 22px;
+                font-size: 22px;
                     font-family: 'Gilroy - Regular';
                     font-weight: lighter;
                     font-style: normal;
 
                     color: #FFFFFF;
-                    
-                }
 
             }
 
@@ -10816,6 +10748,8 @@
                         padding-right: 15px;
     
                         button {
+
+                            box-sizing: border-box;
     
                             position: relative;
     
@@ -10833,9 +10767,7 @@
 
                             justify-content: center;
     
-                            h4 {
-    
-                                font-size: 18px;
+                            font-size: 18px;
                                 font-family: 'Gilroy - SemiBold';
                                 font-weight: lighter;
                                 font-style: normal;
@@ -10844,9 +10776,7 @@
     
                                 line-height: 50px;
     
-                                margin-right: 2%;
-    
-                            }
+                                padding-right: 2%;
     
                             img {
     
@@ -10860,7 +10790,7 @@
                                 width: 23px;
                                 height: 7px;
     
-                                margin-left: 2%;
+                                margin-left: 6%;
     
                             }
                             
